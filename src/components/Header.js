@@ -24,7 +24,7 @@ const HeaderContainer = styled.div`
   flex-wrap: wrap;
   padding: 0 60px;
 
-  @media (max-width: ${sizes.tablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) {
     padding: 20px;
     height: 80px;
   }
@@ -44,7 +44,7 @@ const LogoImg = styled.img`
   width: 87px;
   height: 41px;
 
-  @media (max-width: ${sizes.tablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) {
     order: -1;
   }
 `
@@ -53,7 +53,7 @@ const LinksButtonContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: ${sizes.tablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) {
     ${({ open }) => {
       return open
         ? `width: 100%;
@@ -67,13 +67,13 @@ const LinksButtonContainer = styled.div`
 const LinkContainer = styled.div`
   margin: 0 30px 0 0;
 
-  @media (max-width: ${sizes.tablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) {
     margin: 11px 0;
   }
 `
 
 const ResponsiveButton = styled(Button)`
-  @media (max-width: ${sizes.tablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) {
     display: none;
   }
 `
@@ -81,7 +81,7 @@ const ResponsiveButton = styled(Button)`
 const MobileMenuIconStyles = styled.div`
   display: none;
 
-  @media (max-width: ${sizes.tablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) {
     display: block;
   }
 `

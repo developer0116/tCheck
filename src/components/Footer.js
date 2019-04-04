@@ -1,12 +1,15 @@
-import React, { Component } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-import { Header6, Caption } from "./Typography"
+import { Caption } from "./Typography"
+import FooterColumnExpand from "./FooterColumnExpand"
 
 import { Flour, Fade, tGreen } from "../lib/colors"
+import { sizes } from "../lib/layout"
+
 import logo from "../images/tCheck-logo.png"
 import facebook from "../images/facebook.png"
 import instagram from "../images/instagram.png"
@@ -18,6 +21,11 @@ const FooterTag = styled.footer`
 
 const FooterContainer = styled.div`
   display: flex;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const LogoSocialsContainer = styled.div`
@@ -25,38 +33,47 @@ const LogoSocialsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    order: 2;
+  }
 `
 
 const SocialsContainer = styled.div`
+  display: flex;
   margin: 0 auto;
+  width: 100px;
+  justify-content: space-around;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    margin-top: 30px;
+  }
 `
 
 const SocialImage = styled.img`
   width: 16px;
   height: 16px;
-  margin-right: 16px;
 `
 
 const LogoImg = styled.img`
   margin: 20px auto;
   width: 87px;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    display: none;
+  }
 `
 
 const LinksContainer = styled.div`
   width: 75%;
   display: flex;
   justify-content: flex-start;
-`
 
-const LinksColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding-top: 20px;
-`
-
-const Header = styled(Header6)`
-  margin-bottom: 20px;
+  @media (max-width: ${sizes.modifiedTablet}) {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+  }
 `
 
 const FooterLink = styled(Link)`
@@ -81,6 +98,11 @@ const FooterLinkContainer = styled.div`
 
 const CopyRight = styled(Caption)`
   text-align: center;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    margin-top: 30px;
+    margin-top: 30px;
+  }
 `
 
 const Footer = React.memo(props => {
@@ -140,17 +162,15 @@ const Footer = React.memo(props => {
             /> */}
         </LogoSocialsContainer>
         <LinksContainer>
-          <LinksColumn>
-            <Header color={tGreen}>Company</Header>
+          <FooterColumnExpand headerText="Company">
             <FooterLinkContainer>
               <FooterLink color={Fade}>About</FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
               <FooterLink color={Fade}>Mission Statement</FooterLink>
             </FooterLinkContainer>
-          </LinksColumn>
-          <LinksColumn>
-            <Header color={tGreen}>Work with Us</Header>
+          </FooterColumnExpand>
+          <FooterColumnExpand headerText="Work with Us">
             <FooterLinkContainer>
               <FooterLink color={Fade}>Affiliate Program</FooterLink>
             </FooterLinkContainer>
@@ -160,18 +180,16 @@ const Footer = React.memo(props => {
             <FooterLinkContainer>
               <FooterLink color={Fade}>Careers</FooterLink>
             </FooterLinkContainer>
-          </LinksColumn>
-          <LinksColumn>
-            <Header color={tGreen}>Legal</Header>
+          </FooterColumnExpand>
+          <FooterColumnExpand headerText="Legal">
             <FooterLinkContainer>
               <FooterLink color={Fade}>Agreements</FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
               <FooterLink color={Fade}>Privacy</FooterLink>
             </FooterLinkContainer>
-          </LinksColumn>
-          <LinksColumn>
-            <Header color={tGreen}>Support</Header>
+          </FooterColumnExpand>
+          <FooterColumnExpand headerText="Support">
             <FooterLinkContainer>
               <FooterLink color={Fade}>How-to Videos</FooterLink>
             </FooterLinkContainer>
@@ -181,7 +199,7 @@ const Footer = React.memo(props => {
             <FooterLinkContainer>
               <FooterLink color={Fade}>FAQs</FooterLink>
             </FooterLinkContainer>
-          </LinksColumn>
+          </FooterColumnExpand>
         </LinksContainer>
       </FooterContainer>
       <CopyRight>©2019 Engineered Medical Technologies. Inc</CopyRight>

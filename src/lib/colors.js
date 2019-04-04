@@ -10,6 +10,7 @@ const Fade = "#737373"
 const Ghost = "#fafbfc"
 const InputBorder = "#c1c7d0"
 const Flour = "#ffffff"
+const Concrete = "#e7e7e7"
 
 export {
   tBlue,
@@ -24,4 +25,5 @@ export {
   Ghost,
   InputBorder,
   Flour,
+  Concrete,
 }
