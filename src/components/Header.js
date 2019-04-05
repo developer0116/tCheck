@@ -13,12 +13,13 @@ import Logo from "../images/tCheck-logo.png"
 const HeaderTag = styled.header`
   background-color: ${Flour};
 `
-// box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+
 const HeaderContainer = styled.div`
-  margin: 0 auto;
   max-width: ${maxWidth}px;
+  margin: 0 auto;
+  width: 100%;
   height: 112px;
-  display: flex
+  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;

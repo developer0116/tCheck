@@ -98,11 +98,7 @@ const FooterLinkContainer = styled.div`
 
 const CopyRight = styled(Caption)`
   text-align: center;
-
-  @media (max-width: ${sizes.modifiedTablet}) {
-    margin-top: 30px;
-    margin-top: 30px;
-  }
+  margin: 30px 0;
 `
 
 const Footer = React.memo(props => {
