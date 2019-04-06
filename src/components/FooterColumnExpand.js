@@ -16,7 +16,9 @@ const LinksColumn = styled.div`
 
   @media (max-width: ${sizes.modifiedTablet}) {
     cursor: pointer;
-    border-bottom: solid 1px ${Concrete};
+    ${({ open }) => {
+      return open ? `` : `border-bottom: solid 1px ${Concrete};`
+    }}
   }
 `
 
@@ -54,8 +56,9 @@ const HeaderArrowWrapper = styled.div`
 
 const DisplayDiv = styled.div`
   @media (max-width: ${sizes.modifiedTablet}) {
+    border-bottom: solid 1px ${Concrete};
     ${({ open }) => {
-      return open ? `display: unest;` : `display: none;`
+      return open ? `display: unset; margin-top: 24px;` : `display: none;`
     }}
   }
 `
@@ -68,6 +71,7 @@ const FooterColumnExpand = React.memo(({ headerText, children }) => {
       onClick={() => {
         toggleOpenClose(!open)
       }}
+      open={open}
     >
       <HeaderArrowWrapper>
         <Header color={tGreen}>{headerText}</Header>

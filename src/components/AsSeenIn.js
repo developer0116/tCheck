@@ -8,8 +8,12 @@ import { sizes } from "../lib/layout"
 
 const ASIContainer = styled.div`
   background-color: ${Ghost};
-  margin: 0 -100px;
+  margin: 0 -80px;
   padding: 40px;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    margin: 0;
+  }
 `
 
 const Header = styled(Header4)`

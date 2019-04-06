@@ -59,7 +59,7 @@ const LinksButtonContainer = styled.div`
       return open
         ? `width: 100%;
         order: 2;
-        flex-direction: column; align-items: flex-start; z-index: 2; background-color: white; flex: 1 1 100%; margin: 18px -20px; padding-bottom: 10px; padding-left: 20px;`
+        flex-direction: column; align-items: flex-start; z-index: 2; background-color: white; flex: 1 1 100%; margin: 16px -20px; padding-bottom: 10px; padding-left: 20px;`
         : `display: none`
     }}
   }
@@ -93,16 +93,24 @@ const Header = React.memo(props => {
   return (
     <HeaderTag>
       <HeaderContainer>
-        <LogoImg src={Logo} />
+        <TLink to="/">
+          <LogoImg src={Logo} />
+        </TLink>
         <LinksButtonContainer open={open}>
           <LinkContainer>
-            <TLink to="/">Growers</TLink>
+            <TLink to="/growers" activeStyle={{ color: tGreen }}>
+              Growers
+            </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/">Processors</TLink>
+            <TLink to="/processors" activeStyle={{ color: tGreen }}>
+              Processors
+            </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/">Edible Makers</TLink>
+            <TLink to="/makers" activeStyle={{ color: tGreen }}>
+              Edible Makers
+            </TLink>
           </LinkContainer>
           <LinkContainer>
             <TLink to="/">Blog</TLink>

@@ -19,6 +19,7 @@ const CTAContainer = styled.section`
 
   @media (max-width: ${sizes.modifiedTablet}) {
     flex-direction: column;
+    border-radius: 0px;
   }
 `
 
@@ -71,7 +72,9 @@ const BuyCTA = () => {
         <CTALead color={Flour}>
           Test infusions, flower, and concentrates for $478.99.
         </CTALead>
-        <CTAButton secondary>Buy Now</CTAButton>
+        <CTAButton secondary tertiary>
+          Buy Now
+        </CTAButton>
       </CTATextSection>
     </CTAContainer>
   )

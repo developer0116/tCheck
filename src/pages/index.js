@@ -1,9 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/Layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import ValuePropsRow from "../components/ValuePropsRow"
@@ -13,8 +11,14 @@ import BuyCTA from "../components/BuyCTA"
 import ProfessionalBanner from "../components/ProfessionalBanner"
 import AsSeenIn from "../components/AsSeenIn"
 
+import { sizes } from "../lib/layout"
+
 const PaddingContainer = styled.div`
   padding: 0 80px;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    padding: 0;
+  }
 `
 
 const IndexPage = () => (
