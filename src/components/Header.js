@@ -59,7 +59,7 @@ const LinksButtonContainer = styled.div`
       return open
         ? `width: 100%;
         order: 2;
-        flex-direction: column; align-items: flex-start; z-index: 2; background-color: white; flex: 1 1 100%; margin: 16px -20px; padding-bottom: 10px; padding-left: 20px;`
+        flex-direction: column; align-items: flex-start; z-index: 2; background-color: white; flex: 1 1 100%; margin: 15px -20px; padding-bottom: 10px; padding-left: 20px;`
         : `display: none`
     }}
   }

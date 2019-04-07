@@ -6,6 +6,10 @@ import { Body, Lead, Header4 } from "./Typography"
 import { Ghost } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
+import DopeLogo from "../images/logo_dope.png"
+import HighTimesLogo from "../images/logo_hightimes.png"
+import SensiLogo from "../images/logo_sensi.png"
+
 const ASIContainer = styled.div`
   background-color: ${Ghost};
   margin: 0 -80px;
@@ -23,7 +27,7 @@ const Header = styled(Header4)`
 const PartnerRow = styled.div`
   margin-top: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     flex-direction: column;
@@ -31,9 +35,9 @@ const PartnerRow = styled.div`
   }
 `
 
-const PartnerLogo = styled.div`
-  width: 100px;
-  font-size: 40px;
+const PartnerLogo = styled.img`
+  height: 75px;
+  margin: 0 60px;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     margin: 10px 0;
@@ -45,9 +49,9 @@ const AsSeenIn = () => {
     <ASIContainer>
       <Header>As Seen In</Header>
       <PartnerRow>
-        <PartnerLogo>Sensi</PartnerLogo>
-        <PartnerLogo>High Times</PartnerLogo>
-        <PartnerLogo>dope</PartnerLogo>
+        <PartnerLogo src={SensiLogo} />
+        <PartnerLogo src={HighTimesLogo} />
+        <PartnerLogo src={DopeLogo} />
       </PartnerRow>
     </ASIContainer>
   )

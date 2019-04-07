@@ -16,10 +16,12 @@ const CTAContainer = styled.section`
   justify-content: space-between;
   background-color: ${tBlue};
   border-radius: 8px;
+  margin: 140px 0;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     flex-direction: column;
     border-radius: 0px;
+    margin: 100px 0 0 0;
   }
 `
 

@@ -9,6 +9,7 @@ import ProductRowA from "../components/ProductRowA"
 import ProductRowB from "../components/ProductRowB"
 import BuyCTA from "../components/BuyCTA"
 import ProfessionalBanner from "../components/ProfessionalBanner"
+import AllCannabisProf from "../components/AllCannabisProf"
 import AsSeenIn from "../components/AsSeenIn"
 
 import { sizes } from "../lib/layout"
@@ -30,6 +31,7 @@ const IndexPage = () => (
       <ProductRowA />
       <ProductRowB />
       <BuyCTA />
+      <AllCannabisProf />
       <AsSeenIn />
     </PaddingContainer>
   </Layout>
