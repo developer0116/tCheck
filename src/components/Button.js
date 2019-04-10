@@ -13,7 +13,7 @@ const Button = styled.button`
     secondary ? Flour : tertiary ? "Transparent" : tGreen};
   border: 1px solid ${({ tertiary }) => (tertiary ? Flour : tGreen)};
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;

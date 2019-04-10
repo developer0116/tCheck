@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
 	html, body {
     font-family: Arial Rounded MT Bold, Lato;
+    font-size: 16px;
     
     margin: 0px;
     padding: 0px;

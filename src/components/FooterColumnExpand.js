@@ -23,7 +23,7 @@ const LinksColumn = styled.div`
 `
 
 const Header = styled(Header6)`
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 `
 
 const ChevronArrowImg = styled.img`

@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
-import { Header3, Lead } from "./Typography"
+import { Header4, Lead } from "./Typography"
 import Button from "./Button"
 
 import { Flour } from "../lib/colors"
@@ -12,17 +12,21 @@ import { Flour } from "../lib/colors"
 const HeroContentContainer = styled.div`
   text-align: center;
   max-width: 625px;
-  margin: 250px auto 0;
+  margin: 4.5rem auto;
   color: ${Flour};
 `
 
 const HeroBackground = styled(BackgroundImage)`
-  height: 700px;
+  height: 30rem;
 `
 
 const HeroButton = styled(Button)`
   width: 232px;
-  margin: 28px auto;
+  margin: 0 auto;
+`
+
+const BR = styled.br`
+  line-height: 2rem;
 `
 
 const Hero = () => {
@@ -47,15 +51,17 @@ const Hero = () => {
             backgroundColor={`#040e18`}
           >
             <HeroContentContainer>
-              <Header3 color={Flour}>
+              <Header4 color={Flour}>
                 From seed to sale, tCheck can tell you the potency{" "}
-              </Header3>
-              <br />
+              </Header4>
+              <BR />
               <Lead color={Flour}>
                 Thousands of cannabis professionals are testing their infusions,
                 flower, and concentrate with tCheck.
               </Lead>
+              <BR />
               <HeroButton>Buy Now</HeroButton>
+              <BR />
               <HeroButton tertiary>Learn More</HeroButton>
             </HeroContentContainer>
           </HeroBackground>

@@ -2,11 +2,12 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { Flipper, Flipped } from "react-flip-toolkit"
 
 import Button from "./Button"
 import MobileMenuIcon from "./MobileMenuIcon"
 
-import { Flour, Ink, tGreen } from "../lib/colors"
+import { Flour, Ink, tGreen, tBlue } from "../lib/colors"
 import { maxWidth, sizes } from "../lib/layout"
 import Logo from "../images/tCheck-logo.png"
 
@@ -18,7 +19,7 @@ const HeaderContainer = styled.div`
   max-width: ${maxWidth}px;
   margin: 0 auto;
   width: 100%;
-  height: 112px;
+  height: 5.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,18 +27,24 @@ const HeaderContainer = styled.div`
   padding: 0 60px;
 
   @media (max-width: ${sizes.modifiedTablet}) {
+    height: unset;
     padding: 20px;
-    height: 80px;
   }
 `
 
 const TLink = styled(Link)`
+  font-family: Lato;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.29;
+  letter-spacing: normal;
   text-decoration: none;
   color: ${Ink};
-  font-size: 14px;
+  font-size: 0.875rem;
 
   &:hover {
-    color: ${tGreen};
+    color: ${tBlue};
   }
 `
 
@@ -53,13 +60,12 @@ const LogoImg = styled.img`
 const LinksButtonContainer = styled.div`
   display: flex;
   align-items: center;
+  transition: flex 0.3s ease-out;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     ${({ open }) => {
       return open
-        ? `width: 100%;
-        order: 2;
-        flex-direction: column; align-items: flex-start; z-index: 2; background-color: white; flex: 1 1 100%; margin: 15px -20px; padding-bottom: 10px; padding-left: 20px;`
+        ? `width: 100%; order: 2; flex-direction: column; align-items: flex-start; z-index: 2; background-color: white;`
         : `display: none`
     }}
   }

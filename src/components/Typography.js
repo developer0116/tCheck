@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import { Ink, Flour, Fade } from "../lib/colors"
 
+// 72px
 const Header1 = styled.h1`
-  font-size: 72px;
+  font-size: 4.5rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -13,8 +14,9 @@ const Header1 = styled.h1`
   }};
 `
 
+// 56px
 const Header2 = styled.h2`
-  font-size: 56px;
+  font-size: 3.5rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -25,8 +27,9 @@ const Header2 = styled.h2`
   }};
 `
 
+// 48px
 const Header3 = styled.h3`
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -37,8 +40,9 @@ const Header3 = styled.h3`
   }};
 `
 
+// 40px
 const Header4 = styled.h4`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -49,8 +53,9 @@ const Header4 = styled.h4`
   }};
 `
 
+// 32px
 const Header5 = styled.h5`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -61,8 +66,9 @@ const Header5 = styled.h5`
   }};
 `
 
+// 24px
 const Header6 = styled.h6`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -73,9 +79,10 @@ const Header6 = styled.h6`
   }};
 `
 
+// 24px
 const Lead = styled.div`
   font-family: Lato;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -86,9 +93,10 @@ const Lead = styled.div`
   }};
 `
 
+// 16px
 const Body = styled.p`
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: ${props => (props.fontWeight ? props.fontWeight : 500)};
   font-style: normal;
   font-stretch: normal;
@@ -97,9 +105,10 @@ const Body = styled.p`
   color: ${props => (props.secondary ? Fade : props.inverse ? Flour : Ink)};
 `
 
+// 12px
 const Caption = styled.p`
   font-family: Lato;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: ${({ secondary }) => (secondary ? 300 : 500)};
   font-style: normal;
   font-stretch: normal;

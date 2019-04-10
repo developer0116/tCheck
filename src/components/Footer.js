@@ -7,7 +7,7 @@ import styled from "styled-components"
 import { Caption } from "./Typography"
 import FooterColumnExpand from "./FooterColumnExpand"
 
-import { Flour, Fade, tGreen } from "../lib/colors"
+import { Flour, Fade, tGreen, tBlue } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import logo from "../images/tCheck-logo.png"
@@ -81,19 +81,22 @@ const FooterLink = styled(Link)`
   color: ${({ color = tGreen }) => color};
   text-decoration: none;
   cursor: pointer;
-  font-size: 12px;
+  font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.33;
+  line-height: 2.29;
+  letter-spacing: normal;
+  text-decoration: none;
+  font-size: 0.875rem;
   letter-spacing: 0.2px;
 
   &:hover {
-    color: ${({ hoverColor = tGreen }) => hoverColor};
+    color: ${({ hoverColor = tBlue }) => hoverColor};
   }
 `
 
 const FooterLinkContainer = styled.div`
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 `
 
 const CopyRight = styled(Caption)`
