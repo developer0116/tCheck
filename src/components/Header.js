@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Flipper, Flipped } from "react-flip-toolkit"
 
 import Button from "./Button"
 import MobileMenuIcon from "./MobileMenuIcon"
