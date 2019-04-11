@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header4 } from "./Typography"
+import { Body, Lead, Header5 } from "./Typography"
 
 import { Flour, Fade, tGreen, Ink } from "../lib/colors"
 import { sizes } from "../lib/layout"
@@ -14,6 +14,7 @@ const ProductRowContainer = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 27rem;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     flex-direction: column;
@@ -30,7 +31,7 @@ const ProductTextSection = styled.div`
   }
 `
 
-const ProductTitle = styled(Header4)`
+const ProductTitle = styled(Header5)`
   margin-bottom: 48px;
 `
 

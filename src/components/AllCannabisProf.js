@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons"
 
 import { Body, Lead, Header4 } from "./Typography"
 
@@ -12,8 +14,8 @@ import PicPrice from "../images/pic_price.png"
 const CannabisContainer = styled.section`
   display: flex;
   background-color: ${Ghost};
-  padding: 72px;
-  margin: 0px -80px 80px;
+  padding: 3.5rem 5rem 3rem;
+  margin: 0px -80px 7rem;
   justify-content: space-between;
 
   @media (max-width: ${sizes.modifiedTablet}) {
@@ -34,7 +36,7 @@ const CannabisTextContainer = styled.div`
 `
 
 const Header = styled(Header4)`
-  margin-bottom: 48px;
+  margin-bottom: 2rem;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     margin: 40px 40px;
@@ -42,7 +44,7 @@ const Header = styled(Header4)`
 `
 
 const CannabisLead = styled(Lead)`
-  margin-top: 16px;
+  margin-top: 1.5rem;
 `
 
 const CannabisBody = styled(Body)`
@@ -54,7 +56,13 @@ const CannabisBody = styled(Body)`
 const CannabisLink = styled(Link)`
   text-decoration: none;
   color: ${tBlue};
-  font-size: 14px;
+  font-family: Lato;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.29;
+  letter-spacing: normal;
+  font-size: 0.875rem;
 `
 
 const CannabisProfImg = styled.img`
@@ -70,6 +78,16 @@ const CannabisProfImg = styled.img`
   }
 `
 
+const ArrowIcon = styled(FontAwesomeIcon)`
+  transition: all 300ms 0s ease;
+  position: relative;
+  top: 1px;
+
+  ${CannabisLink}:hover & {
+    transform: translateX(4px);
+  }
+`
+
 const AllCannabisProf = () => {
   return (
     <CannabisContainer>
@@ -80,20 +98,26 @@ const AllCannabisProf = () => {
           Indoor and outdoor growers face different challenges, testing
           shouldn't be one of them.
         </CannabisBody>
-        <CannabisLink to="/growers">Learn More</CannabisLink>
+        <CannabisLink to="/growers">
+          Learn More <ArrowIcon icon={faLongArrowAltRight} />
+        </CannabisLink>
 
         <CannabisLead color={tGreen}>Processors</CannabisLead>
         <CannabisBody secondary>
           Whether you make your own, or buy white label cannabis oil, verify
           your final product.
         </CannabisBody>
-        <CannabisLink to="/processors">Learn More</CannabisLink>
+        <CannabisLink to="/processors">
+          Learn More <ArrowIcon icon={faLongArrowAltRight} />
+        </CannabisLink>
 
         <CannabisLead color={tGreen}>Edible Makers</CannabisLead>
         <CannabisBody secondary>
           Never have another edible mishap with tCheck in hand.
         </CannabisBody>
-        <CannabisLink to="/makers">Learn More</CannabisLink>
+        <CannabisLink to="/makers">
+          Learn More <ArrowIcon icon={faLongArrowAltRight} />
+        </CannabisLink>
       </CannabisTextContainer>
       <CannabisProfImg src={PicPrice} />
     </CannabisContainer>

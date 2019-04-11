@@ -18,6 +18,7 @@ import { maxWidth } from "../lib/layout"
 
 const CenterContainer = styled.div`
   margin: 0 auto;
+  padding-top: 5.5rem;
   max-width: ${maxWidth}px;
 `
 

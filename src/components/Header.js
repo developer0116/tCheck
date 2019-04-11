@@ -12,6 +12,9 @@ import Logo from "../images/tCheck-logo.png"
 
 const HeaderTag = styled.header`
   background-color: ${Flour};
+  position: fixed;
+  z-index: 10;
+  width: 100%;
 `
 
 const HeaderContainer = styled.div`

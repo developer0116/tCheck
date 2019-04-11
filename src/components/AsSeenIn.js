@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header4 } from "./Typography"
+import { Body, Lead, Header5 } from "./Typography"
 
-import { Ghost } from "../lib/colors"
+import { Ghost, Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import DopeLogo from "../images/logo_dope.png"
@@ -13,14 +13,14 @@ import SensiLogo from "../images/logo_sensi.png"
 const ASIContainer = styled.div`
   background-color: ${Ghost};
   margin: 0 -80px;
-  padding: 40px;
+  padding: 3rem;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     margin: 0;
   }
 `
 
-const Header = styled(Header4)`
+const Header = styled(Header5)`
   text-align: center;
 `
 
@@ -47,7 +47,7 @@ const PartnerLogo = styled.img`
 const AsSeenIn = () => {
   return (
     <ASIContainer>
-      <Header>As Seen In</Header>
+      <Header color={Fade}>As Seen In</Header>
       <PartnerRow>
         <PartnerLogo src={SensiLogo} />
         <PartnerLogo src={HighTimesLogo} />

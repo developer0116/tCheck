@@ -13,9 +13,7 @@ import linkedIn from "../images/linked-in.png"
 const ValuePropsContainer = styled.section`
   display: flex;
   justify-content: space-around;
-  padding: 60px 0;
-  width: 90%;
-  margin: 0 auto;
+  padding: 4.5rem 0;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     flex-direction: column;
@@ -33,15 +31,17 @@ const ValueProp = styled.div`
 `
 
 const ValuePropImg = styled.img`
-  width: 115px;
-  height: 115px;
+  width: 7.5rem;
+  height: 7.5rem;
 `
 
 const ValuePropHeader = styled(Lead)`
-  margin: 10px 0;
+  margin-top: 1.5rem;
 `
 
-const ValuePropText = styled(Body)``
+const ValuePropText = styled(Body)`
+  margin-top: 1rem;
+`
 
 const ValuePropsRow = React.memo(() => {
   return (

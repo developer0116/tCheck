@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header4 } from "./Typography"
+import { Body, Lead, Header5 } from "./Typography"
 
 import { Flour, Fade, tGreen, Ink, tBlue, Ghost } from "../lib/colors"
 import { sizes } from "../lib/layout"
@@ -29,7 +29,7 @@ const ProfessionalTextSection = styled.div`
   }
 `
 
-const ProfessionalTitle = styled(Header4)`
+const ProfessionalTitle = styled(Header5)`
   margin-bottom: 24px;
 `
 
