@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header5 } from "./Typography"
+import { Body, Header5 } from "./Typography"
 
-import { Flour, Fade, tGreen, Ink } from "../lib/colors"
+import { Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import hexagonLarge from "../images/hexagon_large.svg"

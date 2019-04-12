@@ -11,6 +11,7 @@ const Ghost = "#fafbfc"
 const InputBorder = "#c1c7d0"
 const Flour = "#ffffff"
 const Concrete = "#e7e7e7"
+const Dada = "#dadada" // did you mean another color?
 
 export {
   tBlue,
@@ -26,4 +27,5 @@ export {
   InputBorder,
   Flour,
   Concrete,
+  Dada,
 }

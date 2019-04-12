@@ -6,7 +6,7 @@ import styled from "styled-components"
 import Button from "./Button"
 import MobileMenuIcon from "./MobileMenuIcon"
 
-import { Flour, Ink, tGreen, tBlue } from "../lib/colors"
+import { Flour, Ink, tBlue } from "../lib/colors"
 import { maxWidth, sizes } from "../lib/layout"
 import Logo from "../images/tCheck-logo.png"
 
@@ -106,17 +106,17 @@ const Header = React.memo(props => {
         </TLink>
         <LinksButtonContainer open={open}>
           <LinkContainer>
-            <TLink to="/growers" activeStyle={{ color: tGreen }}>
+            <TLink to="/growers" activeStyle={{ color: tBlue }}>
               Growers
             </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/processors" activeStyle={{ color: tGreen }}>
+            <TLink to="/processors" activeStyle={{ color: tBlue }}>
               Processors
             </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/makers" activeStyle={{ color: tGreen }}>
+            <TLink to="/makers" activeStyle={{ color: tBlue }}>
               Edible Makers
             </TLink>
           </LinkContainer>

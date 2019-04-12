@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header5 } from "./Typography"
+import { Header5 } from "./Typography"
 
 import { Ghost, Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"

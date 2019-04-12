@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { Body, Lead } from "./Typography"
 
-import { Flour, Fade, tGreen, Ink } from "../lib/colors"
+import { tGreen } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import facebook from "../images/facebook.png"
