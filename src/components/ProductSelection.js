@@ -5,7 +5,6 @@ import { Body, Lead, Header5 } from "./Typography"
 
 import { tGreen, Fade, Dada } from "../lib/colors"
 import { sizes } from "../lib/layout"
-import Header from "./header"
 
 const ProductSelectionContainer = styled.section``
 
