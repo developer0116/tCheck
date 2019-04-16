@@ -9,10 +9,12 @@ import Button from "./Button"
 
 import { Flour } from "../lib/colors"
 
+import whiteBottom from "../images/Whitebottom.svg"
+
 const HeroContentContainer = styled.div`
   text-align: center;
   max-width: 625px;
-  margin: 4.5rem auto;
+  margin: 4.5rem auto 0;
   color: ${Flour};
 `
 
@@ -28,6 +30,8 @@ const HeroButton = styled(Button)`
 const BR = styled.br`
   line-height: 2rem;
 `
+
+const WhiteBottom = styled.img``
 
 const Hero = () => {
   return (
@@ -64,6 +68,7 @@ const Hero = () => {
               <BR />
               <HeroButton tertiary>Learn More</HeroButton>
             </HeroContentContainer>
+            {/* <WhiteBottom src={whiteBottom} /> */}
           </HeroBackground>
         )
       }}

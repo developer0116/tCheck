@@ -9,6 +9,7 @@ import { sizes } from "../lib/layout"
 import hexagonLarge from "../images/hexagon_large.svg"
 import hexagonSmall from "../images/hexagon_small.svg"
 import CannabisTester from "../images/Cannabistester.png"
+import OrangeHex from "../images/hex_orange.svg"
 
 const ProductRowContainer = styled.section`
   display: flex;
@@ -33,6 +34,15 @@ const ProductTextSection = styled.div`
 
 const ProductTitle = styled(Header5)`
   margin-bottom: 48px;
+  position: relative;
+
+  &:before {
+    content: url(${OrangeHex});
+    position: absolute;
+    z-index: -1;
+    top: -12px;
+    left: -23px;
+  }
 `
 
 const ProductBody = styled(Body)``

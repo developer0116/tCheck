@@ -1,14 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header4 } from "./Typography"
+import { Body, Header5 } from "./Typography"
 
-import { Flour, Fade, tGreen, Ink } from "../lib/colors"
+import { Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import hexagonLarge from "../images/hexagon_large.svg"
 import hexagonSmall from "../images/hexagon_small.svg"
 import ExpansionKit from "../images/expansionkit.png"
+import GreenHex from "../images/hex_green.svg"
 
 const ProductRowContainer = styled.section`
   display: flex;
@@ -30,8 +31,17 @@ const ProductTextSection = styled.div`
   }
 `
 
-const ProductTitle = styled(Header4)`
+const ProductTitle = styled(Header5)`
   margin-bottom: 48px;
+  position: relative;
+
+  &:before {
+    content: url(${GreenHex});
+    position: absolute;
+    z-index: -1;
+    top: -12px;
+    left: -23px;
+  }
 `
 
 const ProductBody = styled(Body)``

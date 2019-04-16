@@ -82,9 +82,15 @@ const LinkContainer = styled.div`
 `
 
 const ResponsiveButton = styled(Button)`
+  cursor: pointer;
+
   @media (max-width: ${sizes.modifiedTablet}) {
     display: none;
   }
+`
+
+const ButtonLink = styled(Link)`
+  text-decoration: none;
 `
 
 const MobileMenuIconStyles = styled.div`
@@ -126,7 +132,9 @@ const Header = React.memo(props => {
           <LinkContainer>
             <TLink to="/">Support</TLink>
           </LinkContainer>
-          <ResponsiveButton>Buy Now</ResponsiveButton>
+          <ButtonLink to="/product">
+            <ResponsiveButton>Buy Now</ResponsiveButton>
+          </ButtonLink>
         </LinksButtonContainer>
 
         <MobileMenuIconStyles

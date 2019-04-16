@@ -76,7 +76,7 @@ const LinksContainer = styled.div`
   }
 `
 
-const FooterLink = styled(Link)`
+const FooterLink = styled.a`
   font-family: Lato;
   color: ${({ color = tGreen }) => color};
   text-decoration: none;
@@ -111,9 +111,27 @@ const Footer = React.memo(props => {
         <LogoSocialsContainer>
           <LogoImg src={logo} />
           <SocialsContainer>
-            <SocialImage src={facebook} />
-            <SocialImage src={instagram} />
-            <SocialImage src={linkedIn} />
+            <a
+              alt="facebook logo link"
+              href="https://www.facebook.com/t.chker/"
+              target="_blank"
+            >
+              <SocialImage src={facebook} />
+            </a>
+            <a
+              alt="instagram logo link"
+              href="https://www.instagram.com/tcheck.me/"
+              target="_blank"
+            >
+              <SocialImage src={instagram} />
+            </a>
+            <a
+              alt="linked in logo link"
+              href="https://www.linkedin.com/company/17901741"
+              target="_blank"
+            >
+              <SocialImage src={linkedIn} />
+            </a>
           </SocialsContainer>
           {/* <StaticQuery
               query={graphql`
@@ -171,13 +189,25 @@ const Footer = React.memo(props => {
           </FooterColumnExpand>
           <FooterColumnExpand headerText="Work with Us">
             <FooterLinkContainer>
-              <FooterLink color={Fade}>Affiliate Program</FooterLink>
+              <FooterLink
+                target="_blank"
+                href="https://tcheckme.growsumo.com"
+                color={Fade}
+              >
+                Affiliate Program
+              </FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
               <FooterLink color={Fade}>Wholesale</FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
-              <FooterLink color={Fade}>Careers</FooterLink>
+              <FooterLink
+                target="_blank"
+                href="https://www.indeed.com/cmp/Tcheck-1"
+                color={Fade}
+              >
+                Careers
+              </FooterLink>
             </FooterLinkContainer>
           </FooterColumnExpand>
           <FooterColumnExpand headerText="Legal">
@@ -185,18 +215,42 @@ const Footer = React.memo(props => {
               <FooterLink color={Fade}>Agreements</FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
-              <FooterLink color={Fade}>Privacy</FooterLink>
+              <FooterLink
+                target="_blank"
+                href="https://medium.com/tcheck/tcheck-privacy-policy-36fdf200ce9"
+                color={Fade}
+              >
+                Privacy
+              </FooterLink>
             </FooterLinkContainer>
           </FooterColumnExpand>
           <FooterColumnExpand headerText="Support">
             <FooterLinkContainer>
-              <FooterLink color={Fade}>How-to Videos</FooterLink>
+              <FooterLink
+                target="_blank"
+                href="https://www.youtube.com/channel/UCj842lZb3wYeOuK3XB9nQSA"
+                color={Fade}
+              >
+                How-to Videos
+              </FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
-              <FooterLink color={Fade}>User Manuals</FooterLink>
+              <FooterLink
+                target="_blank"
+                href="https://medium.com/tcheck/tcheck-2-user-manual-c94fe50b2a47"
+                color={Fade}
+              >
+                User Manuals
+              </FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
-              <FooterLink color={Fade}>FAQs</FooterLink>
+              <FooterLink
+                target="_blank"
+                href=" https://medium.com/tcheck/frequently-asked-questions-about-tcheck-36540ca5caf9"
+                color={Fade}
+              >
+                FAQs
+              </FooterLink>
             </FooterLinkContainer>
           </FooterColumnExpand>
         </LinksContainer>
