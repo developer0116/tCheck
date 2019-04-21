@@ -12,9 +12,13 @@ const LinksColumn = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 20px;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    flex: unset;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    padding-top: 20px;
     cursor: pointer;
     ${({ open }) => {
       return open ? `` : `border-bottom: solid 1px ${Concrete};`
@@ -23,7 +27,7 @@ const LinksColumn = styled.div`
 `
 
 const Header = styled(Header6)`
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `
 
 const ChevronArrowImg = styled.img`
@@ -39,7 +43,7 @@ const ChevronArrowImg = styled.img`
 
   display: none;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     display: unset;
   }
 `
@@ -49,16 +53,16 @@ const HeaderArrowWrapper = styled.div`
   justify-content: flex-start;
   position: relative;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     justify-content: center;
   }
 `
 
 const DisplayDiv = styled.div`
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     border-bottom: solid 1px ${Concrete};
     ${({ open }) => {
-      return open ? `display: unset; margin-top: 24px;` : `display: none;`
+      return open ? `display: unset;` : `display: none;`
     }}
   }
 `

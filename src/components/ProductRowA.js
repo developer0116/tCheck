@@ -17,7 +17,11 @@ const ProductRowContainer = styled.section`
   align-items: center;
   height: 27rem;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    flex-direction: column;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
   }
 `
@@ -25,7 +29,13 @@ const ProductRowContainer = styled.section`
 const ProductTextSection = styled.div`
   width: 29%;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    order: 2;
+    width: 90%;
+    text-align: center;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     order: 2;
     width: 90%;
     text-align: center;
@@ -43,6 +53,18 @@ const ProductTitle = styled(Header5)`
     top: -12px;
     left: -23px;
   }
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    &:before {
+      content: unset;
+    }
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    &:before {
+      content: unset;
+    }
+  }
 `
 
 const ProductBody = styled(Body)``
@@ -52,7 +74,14 @@ const ProductImageContainer = styled.div`
   height: 506px;
   background: url(${hexagonLarge}) no-repeat center;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    width: 90%;
+    background: url(${hexagonLarge}) no-repeat center;
+    background-size: contain;
+    height: 300px;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     width: 90%;
     background: url(${hexagonLarge}) no-repeat center;
     background-size: contain;
@@ -65,7 +94,12 @@ const ProductImage = styled.img`
   margin-top: 130px;
   margin-bottom: 60px;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    margin-top: 80px;
+    width: 85%;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     margin-top: 80px;
     width: 85%;
   }

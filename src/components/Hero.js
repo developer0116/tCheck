@@ -32,6 +32,7 @@ const HeroContentContainer = styled.div`
 const HeroBackground = styled(BackgroundImage)`
   &::before {
     background-position: bottom !important;
+    background-color: ${Flour} !important;
   }
 `
 

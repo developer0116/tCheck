@@ -15,7 +15,11 @@ const ValuePropsContainer = styled.section`
   justify-content: space-around;
   padding: 4.5rem 0;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    padding: 4rem 0;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
     align-items: center;
   }
@@ -23,10 +27,14 @@ const ValuePropsContainer = styled.section`
 
 const ValueProp = styled.div`
   text-align: center;
-  width: 250px;
+  width: 15.6rem;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
-    margin: 40px 0;
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    margin: 0 1rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    margin-bottom: 2rem;
   }
 `
 
@@ -36,7 +44,8 @@ const ValuePropImg = styled.img`
 `
 
 const ValuePropHeader = styled(Lead)`
-  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  margin: 1.5rem 0 1rem 0;
 `
 
 const ValuePropText = styled(Body)`

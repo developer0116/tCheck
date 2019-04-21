@@ -17,12 +17,20 @@ import linkedIn from "../images/linked-in.png"
 
 const FooterTag = styled.footer`
   background-color: ${Flour};
+  margin-top: 3rem;
 `
 
 const FooterContainer = styled.div`
   display: flex;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
     align-items: center;
   }
@@ -34,7 +42,11 @@ const LogoSocialsContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    order: 2;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     order: 2;
   }
 `
@@ -45,7 +57,10 @@ const SocialsContainer = styled.div`
   width: 100px;
   justify-content: space-around;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     margin-top: 30px;
   }
 `
@@ -59,7 +74,11 @@ const LogoImg = styled.img`
   margin: 20px auto;
   width: 87px;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    display: none;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     display: none;
   }
 `
@@ -69,7 +88,12 @@ const LinksContainer = styled.div`
   display: flex;
   justify-content: flex-start;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     width: 90%;
     flex-direction: column;
     text-align: center;

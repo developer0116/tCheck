@@ -9,36 +9,52 @@ import { sizes } from "../lib/layout"
 
 import AppStorePicture from "../images/app-store.svg"
 import GoogleStorePicture from "../images/google-play.svg"
+import AppExampleImage from "../images/app_download.svg"
 
 const AppContainer = styled.section`
   display: flex;
   background-color: ${Flour};
-  padding: 3.5rem 5rem 3rem;
-  justify-content: flex-end;
+  padding: 3rem 0;
+  justify-content: space-between;
   align-items: center;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
-    padding: 0;
-    margin: 0;
+    border-radius: 0px;
+    margin: 3rem 0 0 0;
   }
 `
 
 const AppTextContainer = styled.div`
-  width: 33%;
+  width: 41%;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
-    width: 100%;
-    text-align: center;
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    width: 45%;
     margin: 0 0 40px 0;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    width: 85%;
+    margin: 2rem auto 0;
+    text-align: center;
   }
 `
 
 const Header = styled(Header4)`
   margin-bottom: 3rem;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1.5rem;
+    flex-direction: column;
+    border-radius: 0px;
+    margin-bottom: 1.5rem;
   }
 `
 
@@ -46,14 +62,31 @@ const AppBody = styled(Body)`
   margin-bottom: 1.5rem;
 `
 
+const AppImage = styled.img`
+  width: 50%;
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    flex-direction: column;
+    border-radius: 0px;
+    margin: 100px 0 0 0;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    width: 85%;
+    margin: 0 auto;
+  }
+`
+
 const AppStoreImg = styled.img`
-  width: 140px;
+  max-width: 8.75rem;
+  width: 43%;
   margin-right: 1rem;
 `
 
 const AppCTA = () => {
   return (
     <AppContainer>
+      <AppImage src={AppExampleImage} />
       <AppTextContainer>
         <Header>Get the tCheck app</Header>
         <AppBody secondary>
