@@ -8,18 +8,43 @@ import { Header4, Lead } from "./Typography"
 import Button from "./Button"
 
 import { Flour } from "../lib/colors"
+import { sizes } from "../lib/layout"
 
 import whiteBottom from "../images/Whitebottom.svg"
 
 const HeroContentContainer = styled.div`
   text-align: center;
   max-width: 625px;
-  margin: 4.5rem auto 0;
+  margin: 4.5rem auto 4.5rem;
   color: ${Flour};
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    margin: 3rem auto 4rem;
+    max-width: 21rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    margin: 3rem auto 4rem;
+    max-width: 21rem;
+  }
 `
 
 const HeroBackground = styled(BackgroundImage)`
-  height: 30rem;
+  &::before {
+    background-position: bottom !important;
+  }
+`
+
+const HeroHeader = styled(Header4)`
+  @media (max-width: ${sizes.modifiedTablet}) {
+    font-size: 1.5rem;
+  }
+`
+
+const HeroLead = styled(Lead)`
+  @media (max-width: ${sizes.modifiedTablet}) {
+    font-size: 1rem;
+  }
 `
 
 const HeroButton = styled(Button)`
@@ -27,18 +52,34 @@ const HeroButton = styled(Button)`
   margin: 0 auto;
 `
 
-const BR = styled.br`
+const BR1 = styled.br`
   line-height: 2rem;
+  @media (max-width: ${sizes.modifiedTablet}) {
+    line-height: 1rem;
+  }
 `
 
-const WhiteBottom = styled.img``
+const BR2 = styled.br`
+  line-height: 2rem;
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    line-height: 3rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    line-height: 4rem;
+  }
+`
+
+const BR3 = styled.br`
+  line-height: 1.5rem;
+`
 
 const Hero = () => {
   return (
     <StaticQuery
       query={graphql`
         query {
-          hero: file(relativePath: { eq: "background-baking.jpg" }) {
+          hero: file(relativePath: { eq: "hero_homepage.png" }) {
             childImageSharp {
               fluid(quality: 100, maxWidth: 1440) {
                 ...GatsbyImageSharpFluid_withWebp
@@ -55,20 +96,19 @@ const Hero = () => {
             backgroundColor={`#040e18`}
           >
             <HeroContentContainer>
-              <Header4 color={Flour}>
+              <HeroHeader color={Flour}>
                 From seed to sale, tCheck can tell you the potency{" "}
-              </Header4>
-              <BR />
-              <Lead color={Flour}>
+              </HeroHeader>
+              <BR1 />
+              <HeroLead color={Flour}>
                 Thousands of cannabis professionals are testing their infusions,
                 flower, and concentrate with tCheck.
-              </Lead>
-              <BR />
+              </HeroLead>
+              <BR2 />
               <HeroButton>Buy Now</HeroButton>
-              <BR />
+              <BR3 />
               <HeroButton tertiary>Learn More</HeroButton>
             </HeroContentContainer>
-            {/* <WhiteBottom src={whiteBottom} /> */}
           </HeroBackground>
         )
       }}
