@@ -4,29 +4,63 @@ import styled from "styled-components"
 import { Body, Header5 } from "./Typography"
 
 import { tBlue, Fade } from "../lib/colors"
+import { sizes } from "../lib/layout"
 
 const CustomerSegmentQ1Container = styled.section`
   display: flex;
   justify-content: space-between;
   padding: 6rem 0;
+  align-items: center;
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const CustomerSegmentQ1Img = styled.div`
   background-color: ${tBlue};
   width: 28rem;
   height: 21.5rem;
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    width: 21rem;
+    height: 15.4rem;
+  }
 `
 
 const CustomerSegmentQ1TextContainer = styled.div`
   max-width: 38.75rem;
+  width: 50%;
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    width: 50%;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
-const CustomerSegmentQ1Header = styled(Header5)``
+const CustomerSegmentQ1Header = styled(Header5)`
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    font-size: 1.5rem;
+  }
+`
 
 const CustomerSegmentQ1Paragraph1 = styled(Body)`
   margin-top: 2rem;
   font-size: 1.25rem;
   color: ${Fade};
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    font-size: 1rem;
+  }
 `
 
 const CustomerSegmentUL = styled.ul`
@@ -38,12 +72,20 @@ const CustomerSegmentUL = styled.ul`
   font-family: Lato;
   font-size: 1.25rem;
   color: ${Fade};
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    font-size: 1rem;
+  }
 `
 
 const CustomerSegmentQ1Paragraph2 = styled(Body)`
   margin-top: 2rem;
   font-size: 1.25rem;
   color: ${Fade};
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    font-size: 1rem;
+  }
 `
 
 // What do I call this thing?

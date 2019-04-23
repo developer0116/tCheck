@@ -6,13 +6,9 @@ import { Body } from "./Typography"
 import { tGreen, Dada, Flour } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
-import facebook from "../images/facebook.png"
-import instagram from "../images/instagram.png"
-import linkedIn from "../images/linked-in.png"
-
 const CustomerSegmentVPContainer = styled.section`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 2rem 0;
   max-width: 66.5rem;
   margin: -100px auto 0;
@@ -21,7 +17,11 @@ const CustomerSegmentVPContainer = styled.section`
   position: relative;
   background-color: ${Flour};
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    width: 90%;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
     align-items: center;
   }
@@ -31,7 +31,11 @@ const CustomerSegmentVP = styled.div`
   text-align: center;
   width: 13.5rem;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    margin: 0;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     margin: 40px 0;
   }
 `
@@ -51,27 +55,34 @@ const CustomerSegmentVPText = styled(Body)`
   font-size: 1.25rem;
 `
 
-const CustomerSegmentValueProps = React.memo(() => {
-  return (
-    <CustomerSegmentVPContainer>
-      <CustomerSegmentVP>
-        <CustomerSegmentVPImg src={facebook} />
-        <CustomerSegmentVPText>
-          Improve strains through custom hybrids
-        </CustomerSegmentVPText>
-      </CustomerSegmentVP>
-      <Line />
-      <CustomerSegmentVP>
-        <CustomerSegmentVPImg src={instagram} />
-        <CustomerSegmentVPText>A/B test crop</CustomerSegmentVPText>
-      </CustomerSegmentVP>
-      <Line />
-      <CustomerSegmentVP>
-        <CustomerSegmentVPImg src={linkedIn} />
-        <CustomerSegmentVPText>Harvest at peak potency</CustomerSegmentVPText>
-      </CustomerSegmentVP>
-    </CustomerSegmentVPContainer>
-  )
-})
+const CustomerSegmentValueProps = React.memo(
+  ({
+    valueProp1Img,
+    valueProp2Img,
+    valueProp3Img,
+    valueProp1Text,
+    valueProp2Text,
+    valueProp3Text,
+  }) => {
+    return (
+      <CustomerSegmentVPContainer>
+        <CustomerSegmentVP>
+          <CustomerSegmentVPImg src={valueProp1Img} />
+          <CustomerSegmentVPText>{valueProp1Text}</CustomerSegmentVPText>
+        </CustomerSegmentVP>
+        <Line />
+        <CustomerSegmentVP>
+          <CustomerSegmentVPImg src={valueProp2Img} />
+          <CustomerSegmentVPText>{valueProp2Text}</CustomerSegmentVPText>
+        </CustomerSegmentVP>
+        <Line />
+        <CustomerSegmentVP>
+          <CustomerSegmentVPImg src={valueProp3Img} />
+          <CustomerSegmentVPText>{valueProp3Text}</CustomerSegmentVPText>
+        </CustomerSegmentVP>
+      </CustomerSegmentVPContainer>
+    )
+  }
+)
 
 export default CustomerSegmentValueProps

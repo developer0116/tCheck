@@ -7,7 +7,6 @@ import { Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import hexagonLarge from "../images/hexagon_large.svg"
-import hexagonSmall from "../images/hexagon_small.svg"
 import ExpansionKit from "../images/expansionkit.png"
 import GreenHex from "../images/hex_green.svg"
 
@@ -16,7 +15,10 @@ const ProductRowContainer = styled.section`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
   }
 `
@@ -24,7 +26,12 @@ const ProductRowContainer = styled.section`
 const ProductTextSection = styled.div`
   width: 35%;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    margin-right: calc(100vw - 93%);
+    width: 45%;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     order: 2;
     width: 90%;
     text-align: center;
@@ -42,6 +49,12 @@ const ProductTitle = styled(Header5)`
     top: -12px;
     left: -23px;
   }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    &:before {
+      content: unset;
+    }
+  }
 `
 
 const ProductBody = styled(Body)``
@@ -51,7 +64,11 @@ const ProductImageContainer = styled.div`
   height: 506px;
   background: url(${hexagonLarge}) no-repeat center;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    width: 40%;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     width: 90%;
     background: url(${hexagonLarge}) no-repeat center;
     background-size: contain;
@@ -64,7 +81,10 @@ const ProductImage = styled.img`
   margin-top: 130px;
   margin-bottom: 60px;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     margin-top: 80px;
     width: 85%;
   }

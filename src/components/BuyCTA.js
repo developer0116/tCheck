@@ -1,23 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header5 } from "./Typography"
+import { Lead, Header5 } from "./Typography"
 import Button from "./Button"
 
 import { Flour, Fade, tGreen, Ink, tBlue } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
-import hexagonLarge from "../images/hexagon_large.svg"
-import hexagonSmall from "../images/hexagon_small.svg"
 import PicPrice from "../images/pic_price.png"
 
 const CTAContainer = styled.section`
+  width: 100%;
+  height: calc(50vw / 2);
+  max-height: 26rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: space-between;
-  background-color: ${tBlue};
-  border-radius: 8px;
-  margin: 140px 0;
-  width: 100%;
+  align-items: center;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
   }
@@ -30,13 +29,18 @@ const CTAContainer = styled.section`
 `
 
 const CTATextSection = styled.div`
-  width: 500px;
-  margin: 0 auto;
-  padding: 4.5rem 0;
+  background-color: ${tBlue};
+  border-radius: 0 8px 8px 0;
+  vertical-align: middle;
+  height: 100%;
   text-align: center;
-  border: 1px solid black;
+  width: 50%;
+  position: relative;
+  left: -4px;
+  padding: 4.5rem 0;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    padding: 2rem 0;
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
@@ -47,19 +51,18 @@ const CTATextSection = styled.div`
 `
 
 const CTATitle = styled(Header5)`
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  width: 90%;
 `
 
 const CTALead = styled(Lead)`
   font-size: 1.25rem;
-  padding: 0 9%;
-  margin-bottom: 4.5rem;
+  width: 60%;
+  margin: 0 auto 10%;
 `
 
 const CTAImage = styled.img`
-  width: 60%;
-  max-height: 29.5rem;
-  margin: -30px;
+  width: 55%;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
   }
@@ -79,6 +82,7 @@ const BuyCTA = () => {
   return (
     <CTAContainer>
       <CTAImage src={PicPrice} />
+
       <CTATextSection>
         <CTATitle color={Flour}>
           Start testing infusions with tCheck for $279.99

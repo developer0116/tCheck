@@ -7,7 +7,6 @@ import { Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import hexagonLarge from "../images/hexagon_large.svg"
-import hexagonSmall from "../images/hexagon_small.svg"
 import CannabisTester from "../images/Cannabistester.png"
 import OrangeHex from "../images/hex_orange.svg"
 
@@ -16,10 +15,6 @@ const ProductRowContainer = styled.section`
   justify-content: space-between;
   align-items: center;
   height: 27rem;
-
-  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
-    flex-direction: column;
-  }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
@@ -30,9 +25,8 @@ const ProductTextSection = styled.div`
   width: 29%;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
-    order: 2;
-    width: 90%;
-    text-align: center;
+    width: 40%;
+    margin-left: calc(100vw - 93%);
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
@@ -54,12 +48,6 @@ const ProductTitle = styled(Header5)`
     left: -23px;
   }
 
-  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
-    &:before {
-      content: unset;
-    }
-  }
-
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     &:before {
       content: unset;
@@ -75,7 +63,7 @@ const ProductImageContainer = styled.div`
   background: url(${hexagonLarge}) no-repeat center;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
-    width: 90%;
+    width: 50%;
     background: url(${hexagonLarge}) no-repeat center;
     background-size: contain;
     height: 300px;

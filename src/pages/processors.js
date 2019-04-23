@@ -10,13 +10,18 @@ import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCent
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
 import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
 
+import ProcessorsHero from "../images/hero_processor.png"
+import ValueProp1 from "../images/processors_maxpotency.svg"
+import ValueProp2 from "../images/processors_controlyield.svg"
+import ValueProp3 from "../images/processors_cannaloss.svg"
+
 import { sizes } from "../lib/layout"
 
 const list = [
-  "A pea sized nug that is at least 60% dried",
+  "50-80 ML of concentrate",
   "tCheck 2",
   "Expansion Kit",
-  "5 minutes of your time",
+  "6 minutes of your time",
 ]
 
 const PaddingContainer = styled.div`
@@ -31,32 +36,40 @@ const Processors = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <CustomerSegmentHero
-      heroHeader={"Harvest the highest potency"}
+      heroImgURL={ProcessorsHero}
+      heroHeader={"Concentrate potency is super critical"}
       heroLead={
-        "Whether you are in a grow room or on the field, tCheck gives you more control over your crop. "
+        "Cannabis concentrates are only getting better, test your yield for extraction efficiency."
       }
     />
     <PaddingContainer>
-      <CustomerSegmentValueProps />
+      <CustomerSegmentValueProps
+        valueProp1Img={ValueProp1}
+        valueProp1Text={"Find max potency"}
+        valueProp2Img={ValueProp2}
+        valueProp2Text={"Better control yield and efficiency"}
+        valueProp3Img={ValueProp3}
+        valueProp3Text={"Identify areas of cannabinoid loss"}
+      />
       <CustomerSegmentCarousel />
       <CustomerSegmentCenterTestingBlurb
-        header={"Determine your THCa percentage in a pinch"}
+        header={"Dial in your controls and increase your efficiency"}
         body={
-          "With just a pinch of plant, testing your cannabis on the spot for THCa gives you a leg up over the competition. Your crop may look and smell amazing, but is it sitting at 15.6%, or soaring at 27.3%? State guidelines vary on testing for contaminates like pesticides, or heavy metals but everyone wants the strongest strain to hit that top shelf. We can help you determine which strain has the highest THCa so you can choose which plants to pull, and which ones to process into concentrates instead."
+          "With so many variables for making concentrates, being able to determine what you're doing right and what might need some tweaking, can be invaluable. tCheck offers insight into what changes increase your yield and what increases your efficiency. Perfecting your process means less time and energy spent towards making a better product. Making a better product means everything at the end of the day. "
         }
       />
       <CustomerSegmentQuestion1
         header={"How do I test the potency?"}
         paragraph1={
-          "Whether this is your first crop, or you're a seasoned green thumb, we have designed tCheck to be simple enough for virtually anyone to use. Here’s all you need: "
+          "From closed-loop to rosin press, all you need to test any concentrate is provided in our expansion kit, to go along with your tCheck. Heres what you need: "
         }
         list={list}
         paragraph2={
-          "tCheck, along with the Expansion Kit gives you everything you need to do 9 flower tests. Need to test more? Just order another bottle of reagent."
+          "tCheck, along with the Expansion Kit gives you everything you need to do 9 concentrate tests. Need to test more? Just order another bottle of reagent."
         }
       />
       <CustomerSegmentQuestion2
-        header={"Track each test right from the tCheck app"}
+        header={"We make testing concentrates easy"}
         body={
           "When you log in to the free tCheck app, you can see all your past test results in the user log. You can add notes about that test, such as what strain it is, or the nutrients for that grow. You can track the progress of how green your thumb is with real, live potency testing- in the palm of your hands."
         }
