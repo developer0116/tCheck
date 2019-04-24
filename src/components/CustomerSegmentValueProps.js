@@ -24,6 +24,7 @@ const CustomerSegmentVPContainer = styled.section`
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
     align-items: center;
+    width: 90%;
   }
 `
 

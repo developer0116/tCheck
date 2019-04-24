@@ -21,8 +21,10 @@ const CustomerSegmentQ2Container = styled.section`
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    margin: 0;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0 3rem;
   }
 `
 
@@ -35,6 +37,10 @@ const CustomerSegmentQ2Img = styled.div`
     width: 21rem;
     height: 15.4rem;
   }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    width: 90%;
+  }
 `
 
 const CustomerSegmentQ2TextContainer = styled.div`
@@ -45,8 +51,11 @@ const CustomerSegmentQ2TextContainer = styled.div`
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    width: 90%;
+    margin-top: 2rem;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    order: 2;
   }
 `
 const CustomerSegmentQ2Header = styled(Header5)`
@@ -61,6 +70,10 @@ const CustomerSegmentQ2Paragraph1 = styled(Body)`
   color: ${Fade};
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     font-size: 1rem;
   }
 `

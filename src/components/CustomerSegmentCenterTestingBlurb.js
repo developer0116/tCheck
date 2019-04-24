@@ -26,6 +26,8 @@ const Header = styled(Header4)`
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1.5rem;
+    width: 90%;
   }
 `
 
@@ -36,6 +38,12 @@ const CustomerSegmentBlurb = styled(Body)`
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     font-size: 1rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1rem;
+    width: 90%;
+    margin: 2rem auto;
   }
 `
 

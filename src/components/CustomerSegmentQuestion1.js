@@ -19,6 +19,8 @@ const CustomerSegmentQ1Container = styled.section`
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0 3rem;
+    margin: 0;
   }
 `
 
@@ -30,6 +32,10 @@ const CustomerSegmentQ1Img = styled.div`
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     width: 21rem;
     height: 15.4rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    width: 90%;
   }
 `
 
@@ -44,12 +50,21 @@ const CustomerSegmentQ1TextContainer = styled.div`
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    margin-top: 2rem;
   }
 `
 
 const CustomerSegmentQ1Header = styled(Header5)`
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1.5rem;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
   }
 `
 
@@ -59,6 +74,10 @@ const CustomerSegmentQ1Paragraph1 = styled(Body)`
   color: ${Fade};
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     font-size: 1rem;
   }
 `
@@ -76,6 +95,10 @@ const CustomerSegmentUL = styled.ul`
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     font-size: 1rem;
   }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1rem;
+  }
 `
 
 const CustomerSegmentQ1Paragraph2 = styled(Body)`
@@ -84,6 +107,10 @@ const CustomerSegmentQ1Paragraph2 = styled(Body)`
   color: ${Fade};
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     font-size: 1rem;
   }
 `
