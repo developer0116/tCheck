@@ -51,22 +51,30 @@ const ChevronArrowImg = styled.img`
 const FAQAnswer = styled(Body)`
   font-size: 1.25rem;
   margin-top: 1rem;
+
+  overflow: hidden;
   &.${transitionName}-enter {
+    max-height: 0rem;
     opacity: 0;
+    transition: all ${transitionDuration}ms ease;
   }
 
   &.${transitionName}-enter-active {
+    max-height: 30rem;
     opacity: 1;
-    transition: opacity ${transitionDuration}ms ease-in;
+    transition: all ${transitionDuration}ms ease;
   }
 
   &.${transitionName}-exit {
+    max-height: 30rem;
     opacity: 1;
+    transition: all ${transitionDuration}ms ease;
   }
 
   &.${transitionName}-exit-active {
+    max-height: 0rem;
     opacity: 0;
-    transition: opacity ${transitionDuration}ms ease-out;
+    transition: all ${transitionDuration}ms ease;
   }
 `
 
