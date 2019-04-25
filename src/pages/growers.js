@@ -9,6 +9,11 @@ import CustomerSegmentCarousel from "../components/CustomerSegmentCarousel"
 import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCenterTestingBlurb"
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
 import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
+import { Body } from "../components/Typography"
+
+import ValueProp1 from "../images/growers_improvestrains.svg"
+import ValueProp2 from "../images/growers_abtest.svg"
+import ValueProp3 from "../images/growers_harvestpeak.svg"
 
 import { sizes } from "../lib/layout"
 
@@ -27,6 +32,23 @@ const PaddingContainer = styled.div`
   }
 `
 
+const CustomerSegmentBlurb = styled(Body)`
+  max-width: 77rem;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  text-align: center;
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1rem;
+    width: 90%;
+    margin: 2rem auto;
+  }
+`
+
 const Growers = React.memo(() => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -37,14 +59,26 @@ const Growers = React.memo(() => (
       }
     />
     <PaddingContainer>
-      <CustomerSegmentValueProps />
+      <CustomerSegmentValueProps
+        valueProp1Img={ValueProp1}
+        valueProp1Text={"Improve strains through custom hybrids"}
+        valueProp2Img={ValueProp2}
+        valueProp2Text={"A/B test crop"}
+        valueProp3Img={ValueProp3}
+        valueProp3Text={"Harvest at peak potency"}
+      />
       <CustomerSegmentCarousel />
       <CustomerSegmentCenterTestingBlurb
         header={"Determine your THCa percentage in a pinch"}
         body={
-          "With just a pinch of plant, testing your cannabis on the spot for THCa gives you a leg up over the competition. Your crop may look and smell amazing, but is it sitting at 15.6%, or soaring at 27.3%? State guidelines vary on testing for contaminates like pesticides, or heavy metals but everyone wants the strongest strain to hit that top shelf. We can help you determine which strain has the highest THCa so you can choose which plants to pull, and which ones to process into concentrates instead."
+          "With just a pinch of plant, testing your cannabis on the spot for THCa gives you a leg up over the competition. Your crop may look and smell amazing, but is it sitting at 15.6%, or soaring at 27.3%? State guidelines vary on testing for contaminates like pesticides, or heavy metals but everyone wants the strongest strain to hit that top shelf."
         }
       />
+      <CustomerSegmentBlurb secondary>
+        We can help you determine which strain has the highest THCa so you can
+        choose which plants to pull, and which ones to process into concentrates
+        instead.
+      </CustomerSegmentBlurb>
       <CustomerSegmentQuestion1
         header={"How do I test the potency?"}
         paragraph1={

@@ -9,7 +9,7 @@ import { sizes } from "../lib/layout"
 const CustomerSegmentQ2Container = styled.section`
   margin: 0 -80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 6rem 0;
   background-color: ${Ghost};
   align-items: center;
@@ -44,7 +44,7 @@ const CustomerSegmentQ2Img = styled.div`
 `
 
 const CustomerSegmentQ2TextContainer = styled.div`
-  max-width: 38.75rem;
+  max-width: 30rem;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     width: 50%;

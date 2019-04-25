@@ -10,13 +10,16 @@ import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCent
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
 import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
 
+import ValueProp1 from "../images/edible_cancompliant.svg"
+import ValueProp2 from "../images/edible_productline.svg"
+import ValueProp3 from "../images/edible_newrecipes.svg"
+
 import { sizes } from "../lib/layout"
 
 const list = [
-  "A pea sized nug that is at least 60% dried",
+  "3-5 drops of your infusion",
   "tCheck 2",
-  "Expansion Kit",
-  "5 minutes of your time",
+  "2 minutes of your time",
 ]
 
 const PaddingContainer = styled.div`
@@ -37,18 +40,27 @@ const Makers = () => (
       }
     />
     <PaddingContainer>
-      <CustomerSegmentValueProps />
+      <CustomerSegmentValueProps
+        valueProp1Img={ValueProp1}
+        valueProp1Text={"Be Cannabis-compliant"}
+        valueProp2Img={ValueProp2}
+        valueProp2Text={"Expand product line"}
+        valueProp3Img={ValueProp3}
+        valueProp3Text={"Develop new recipes"}
+      />
       <CustomerSegmentCarousel />
       <CustomerSegmentCenterTestingBlurb
-        header={"Determine your THCa percentage in a pinch"}
+        header={
+          "Test every batch of canna oil in any kitchen you are working in."
+        }
         body={
-          "With just a pinch of plant, testing your cannabis on the spot for THCa gives you a leg up over the competition. Your crop may look and smell amazing, but is it sitting at 15.6%, or soaring at 27.3%? State guidelines vary on testing for contaminates like pesticides, or heavy metals but everyone wants the strongest strain to hit that top shelf. We can help you determine which strain has the highest THCa so you can choose which plants to pull, and which ones to process into concentrates instead."
+          "tCheck is small enough to fit in your pocket, so taking it to any venue you are working at is super simple. Our reusable tray means that you can test your infused butter, coconut oil, olive oil, or even alcohol tinctures one right after another without anything more than cleaning off the tray. Personalized, and perfectly dosed recipes are in the palm of your hand."
         }
       />
       <CustomerSegmentQuestion1
         header={"How do I test the potency?"}
         paragraph1={
-          "Whether this is your first crop, or you're a seasoned green thumb, we have designed tCheck to be simple enough for virtually anyone to use. Here’s all you need: "
+          "Once you have infused your base oil, butter, or alcohol, testing the potency is simple enough for anyone. Here's all you need: "
         }
         list={list}
         paragraph2={
@@ -56,9 +68,9 @@ const Makers = () => (
         }
       />
       <CustomerSegmentQuestion2
-        header={"Track each test right from the tCheck app"}
+        header={"Make any oil work for any recipe"}
         body={
-          "When you log in to the free tCheck app, you can see all your past test results in the user log. You can add notes about that test, such as what strain it is, or the nutrients for that grow. You can track the progress of how green your thumb is with real, live potency testing- in the palm of your hands."
+          "Our built-in calculator allows you to customize your infused oil, butter, or alcohol tincture to any recipe. Just input the required material into the calculator and it will tell you exactly how much of your infusion to add to your recipe to get to that perfect desired dose. "
         }
       />
     </PaddingContainer>

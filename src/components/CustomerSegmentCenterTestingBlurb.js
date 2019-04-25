@@ -19,7 +19,7 @@ const CustomerSegmentBlurbContainer = styled.section`
 
 const Header = styled(Header4)`
   margin: 0 auto;
-  max-width: 29.8rem;
+  max-width: 37.8rem;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     font-size: 1.5rem;
