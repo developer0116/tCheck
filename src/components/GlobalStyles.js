@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { tGreen, Fade } from "../lib/colors"
 
 const GlobalStyle = createGlobalStyle`
 	* {
@@ -19,7 +20,32 @@ const GlobalStyle = createGlobalStyle`
 
 	textarea, select, input, button { 
 		outline: none;
-	}
+  }
+  
+  .carousel .control-dots {
+    text-align: left !important;
+  }
+
+  .carousel .control-dots .dot.selected {
+    width: 1rem !important;
+    height: 1rem !important;
+    background: ${tGreen} !important;
+    border: none !important;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  .carousel .control-dots .dot {
+    width: 1rem !important;
+    height: 1rem !important;
+    border: solid 1px ${Fade} !important;
+
+    &:hover {
+      opacity: 0.3 !important;
+    }
+  }
 `
 
 export default GlobalStyle

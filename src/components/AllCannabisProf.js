@@ -3,13 +3,14 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons"
+import ProductCarousel from "./ProductCarousel"
+
+import CarouselImages from "../lib/carouselImages"
 
 import { Body, Lead, Header4 } from "./Typography"
 
 import { Ghost, tGreen, tBlue } from "../lib/colors"
 import { sizes } from "../lib/layout"
-
-import PicPrice from "../images/pic_price.png"
 
 const CannabisContainer = styled.section`
   display: flex;
@@ -65,11 +66,11 @@ const CannabisLink = styled(Link)`
   font-size: 0.875rem;
 `
 
-const CannabisProfImg = styled.img`
+const CannabisProfCarousel = styled.div`
   position: relative;
   top: 125px;
   margin-left: auto;
-  height: 500px;
+  width: 62%;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     position: unset;
@@ -119,7 +120,17 @@ const AllCannabisProf = () => {
           Learn More <ArrowIcon icon={faLongArrowAltRight} />
         </CannabisLink>
       </CannabisTextContainer>
-      <CannabisProfImg src={PicPrice} />
+      <CannabisProfCarousel>
+        <ProductCarousel>
+          {CarouselImages["professionals"].map(img => {
+            return (
+              <div>
+                <img src={img} />
+              </div>
+            )
+          })}
+        </ProductCarousel>
+      </CannabisProfCarousel>
     </CannabisContainer>
   )
 }

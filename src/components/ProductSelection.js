@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import { Body, Lead, Header4 } from "./Typography"
 import Button from "./Button"
+import ProductCarousel from "./ProductCarousel"
 
 import { tGreen, tBlue, Ink, Fade, Dada, Ghost, Flour } from "../lib/colors"
 import { sizes } from "../lib/layout"
+import CarouselImages from "../lib/carouselImages"
 
 import CheckMark from "../images/greenCheckMark.svg"
 
@@ -14,17 +16,20 @@ const ProductSelectionContainer = styled.section`
   padding: 3.5rem 6.25rem;
   background-color: ${Ghost};
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    padding: 1.5rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
 `
 
-const ProductCarousel = styled.div`
+const ProductCarouselContainer = styled.div`
   width: 50%;
   height: 600px;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,12 +112,22 @@ const ProductPolicyCheckMark = styled.img`
 `
 
 const ProductSelection = ({ product, toggleProduct, color, colorSelect }) => {
+  const [productColor, changeColor] = useState("black")
   const headerText = product === "kit" ? "tCheck 2 & Expansion Kit" : "tCheck 2"
+
   return (
     <ProductSelectionContainer>
-      <ProductCarousel>
-        <div>Carousel Here</div>
-      </ProductCarousel>
+      <ProductCarouselContainer>
+        <ProductCarousel>
+          {CarouselImages[productColor].map(img => {
+            return (
+              <div>
+                <img src={img} />
+              </div>
+            )
+          })}
+        </ProductCarousel>
+      </ProductCarouselContainer>
       <ProductSelectionModule>
         <ProductSelectionHeader>{headerText}</ProductSelectionHeader>
         <ProductSelectionSubHeader color={Fade}>
@@ -125,10 +140,30 @@ const ProductSelection = ({ product, toggleProduct, color, colorSelect }) => {
         <ProductColorSelectContainer>
           <ProductColorLead color={Fade}>Pick your color</ProductColorLead>
           <ProductColorRow>
-            <ProductColorCircle color={Ink} />
-            <ProductColorCircle color={tGreen} />
-            <ProductColorCircle color={tBlue} />
-            <ProductColorCircle color={Flour} />
+            <ProductColorCircle
+              color={Ink}
+              onClick={e => {
+                changeColor("black")
+              }}
+            />
+            <ProductColorCircle
+              color={tGreen}
+              onClick={e => {
+                changeColor("green")
+              }}
+            />
+            <ProductColorCircle
+              color={tBlue}
+              onClick={e => {
+                changeColor("blue")
+              }}
+            />
+            <ProductColorCircle
+              color={Flour}
+              onClick={e => {
+                changeColor("white")
+              }}
+            />
           </ProductColorRow>
           <ProductAddToCartButton>Add to Cart</ProductAddToCartButton>
         </ProductColorSelectContainer>
