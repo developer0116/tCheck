@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 
 import { Body, Lead, Header4 } from "./Typography"
@@ -7,7 +7,8 @@ import ProductCarousel from "./ProductCarousel"
 
 import { tGreen, tBlue, Ink, Fade, Dada, Ghost, Flour } from "../lib/colors"
 import { sizes } from "../lib/layout"
-import CarouselImages from "../lib/carouselImages"
+import productCarouselImages from "../lib/productCarouselImages"
+import productSelectionContent from "../lib/productSelectionContent"
 
 import CheckMark from "../images/greenCheckMark.svg"
 
@@ -33,6 +34,8 @@ const ProductCarouselContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     width: 100%;
@@ -45,22 +48,55 @@ const ProductSelectionModule = styled.div`
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   background-color: ${Flour};
   padding: 2rem;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     width: 100%;
   }
 `
 
-const ProductSelectionHeader = styled(Header4)``
+const ProductSelectionTitle = styled(Header4)``
 
-const ProductSelectionSubHeader = styled(Lead)`
+const ProductSelectionHeader = styled(Lead)`
   font-size: 1.25rem;
 `
 
-const ProductSelectionToggle = styled.div`
+const ProductSelectionButtonsContainer = styled.div`
+  display: flex;
+  border: 3px solid ${Dada};
+  border-radius: 12px;
+  margin: 1.5rem 0;
+`
+
+const ProductSelectionButtons = styled.div`
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+
+  ${({ selected }) => {
+    return selected
+      ? `background-color: ${tBlue}; margin: -10px; border-radius: 12px; padding: 30px; color: ${Flour}; z-index: 2;`
+      : null
+  }}
+`
+
+const ProductSelectionButtonTitle = styled(ProductSelectionHeader)`
+  margin-bottom: 1rem;
+  color: inherit;
+`
+
+const ProductSelectionButtonPrice = styled(Body)`
+  font-size: 0.875rem;
+  color: inherit;
+`
+
+const Line = styled.span`
   border: 1px solid ${Dada};
-  border-radius: 8px;
-  margin: 3rem 0;
+  margin: 15px 0;
+  position: relative;
+  z-index: 1;
 `
 
 const ProductColorSelectContainer = styled.div`
@@ -68,8 +104,13 @@ const ProductColorSelectContainer = styled.div`
   margin-bottom: 2rem;
 `
 
-const ProductColorLead = styled(ProductSelectionSubHeader)`
+const ProductColorLead = styled(ProductSelectionHeader)`
   margin-bottom: 2rem;
+`
+
+const Misc = styled(Body)`
+  text-align: center;
+  margin: 2rem 0 0 0;
 `
 
 const ProductColorRow = styled.div`
@@ -111,32 +152,87 @@ const ProductPolicyCheckMark = styled.img`
   margin: 0 0.5rem 0 0;
 `
 
-const ProductSelection = ({ product, toggleProduct, color, colorSelect }) => {
-  const [productColor, changeColor] = useState("black")
-  const headerText = product === "kit" ? "tCheck 2 & Expansion Kit" : "tCheck 2"
+const ProductCarouselImgContainer = styled.div`
+  background-color: ${Ghost};
+`
 
+const InlineLink = styled.a`
+  text-decoration: none;
+  color: ${tBlue};
+`
+
+const ProductSelection = ({
+  productNum,
+  setProductNum,
+  productColor,
+  changeColor,
+}) => {
   return (
     <ProductSelectionContainer>
       <ProductCarouselContainer>
         <ProductCarousel>
-          {CarouselImages[productColor].map(img => {
+          {productCarouselImages[productColor].map(img => {
             return (
-              <div>
+              <ProductCarouselImgContainer>
                 <img src={img} />
-              </div>
+              </ProductCarouselImgContainer>
             )
           })}
         </ProductCarousel>
       </ProductCarouselContainer>
       <ProductSelectionModule>
-        <ProductSelectionHeader>{headerText}</ProductSelectionHeader>
-        <ProductSelectionSubHeader color={Fade}>
-          Cannabis Infusion Tester
-        </ProductSelectionSubHeader>
-        <ProductSelectionToggle>
-          <div>tCheck 2 & Expansion Kit</div>
-          <div>tCheck 2</div>
-        </ProductSelectionToggle>
+        <ProductSelectionTitle>
+          {productSelectionContent[productNum].title}
+        </ProductSelectionTitle>
+        <ProductSelectionHeader>
+          {productSelectionContent[productNum].header}
+        </ProductSelectionHeader>
+        <Body secondary>
+          {productSelectionContent[productNum].subHeader}{" "}
+          <InlineLink href="#">Learn more</InlineLink>
+        </Body>
+        <Misc secondary>Select your purchase</Misc>
+        <ProductSelectionButtonsContainer>
+          <ProductSelectionButtons
+            selected={productNum == 1}
+            onClick={() => setProductNum(1)}
+          >
+            <ProductSelectionButtonTitle>
+              tCheck 2 & Expansion Kit
+            </ProductSelectionButtonTitle>
+            <ProductSelectionButtonPrice fontWeight={900}>
+              $479.98
+            </ProductSelectionButtonPrice>
+          </ProductSelectionButtons>
+          <Line />
+          <ProductSelectionButtons
+            selected={productNum == 2}
+            onClick={() => setProductNum(2)}
+          >
+            <ProductSelectionButtonTitle>
+              tCheck 2 device only
+            </ProductSelectionButtonTitle>
+            <ProductSelectionButtonPrice fontWeight={900}>
+              $279.99
+            </ProductSelectionButtonPrice>
+          </ProductSelectionButtons>
+          <Line />
+          <ProductSelectionButtons
+            selected={productNum == 3}
+            onClick={() => setProductNum(3)}
+          >
+            <ProductSelectionButtonTitle>
+              Expansion kit only
+            </ProductSelectionButtonTitle>
+            <ProductSelectionButtonPrice fontWeight={900}>
+              $199.99
+            </ProductSelectionButtonPrice>
+          </ProductSelectionButtons>
+        </ProductSelectionButtonsContainer>
+        <Misc secondary>
+          Ships in 2-3 weeks. See{" "}
+          <InlineLink href="#">shipping details</InlineLink>
+        </Misc>
         <ProductColorSelectContainer>
           <ProductColorLead color={Fade}>Pick your color</ProductColorLead>
           <ProductColorRow>

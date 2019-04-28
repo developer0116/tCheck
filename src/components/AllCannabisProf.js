@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons"
 import ProductCarousel from "./ProductCarousel"
 
-import CarouselImages from "../lib/carouselImages"
+import productCarouselImages from "../lib/productCarouselImages"
 
 import { Body, Lead, Header4 } from "./Typography"
 
@@ -122,7 +122,7 @@ const AllCannabisProf = () => {
       </CannabisTextContainer>
       <CannabisProfCarousel>
         <ProductCarousel>
-          {CarouselImages["professionals"].map(img => {
+          {productCarouselImages["professionals"].map(img => {
             return (
               <div>
                 <img src={img} />

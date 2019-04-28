@@ -19,24 +19,26 @@ const PaddingContainer = styled.div`
 `
 
 const ProductPage = () => {
-  // initial state is "kit"
-  // to toggle between "kit" and "tCheck"
-  const [product, toggleProduct] = useState("kit")
+  // to select between
+  // 1. tCheck and Kit
+  // 2. tCheck
+  // 3. Kit
+  const [productNum, setProductNum] = useState(1)
 
   // options are
   // black, green, blue, white
-  const [color, colorSelect] = useState("green")
+  const [productColor, changeColor] = useState("black")
 
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <ProductSelection
-        product={product}
-        toggleProduct={toggleProduct}
-        color={color}
-        colorSelect={colorSelect}
+        productNum={productNum}
+        setProductNum={setProductNum}
+        productColor={productColor}
+        changeColor={changeColor}
       />
-      <ProductDetails product={product} />
+      <ProductDetails productNum={productNum} />
       <ProductFAQ />
 
       <PaddingContainer />

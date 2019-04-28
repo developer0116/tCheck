@@ -2,10 +2,14 @@ import React, { useState } from "react"
 import styled from "styled-components"
 
 import { Body, Lead, Header4 } from "./Typography"
+import ProductDetailsFeatures from "./ProductDetailsFeatures"
+import ProductDetailsIncludes from "./ProductDetailsIncludes"
+import ProductDetailsShipping from "./ProductDetailsShipping"
+import ProductDetailsSpecs from "./ProductDetailsSpecs"
 
 import { Fade, Dada, Ghost } from "../lib/colors"
 import { sizes } from "../lib/layout"
-import detailsContent from "../lib/detailsContent"
+import productDetailsContent from "../lib/productDetailsContent"
 
 const DetailsContainer = styled.section``
 
@@ -25,39 +29,43 @@ const DetailsTab = styled(Lead)`
 
 const DetailsText = styled(Body)`
   max-width: 46rem;
-  margin: 2rem auto 0;
+  margin: 2rem auto 3.5rem;
 `
 
-const ProductDetails = React.memo(({ product }) => {
+const ProductDetails = React.memo(({ productNum }) => {
   // detail would be a string of
-  // description, features, included, shipping, or specs
-  const [detail, setDetail] = useState("description")
+  // features, included, shipping, or specs
+  const [detail, setDetail] = useState("features")
 
-  let detailText = detailsContent[product][detail]
+  const obj = productDetailsContent[productNum][detail]
+  console.log(obj)
+  let detailText
 
+  if (detail === "features") {
+    detailText = <ProductDetailsFeatures obj={obj} />
+  } else if (detail === "included") {
+    detailText = <ProductDetailsIncludes obj={obj} />
+  } else if (detail === "shipping") {
+    detailText = <ProductDetailsShipping obj={obj} />
+  } else if (detail === "specs") {
+    detailText = <ProductDetailsSpecs obj={obj} />
+  }
   return (
     <DetailsContainer>
       <DetailsTabContainer>
-        <DetailsTab
-          onClick={() => setDetail("description")}
-          tabIndex="0"
-          color={Fade}
-        >
-          Description
-        </DetailsTab>
         <DetailsTab
           onClick={() => setDetail("features")}
           tabIndex="0"
           color={Fade}
         >
-          Features
+          Product & Features
         </DetailsTab>
         <DetailsTab
           onClick={() => setDetail("included")}
           tabIndex="0"
           color={Fade}
         >
-          Whats Included
+          What's Included
         </DetailsTab>
         <DetailsTab
           onClick={() => setDetail("shipping")}
