@@ -10,6 +10,7 @@ import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCent
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
 import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
 
+import MakersHero from "../images/hero_edible.png"
 import ValueProp1 from "../images/edible_cancompliant.svg"
 import ValueProp2 from "../images/edible_productline.svg"
 import ValueProp3 from "../images/edible_newrecipes.svg"
@@ -34,9 +35,10 @@ const Makers = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <CustomerSegmentHero
-      heroHeader={"Harvest the highest potency"}
+      heroImgURL={MakersHero}
+      heroHeader={"Accurate dosing is a recipe for success"}
       heroLead={
-        "Whether you are in a grow room or on the field, tCheck gives you more control over your crop. "
+        "Better butter, or coconut oil, olive oil, or alcohol tinctures. The choice is yours with tCheck in hand."
       }
     />
     <PaddingContainer>

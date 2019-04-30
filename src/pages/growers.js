@@ -11,6 +11,7 @@ import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
 import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
 import { Body } from "../components/Typography"
 
+import GrowersHero from "../images/hero_grower.png"
 import ValueProp1 from "../images/growers_improvestrains.svg"
 import ValueProp2 from "../images/growers_abtest.svg"
 import ValueProp3 from "../images/growers_harvestpeak.svg"
@@ -53,6 +54,7 @@ const Growers = React.memo(() => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <CustomerSegmentHero
+      heroImgURL={GrowersHero}
       heroHeader={"Harvest the highest potency"}
       heroLead={
         "Whether you are in a grow room or on the field, tCheck gives you more control over your crop. "

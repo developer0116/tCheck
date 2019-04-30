@@ -6,9 +6,9 @@ import { Body, Lead } from "./Typography"
 import { tGreen } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
-import facebook from "../images/facebook.png"
-import instagram from "../images/instagram.png"
-import linkedIn from "../images/linked-in.png"
+import Clock from "../images/clock.svg"
+import Wallet from "../images/wallet.svg"
+import Snap from "../images/snap.svg"
 
 const ValuePropsContainer = styled.section`
   display: flex;
@@ -56,7 +56,7 @@ const ValuePropsRow = React.memo(() => {
   return (
     <ValuePropsContainer>
       <ValueProp>
-        <ValuePropImg src={facebook} />
+        <ValuePropImg src={Clock} />
         <ValuePropHeader color={tGreen}>Move fast.</ValuePropHeader>
         <ValuePropText>
           60 seconds to test your infusions. 5 minutes to test your flower and
@@ -64,14 +64,14 @@ const ValuePropsRow = React.memo(() => {
         </ValuePropText>
       </ValueProp>
       <ValueProp>
-        <ValuePropImg src={instagram} />
+        <ValuePropImg src={Wallet} />
         <ValuePropHeader color={tGreen}>Spare your wallet.</ValuePropHeader>
         <ValuePropText>
           Knowledge shouldn’t be expensive, tCheck is an affordable solution.
         </ValuePropText>
       </ValueProp>
       <ValueProp>
-        <ValuePropImg src={linkedIn} />
+        <ValuePropImg src={Snap} />
         <ValuePropHeader color={tGreen}>Start testing in mins.</ValuePropHeader>
         <ValuePropText>
           Designed for everyone, tCheck is easy to use and
