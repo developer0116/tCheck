@@ -62,6 +62,10 @@ const ProductSelectionHeader = styled(Lead)`
   font-size: 1.25rem;
 `
 
+const ProductSelectionBody = styled(Body)`
+  min-height: 3rem;
+`
+
 const ProductSelectionButtonsContainer = styled.div`
   display: flex;
   border: 3px solid ${Dada};
@@ -187,15 +191,16 @@ const ProductSelection = ({
         <ProductSelectionHeader>
           {productSelectionContent[productNum].header}
         </ProductSelectionHeader>
-        <Body secondary>
+        <ProductSelectionBody secondary>
           {productSelectionContent[productNum].subHeader}{" "}
-          <InlineLink href="#">Learn more</InlineLink>
-        </Body>
+          <InlineLink href="#details">Learn more</InlineLink>
+        </ProductSelectionBody>
         <Misc secondary>Select your purchase</Misc>
         <ProductSelectionButtonsContainer>
           <ProductSelectionButtons
             selected={productNum == 1}
             onClick={() => setProductNum(1)}
+            tabIndex="0"
           >
             <ProductSelectionButtonTitle>
               tCheck 2 & Expansion Kit
@@ -208,6 +213,7 @@ const ProductSelection = ({
           <ProductSelectionButtons
             selected={productNum == 2}
             onClick={() => setProductNum(2)}
+            tabIndex="0"
           >
             <ProductSelectionButtonTitle>
               tCheck 2 device only
@@ -220,6 +226,7 @@ const ProductSelection = ({
           <ProductSelectionButtons
             selected={productNum == 3}
             onClick={() => setProductNum(3)}
+            tabIndex="0"
           >
             <ProductSelectionButtonTitle>
               Expansion kit only

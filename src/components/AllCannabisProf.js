@@ -71,6 +71,7 @@ const CannabisProfCarousel = styled.div`
   top: 125px;
   margin-left: auto;
   width: 62%;
+  border-radius: 8px;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     position: unset;
@@ -87,6 +88,10 @@ const ArrowIcon = styled(FontAwesomeIcon)`
   ${CannabisLink}:hover & {
     transform: translateX(4px);
   }
+`
+
+const ProfessionalImages = styled.img`
+  border-radius: 8px;
 `
 
 const AllCannabisProf = () => {
@@ -123,11 +128,7 @@ const AllCannabisProf = () => {
       <CannabisProfCarousel>
         <ProductCarousel>
           {productCarouselImages["professionals"].map(img => {
-            return (
-              <div>
-                <img src={img} />
-              </div>
-            )
+            return <ProfessionalImages src={img} />
           })}
         </ProductCarousel>
       </CannabisProfCarousel>

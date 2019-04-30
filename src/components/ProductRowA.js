@@ -12,7 +12,7 @@ import OrangeHex from "../images/hex_orange.svg"
 
 const ProductRowContainer = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 27rem;
 
@@ -57,39 +57,14 @@ const ProductTitle = styled(Header5)`
 
 const ProductBody = styled(Body)``
 
-const ProductImageContainer = styled.div`
-  width: 65%;
-  height: 506px;
-  background: url(${hexagonLarge}) no-repeat center;
-
-  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
-    width: 50%;
-    background: url(${hexagonLarge}) no-repeat center;
-    background-size: contain;
-    height: 300px;
-  }
-
-  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
-    width: 90%;
-    background: url(${hexagonLarge}) no-repeat center;
-    background-size: contain;
-    height: 300px;
-  }
-`
-
 const ProductImage = styled.img`
-  width: 85%;
-  margin-top: 130px;
-  margin-bottom: 60px;
+  max-width: 50%;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
-    margin-top: 80px;
-    width: 85%;
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     margin-top: 80px;
-    width: 85%;
   }
 `
 
@@ -104,9 +79,8 @@ const ProductRowA = () => {
           your phone. Test infused olive oil, coconut oil, alcohol, or butter.
         </ProductBody>
       </ProductTextSection>
-      <ProductImageContainer>
-        <ProductImage src={CannabisTester} />
-      </ProductImageContainer>
+
+      <ProductImage src={CannabisTester} />
     </ProductRowContainer>
   )
 }

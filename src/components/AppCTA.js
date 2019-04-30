@@ -14,7 +14,7 @@ import AppExampleImage from "../images/app_download.svg"
 const AppContainer = styled.section`
   display: flex;
   background-color: ${Flour};
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
   justify-content: space-between;
   align-items: center;
 
@@ -25,6 +25,7 @@ const AppContainer = styled.section`
     flex-direction: column;
     border-radius: 0px;
     margin: 3rem 0 0 0;
+    padding: 3rem 0;
   }
 `
 
@@ -81,6 +82,13 @@ const AppStoreImg = styled.img`
   max-width: 8.75rem;
   width: 43%;
   margin-right: 1rem;
+
+  transition: all 300ms 0s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+  }
 `
 
 const AppCTA = () => {

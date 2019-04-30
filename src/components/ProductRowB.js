@@ -7,12 +7,12 @@ import { Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import hexagonLarge from "../images/hexagon_large.svg"
-import ExpansionKit from "../images/expansionkit.png"
+import ExpansionKit from "../images/kit.png"
 import GreenHex from "../images/hex_green.svg"
 
 const ProductRowContainer = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
@@ -59,28 +59,8 @@ const ProductTitle = styled(Header5)`
 
 const ProductBody = styled(Body)``
 
-const ProductImageContainer = styled.div`
-  width: 50%;
-  height: 506px;
-  background: url(${hexagonLarge}) no-repeat center;
-
-  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
-    width: 40%;
-  }
-
-  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
-    width: 90%;
-    background: url(${hexagonLarge}) no-repeat center;
-    background-size: contain;
-    height: 300px;
-  }
-`
-
 const ProductImage = styled.img`
-  width: 85%;
-  margin-top: 130px;
-  margin-bottom: 60px;
-
+  max-width: 50%;
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
   }
 
@@ -94,9 +74,8 @@ const ProductImage = styled.img`
 const ProductRowB = () => {
   return (
     <ProductRowContainer>
-      <ProductImageContainer>
-        <ProductImage src={ExpansionKit} />
-      </ProductImageContainer>
+      <ProductImage src={ExpansionKit} />
+
       <ProductTextSection>
         <ProductTitle>
           Expansion kit for flower and concentrate testing

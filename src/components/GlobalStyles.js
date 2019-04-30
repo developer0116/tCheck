@@ -21,6 +21,10 @@ const GlobalStyle = createGlobalStyle`
 	textarea, select, input, button { 
 		outline: none;
   }
+
+  .carousel {
+    border-radius: 8px;
+  }
   
   .carousel .control-dots {
     text-align: left !important;

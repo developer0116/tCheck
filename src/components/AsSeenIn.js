@@ -6,9 +6,10 @@ import { Header5 } from "./Typography"
 import { Ghost, Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
-import DopeLogo from "../images/logo_dope.png"
+import BizJournal from "../images/logo_bizjor.svg"
 import HighTimesLogo from "../images/logo_hightimes.png"
-import SensiLogo from "../images/logo_sensi.png"
+import WikiLeaf from "../images/logo_wikileaf.svg"
+import DigitalTrends from "../images/logo_digtrends.png"
 
 const ASIContainer = styled.div`
   background-color: ${Ghost};
@@ -40,7 +41,7 @@ const Header = styled(Header5)`
 const PartnerRow = styled.div`
   margin-top: 2.1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     justify-content: space-around;
@@ -55,8 +56,12 @@ const PartnerRow = styled.div`
 `
 
 const PartnerLogo = styled.img`
-  height: 75px;
-  margin: 0 60px;
+  height: auto;
+  max-height: 3.75rem;
+
+  &:last-child {
+    height: 2rem;
+  }
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     margin: 0;
@@ -72,9 +77,10 @@ const AsSeenIn = () => {
     <ASIContainer>
       <Header color={Fade}>As Seen In</Header>
       <PartnerRow>
-        <PartnerLogo src={SensiLogo} />
+        <PartnerLogo src={WikiLeaf} />
         <PartnerLogo src={HighTimesLogo} />
-        <PartnerLogo src={DopeLogo} />
+        <PartnerLogo src={BizJournal} />
+        <PartnerLogo src={DigitalTrends} />
       </PartnerRow>
     </ASIContainer>
   )

@@ -50,6 +50,22 @@ const TLink = styled(Link)`
   }
 `
 
+const ExternalLink = styled.a`
+  font-family: Lato;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.29;
+  letter-spacing: normal;
+  text-decoration: none;
+  color: ${Ink};
+  font-size: 0.875rem;
+
+  &:hover {
+    color: ${tBlue};
+  }
+`
+
 const LogoImg = styled.img`
   width: 87px;
   height: 41px;
@@ -127,10 +143,17 @@ const Header = React.memo(props => {
             </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/">Blog</TLink>
+            <ExternalLink href="https://medium.com/tcheck" target="_blank">
+              Blog
+            </ExternalLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/">Support</TLink>
+            <ExternalLink
+              href="https://medium.com/tcheck/i-need-help-e7ede86f2191"
+              target="_blank"
+            >
+              Support
+            </ExternalLink>
           </LinkContainer>
           <ButtonLink to="/product">
             <ResponsiveButton>Buy Now</ResponsiveButton>

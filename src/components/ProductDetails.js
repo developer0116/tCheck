@@ -51,7 +51,7 @@ const ProductDetails = React.memo(({ productNum }) => {
     detailText = <ProductDetailsSpecs obj={obj} />
   }
   return (
-    <DetailsContainer>
+    <DetailsContainer id="details">
       <DetailsTabContainer>
         <DetailsTab
           onClick={() => setDetail("features")}
