@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-scroll"
 
 import { Body, Lead, Header4 } from "./Typography"
 import Button from "./Button"
@@ -11,6 +12,8 @@ import productCarouselImages from "../lib/productCarouselImages"
 import productSelectionContent from "../lib/productSelectionContent"
 
 import CheckMark from "../images/greenCheckMark.svg"
+import BlackCheckMark from "../images/ic_checkmark_b.svg"
+import WhiteCheckMark from "../images/ic_checkmark_w.svg"
 
 const ProductSelectionContainer = styled.section`
   display: flex;
@@ -67,24 +70,25 @@ const ProductSelectionBody = styled(Body)`
 `
 
 const ProductSelectionButtonsContainer = styled.div`
-  display: flex;
   border: 3px solid ${Dada};
   border-radius: 12px;
   margin: 1.5rem 0;
 `
 
 const ProductSelectionButtons = styled.div`
+  display: inline-block;
+  width: 33%;
   padding: 20px;
   text-align: center;
   cursor: pointer;
   position: relative;
-
-  ${({ selected }) => {
-    return selected
-      ? `background-color: ${tBlue}; margin: -10px; border-radius: 12px; padding: 30px; color: ${Flour}; z-index: 2;`
-      : null
-  }}
 `
+
+// ${({ selected }) => {
+//   return selected
+//     ? `background-color: ${tBlue}; margin: -10px; border-radius: 12px; padding: 30px; color: ${Flour}; z-index: 2;`
+//     : null
+// }}
 
 const ProductSelectionButtonTitle = styled(ProductSelectionHeader)`
   margin-bottom: 1rem;
@@ -98,14 +102,15 @@ const ProductSelectionButtonPrice = styled(Body)`
 
 const Line = styled.span`
   border: 1px solid ${Dada};
-  margin: 15px 0;
   position: relative;
   z-index: 1;
+  display: inline-block;
+  height: 80px;
 `
 
 const ProductColorSelectContainer = styled.div`
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 `
 
 const ProductColorLead = styled(ProductSelectionHeader)`
@@ -134,6 +139,15 @@ const ProductColorCircle = styled.div`
     return color
   }};
   cursor: pointer;
+  background-image: url(${({ productColor, isSelected }) => {
+    if (productColor === "black" && isSelected) {
+      return WhiteCheckMark
+    } else if (isSelected) {
+      return BlackCheckMark
+    } else {
+      return null
+    }
+  }});
 `
 
 const ProductAddToCartButton = styled(Button)`
@@ -160,7 +174,7 @@ const ProductCarouselImgContainer = styled.div`
   background-color: ${Ghost};
 `
 
-const InlineLink = styled.a`
+const InlineLink = styled(Link)`
   text-decoration: none;
   color: ${tBlue};
 `
@@ -170,6 +184,7 @@ const ProductSelection = ({
   setProductNum,
   productColor,
   changeColor,
+  setDetail,
 }) => {
   return (
     <ProductSelectionContainer>
@@ -193,7 +208,17 @@ const ProductSelection = ({
         </ProductSelectionHeader>
         <ProductSelectionBody secondary>
           {productSelectionContent[productNum].subHeader}{" "}
-          <InlineLink href="#details">Learn more</InlineLink>
+          <InlineLink
+            href="#"
+            to="details"
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              setDetail("features")
+            }}
+          >
+            Learn more
+          </InlineLink>
         </ProductSelectionBody>
         <Misc secondary>Select your purchase</Misc>
         <ProductSelectionButtonsContainer>
@@ -238,7 +263,17 @@ const ProductSelection = ({
         </ProductSelectionButtonsContainer>
         <Misc secondary>
           Ships in 2-3 weeks. See{" "}
-          <InlineLink href="#">shipping details</InlineLink>
+          <InlineLink
+            href="#"
+            to="details"
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              setDetail("shipping")
+            }}
+          >
+            shipping details
+          </InlineLink>
         </Misc>
         <ProductColorSelectContainer>
           <ProductColorLead color={Fade}>Pick your color</ProductColorLead>
@@ -248,24 +283,32 @@ const ProductSelection = ({
               onClick={e => {
                 changeColor("black")
               }}
+              isSelected={productColor === "black"}
+              productColor={productColor}
             />
             <ProductColorCircle
               color={tGreen}
               onClick={e => {
                 changeColor("green")
               }}
+              isSelected={productColor === "green"}
+              productColor={productColor}
             />
             <ProductColorCircle
               color={tBlue}
               onClick={e => {
                 changeColor("blue")
               }}
+              isSelected={productColor === "blue"}
+              productColor={productColor}
             />
             <ProductColorCircle
               color={Flour}
               onClick={e => {
                 changeColor("white")
               }}
+              isSelected={productColor === "white"}
+              productColor={productColor}
             />
           </ProductColorRow>
           <ProductAddToCartButton>Add to Cart</ProductAddToCartButton>

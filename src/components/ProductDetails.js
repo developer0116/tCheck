@@ -7,7 +7,7 @@ import ProductDetailsIncludes from "./ProductDetailsIncludes"
 import ProductDetailsShipping from "./ProductDetailsShipping"
 import ProductDetailsSpecs from "./ProductDetailsSpecs"
 
-import { Fade, Dada, Ghost } from "../lib/colors"
+import { Fade, Dada, Ink, Ghost } from "../lib/colors"
 import { sizes } from "../lib/layout"
 import productDetailsContent from "../lib/productDetailsContent"
 
@@ -32,13 +32,9 @@ const DetailsText = styled(Body)`
   margin: 2rem auto 3.5rem;
 `
 
-const ProductDetails = React.memo(({ productNum }) => {
-  // detail would be a string of
-  // features, included, shipping, or specs
-  const [detail, setDetail] = useState("features")
-
+const ProductDetails = React.memo(({ productNum, setDetail, detail }) => {
   const obj = productDetailsContent[productNum][detail]
-  console.log(obj)
+
   let detailText
 
   if (detail === "features") {
@@ -50,20 +46,21 @@ const ProductDetails = React.memo(({ productNum }) => {
   } else if (detail === "specs") {
     detailText = <ProductDetailsSpecs obj={obj} />
   }
+
   return (
     <DetailsContainer id="details">
       <DetailsTabContainer>
         <DetailsTab
           onClick={() => setDetail("features")}
           tabIndex="0"
-          color={Fade}
+          color={detail === "features" ? Ink : Fade}
         >
           Product & Features
         </DetailsTab>
         <DetailsTab
           onClick={() => setDetail("included")}
           tabIndex="0"
-          color={Fade}
+          color={detail === "included" ? Ink : Fade}
         >
           What's Included
         </DetailsTab>
@@ -71,6 +68,7 @@ const ProductDetails = React.memo(({ productNum }) => {
           onClick={() => setDetail("shipping")}
           tabIndex="0"
           color={Fade}
+          color={detail === "shipping" ? Ink : Fade}
         >
           Shipping
         </DetailsTab>
@@ -78,6 +76,7 @@ const ProductDetails = React.memo(({ productNum }) => {
           onClick={() => setDetail("specs")}
           tabIndex="0"
           color={Fade}
+          color={detail === "specs" ? Ink : Fade}
         >
           Specs
         </DetailsTab>

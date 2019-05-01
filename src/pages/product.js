@@ -29,6 +29,10 @@ const ProductPage = () => {
   // black, green, blue, white
   const [productColor, changeColor] = useState("black")
 
+  // detail would be a string of
+  // features, included, shipping, or specs
+  const [detail, setDetail] = useState("features")
+
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -37,8 +41,13 @@ const ProductPage = () => {
         setProductNum={setProductNum}
         productColor={productColor}
         changeColor={changeColor}
+        setDetail={setDetail}
       />
-      <ProductDetails productNum={productNum} />
+      <ProductDetails
+        productNum={productNum}
+        setDetail={setDetail}
+        detail={detail}
+      />
       <ProductFAQ />
 
       <PaddingContainer />
