@@ -51,6 +51,7 @@ const ProductTitle = styled(Header5)`
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    margin-bottom: 2rem;
     &:before {
       content: unset;
     }

@@ -55,13 +55,17 @@ const PartnerRow = styled.div`
   }
 `
 
+const Link = styled.a`
+  &:last-child {
+    img {
+      height: 2.5rem;
+    }
+  }
+`
+
 const PartnerLogo = styled.img`
   height: auto;
   max-height: 3.75rem;
-
-  &:last-child {
-    height: 2rem;
-  }
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     margin: 0;
@@ -77,10 +81,30 @@ const AsSeenIn = () => {
     <ASIContainer>
       <Header color={Fade}>As Seen In</Header>
       <PartnerRow>
-        <PartnerLogo src={WikiLeaf} />
-        <PartnerLogo src={HighTimesLogo} />
-        <PartnerLogo src={BizJournal} />
-        <PartnerLogo src={DigitalTrends} />
+        <Link
+          href="https://www.wikileaf.com/thestash/home-marijuana-testing/"
+          target="_blank"
+        >
+          <PartnerLogo src={WikiLeaf} />
+        </Link>
+        <Link
+          href="https://hightimes.com/culture/the-thc-test-lab-in-the-palm-of-your-hand/"
+          target="_blank"
+        >
+          <PartnerLogo src={HighTimesLogo} />
+        </Link>
+        <Link
+          href="https://www.bizjournals.com/sacramento/news/2018/09/18/huge-demand-creates-challenges-for-pot-potency.html"
+          target="_blank"
+        >
+          <PartnerLogo src={BizJournal} />
+        </Link>
+        <Link
+          href="https://www.digitaltrends.com/home/best-cannabis-cooking-gadgets/"
+          target="_blank"
+        >
+          <PartnerLogo src={DigitalTrends} />
+        </Link>
       </PartnerRow>
     </ASIContainer>
   )

@@ -236,7 +236,13 @@ const Footer = React.memo(props => {
           </FooterColumnExpand>
           <FooterColumnExpand headerText="Legal">
             <FooterLinkContainer>
-              <FooterLink color={Fade}>Agreements</FooterLink>
+              <FooterLink
+                color={Fade}
+                target="_blank"
+                href="https://medium.com/tcheck/tcheck-agreements-ee293283431f"
+              >
+                Agreements
+              </FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
               <FooterLink

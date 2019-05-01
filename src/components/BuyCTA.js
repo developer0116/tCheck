@@ -4,16 +4,16 @@ import styled from "styled-components"
 import { Lead, Header5 } from "./Typography"
 import Button from "./Button"
 
-import { Flour, Fade, tGreen, Ink, tBlue } from "../lib/colors"
+import { Flour, tBlue } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import PicPrice from "../images/pic_price.png"
 
 const CTAContainer = styled.section`
   width: 100%;
-  height: calc(50vw / 2);
-  max-height: 26rem;
-  margin-top: 4rem;
+  border-radius: 8px;
+  background-color: ${tBlue};
+  margin: 6rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,19 +25,13 @@ const CTAContainer = styled.section`
     flex-direction: column;
     border-radius: 0px;
     margin: 100px 0 0 0;
+    align-items: unset;
   }
 `
 
 const CTATextSection = styled.div`
-  background-color: ${tBlue};
-  border-radius: 0 8px 8px 0;
-  vertical-align: middle;
-  height: 100%;
   text-align: center;
-  width: 50%;
-  position: relative;
-  left: -4px;
-  padding: 4.5rem 0;
+  padding: 0 45px;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     padding: 2rem 0;
@@ -45,24 +39,37 @@ const CTATextSection = styled.div`
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     order: 2;
-    width: 90%;
+
     text-align: center;
+    padding: 2rem;
   }
 `
 
 const CTATitle = styled(Header5)`
   margin: 0 auto 2rem;
   width: 90%;
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+  }
 `
 
 const CTALead = styled(Lead)`
   font-size: 1.25rem;
   width: 60%;
   margin: 0 auto 10%;
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+  }
 `
 
 const CTAImage = styled.img`
-  width: 55%;
+  width: 50%;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
   }

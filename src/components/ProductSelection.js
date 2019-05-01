@@ -70,25 +70,26 @@ const ProductSelectionBody = styled(Body)`
 `
 
 const ProductSelectionButtonsContainer = styled.div`
+  display: flex;
   border: 3px solid ${Dada};
   border-radius: 12px;
   margin: 1.5rem 0;
 `
 
 const ProductSelectionButtons = styled.div`
-  display: inline-block;
   width: 33%;
   padding: 20px;
   text-align: center;
   cursor: pointer;
   position: relative;
-`
+  transition: 500ms;
 
-// ${({ selected }) => {
-//   return selected
-//     ? `background-color: ${tBlue}; margin: -10px; border-radius: 12px; padding: 30px; color: ${Flour}; z-index: 2;`
-//     : null
-// }}
+  ${({ selected }) => {
+    return selected
+      ? `background-color: ${tBlue};  border-radius: 12px; color: ${Flour}; z-index: 2;`
+      : null
+  }}
+`
 
 const ProductSelectionButtonTitle = styled(ProductSelectionHeader)`
   margin-bottom: 1rem;
@@ -102,10 +103,9 @@ const ProductSelectionButtonPrice = styled(Body)`
 
 const Line = styled.span`
   border: 1px solid ${Dada};
+  margin: 15px 0;
   position: relative;
   z-index: 1;
-  display: inline-block;
-  height: 80px;
 `
 
 const ProductColorSelectContainer = styled.div`

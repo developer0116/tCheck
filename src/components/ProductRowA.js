@@ -26,7 +26,6 @@ const ProductTextSection = styled.div`
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     width: 40%;
-    margin-left: calc(100vw - 93%);
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
@@ -37,7 +36,7 @@ const ProductTextSection = styled.div`
 `
 
 const ProductTitle = styled(Header5)`
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
   position: relative;
 
   &:before {
@@ -49,6 +48,7 @@ const ProductTitle = styled(Header5)`
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    margin-bottom: 2rem;
     &:before {
       content: unset;
     }
