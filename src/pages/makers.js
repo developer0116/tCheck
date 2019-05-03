@@ -10,6 +10,8 @@ import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCent
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
 import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
 
+import { Ghost } from "../lib/colors"
+
 import MakersHero from "../images/hero_edible.png"
 import ValueProp1 from "../images/edible_cancompliant.svg"
 import ValueProp2 from "../images/edible_productline.svg"
@@ -31,6 +33,10 @@ const PaddingContainer = styled.div`
   }
 `
 
+const GhostBackground = styled.div`
+  background-color: ${Ghost};
+`
+
 const Makers = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -41,7 +47,7 @@ const Makers = () => (
         "Better butter, or coconut oil, olive oil, or alcohol tinctures. The choice is yours with tCheck in hand."
       }
     />
-    <PaddingContainer>
+    <GhostBackground>
       <CustomerSegmentValueProps
         valueProp1Img={ValueProp1}
         valueProp1Text={"Be Cannabis-compliant"}
@@ -51,6 +57,8 @@ const Makers = () => (
         valueProp3Text={"Develop new recipes"}
       />
       <CustomerSegmentCarousel />
+    </GhostBackground>
+    <PaddingContainer>
       <CustomerSegmentCenterTestingBlurb
         header={
           "Test every batch of canna oil in any kitchen you are working in."

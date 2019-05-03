@@ -10,8 +10,9 @@ const CustomerSegmentVPContainer = styled.section`
   display: flex;
   justify-content: space-evenly;
   padding: 2rem 0;
-  max-width: 66.5rem;
-  margin: -100px auto 0;
+  width: 74%;
+  margin: 0 auto;
+  bottom: 80px;
   border-radius: 8px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   position: relative;

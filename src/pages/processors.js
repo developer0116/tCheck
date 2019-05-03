@@ -10,6 +10,8 @@ import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCent
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
 import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
 
+import { Ghost } from "../lib/colors"
+
 import ProcessorsHero from "../images/hero_processor.png"
 import ValueProp1 from "../images/processors_maxpotency.svg"
 import ValueProp2 from "../images/processors_controlyield.svg"
@@ -32,6 +34,10 @@ const PaddingContainer = styled.div`
   }
 `
 
+const GhostBackground = styled.div`
+  background-color: ${Ghost};
+`
+
 const Processors = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -42,7 +48,7 @@ const Processors = () => (
         "Cannabis concentrates are only getting better, test your yield for extraction efficiency."
       }
     />
-    <PaddingContainer>
+    <GhostBackground>
       <CustomerSegmentValueProps
         valueProp1Img={ValueProp1}
         valueProp1Text={"Find max potency"}
@@ -52,6 +58,8 @@ const Processors = () => (
         valueProp3Text={"Identify areas of cannabinoid loss"}
       />
       <CustomerSegmentCarousel />
+    </GhostBackground>
+    <PaddingContainer>
       <CustomerSegmentCenterTestingBlurb
         header={"Dial in your controls and increase your efficiency"}
         body={

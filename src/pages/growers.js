@@ -11,6 +11,8 @@ import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
 import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
 import { Body } from "../components/Typography"
 
+import { Ghost } from "../lib/colors"
+
 import GrowersHero from "../images/hero_grower.png"
 import ValueProp1 from "../images/growers_improvestrains.svg"
 import ValueProp2 from "../images/growers_abtest.svg"
@@ -50,6 +52,10 @@ const CustomerSegmentBlurb = styled(Body)`
   }
 `
 
+const GhostBackground = styled.div`
+  background-color: ${Ghost};
+`
+
 const Growers = React.memo(() => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -60,7 +66,7 @@ const Growers = React.memo(() => (
         "Whether you are in a grow room or on the field, tCheck gives you more control over your crop. "
       }
     />
-    <PaddingContainer>
+    <GhostBackground>
       <CustomerSegmentValueProps
         valueProp1Img={ValueProp1}
         valueProp1Text={"Improve strains through custom hybrids"}
@@ -70,6 +76,8 @@ const Growers = React.memo(() => (
         valueProp3Text={"Harvest at peak potency"}
       />
       <CustomerSegmentCarousel />
+    </GhostBackground>
+    <PaddingContainer>
       <CustomerSegmentCenterTestingBlurb
         header={"Determine your THCa percentage in a pinch"}
         body={
