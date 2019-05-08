@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header4 } from "./Typography"
+import { Body, Lead } from "./Typography"
 import ProductDetailsFeatures from "./ProductDetailsFeatures"
 import ProductDetailsIncludes from "./ProductDetailsIncludes"
 import ProductDetailsShipping from "./ProductDetailsShipping"

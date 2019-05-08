@@ -205,7 +205,13 @@ const Footer = React.memo(props => {
         <LinksContainer>
           <FooterColumnExpand headerText="Company">
             <FooterLinkContainer>
-              <FooterLink color={Fade}>About</FooterLink>
+              <FooterLink
+                href="https://medium.com/tcheck/about-engineered-medical-technologies-e76ce1544cb8"
+                target="_blank"
+                color={Fade}
+              >
+                About
+              </FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
               <FooterLink color={Fade}>Mission Statement</FooterLink>
@@ -276,7 +282,7 @@ const Footer = React.memo(props => {
             <FooterLinkContainer>
               <FooterLink
                 target="_blank"
-                href=" https://medium.com/tcheck/frequently-asked-questions-about-tcheck-36540ca5caf9"
+                href="https://medium.com/tcheck/site-faqs-a69db16e2c1d"
                 color={Fade}
               >
                 FAQs

@@ -128,8 +128,8 @@ const Header = React.memo(props => {
         </TLink>
         <LinksButtonContainer open={open}>
           <LinkContainer>
-            <TLink to="/growers" activeStyle={{ color: tBlue }}>
-              Growers
+            <TLink to="/makers" activeStyle={{ color: tBlue }}>
+              Edible Makers
             </TLink>
           </LinkContainer>
           <LinkContainer>
@@ -138,8 +138,8 @@ const Header = React.memo(props => {
             </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/makers" activeStyle={{ color: tBlue }}>
-              Edible Makers
+            <TLink to="/growers" activeStyle={{ color: tBlue }}>
+              Growers
             </TLink>
           </LinkContainer>
           <LinkContainer>

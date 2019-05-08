@@ -42,6 +42,7 @@ const PartnerRow = styled.div`
   margin-top: 2.1rem;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     justify-content: space-around;

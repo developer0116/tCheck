@@ -69,43 +69,36 @@ const ProductSelectionBody = styled(Body)`
   min-height: 3rem;
 `
 
-const ProductSelectionButtonsContainer = styled.div`
+const ProductSelectionButton = styled.div`
   display: flex;
-  border: 3px solid ${Dada};
-  border-radius: 12px;
-  margin: 1.5rem 0;
-`
-
-const ProductSelectionButtons = styled.div`
-  width: 33%;
-  padding: 20px;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 0 rgba(16, 156, 179, 0.2);
+  padding: 0.75rem 1.875rem;
   cursor: pointer;
-  position: relative;
-  transition: 500ms;
-
   ${({ selected }) => {
-    return selected
-      ? `background-color: ${tBlue};  border-radius: 12px; color: ${Flour}; z-index: 2;`
-      : null
+    return selected ? `border: solid 2px ${tBlue};` : null
   }}
 `
 
-const ProductSelectionButtonTitle = styled(ProductSelectionHeader)`
-  margin-bottom: 1rem;
-  color: inherit;
+const ProductSelectionName = styled(Lead)`
+  font-size: 1.25rem;
 `
 
-const ProductSelectionButtonPrice = styled(Body)`
+const ProductSelectionButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem auto;
+  max-width: 25rem;
+`
+
+const ProductSelectionPrice = styled(Body)`
   font-size: 0.875rem;
   color: inherit;
-`
-
-const Line = styled.span`
-  border: 1px solid ${Dada};
-  margin: 15px 0;
-  position: relative;
-  z-index: 1;
 `
 
 const ProductColorSelectContainer = styled.div`
@@ -222,44 +215,37 @@ const ProductSelection = ({
         </ProductSelectionBody>
         <Misc secondary>Select your purchase</Misc>
         <ProductSelectionButtonsContainer>
-          <ProductSelectionButtons
+          <ProductSelectionButton
             selected={productNum == 1}
             onClick={() => setProductNum(1)}
-            tabIndex="0"
           >
-            <ProductSelectionButtonTitle>
+            <ProductSelectionName>
               tCheck 2 & Expansion Kit
-            </ProductSelectionButtonTitle>
-            <ProductSelectionButtonPrice fontWeight={900}>
+            </ProductSelectionName>
+            <ProductSelectionPrice fontWeight={900}>
               $479.98
-            </ProductSelectionButtonPrice>
-          </ProductSelectionButtons>
-          <Line />
-          <ProductSelectionButtons
+            </ProductSelectionPrice>
+          </ProductSelectionButton>
+          <br />
+          <ProductSelectionButton
             selected={productNum == 2}
             onClick={() => setProductNum(2)}
-            tabIndex="0"
           >
-            <ProductSelectionButtonTitle>
-              tCheck 2 device only
-            </ProductSelectionButtonTitle>
-            <ProductSelectionButtonPrice fontWeight={900}>
+            <ProductSelectionName>tCheck 2 device only</ProductSelectionName>
+            <ProductSelectionPrice fontWeight={900}>
               $279.99
-            </ProductSelectionButtonPrice>
-          </ProductSelectionButtons>
-          <Line />
-          <ProductSelectionButtons
+            </ProductSelectionPrice>
+          </ProductSelectionButton>
+          <br />
+          <ProductSelectionButton
             selected={productNum == 3}
             onClick={() => setProductNum(3)}
-            tabIndex="0"
           >
-            <ProductSelectionButtonTitle>
-              Expansion kit only
-            </ProductSelectionButtonTitle>
-            <ProductSelectionButtonPrice fontWeight={900}>
+            <ProductSelectionName>Expansion kit only</ProductSelectionName>
+            <ProductSelectionPrice fontWeight={900}>
               $199.99
-            </ProductSelectionButtonPrice>
-          </ProductSelectionButtons>
+            </ProductSelectionPrice>
+          </ProductSelectionButton>
         </ProductSelectionButtonsContainer>
         <Misc secondary>
           Ships in 2-3 weeks. See{" "}
