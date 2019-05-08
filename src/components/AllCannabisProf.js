@@ -126,7 +126,7 @@ const AllCannabisProf = () => {
         </CannabisLink>
       </CannabisTextContainer>
       <CannabisProfCarousel>
-        <ProductCarousel>
+        <ProductCarousel autoPlay={true} interval={3000} infiniteLoop={true}>
           {productCarouselImages["professionals"].map(img => {
             return <ProfessionalImages src={img} />
           })}
