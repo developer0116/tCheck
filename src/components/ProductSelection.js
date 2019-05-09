@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "react-scroll"
+import { animateScroll as scroll } from "react-scroll"
 
 import { Body, Lead, Header4 } from "./Typography"
 import Button from "./Button"
@@ -76,11 +76,12 @@ const ProductSelectionButton = styled.div`
   width: 100%;
   height: 3.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 10px 0 rgba(16, 156, 179, 0.2);
   padding: 0.75rem 1.875rem;
   cursor: pointer;
   ${({ selected }) => {
-    return selected ? `border: solid 2px ${tBlue};` : null
+    return selected
+      ? `border: solid 2px ${tBlue}; box-shadow: 0 4px 10px 0 rgba(16, 156, 179, 0.2);`
+      : `box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);`
   }}
 `
 
@@ -167,7 +168,7 @@ const ProductCarouselImgContainer = styled.div`
   background-color: ${Ghost};
 `
 
-const InlineLink = styled(Link)`
+const InlineLink = styled.a`
   text-decoration: none;
   color: ${tBlue};
 `
@@ -203,11 +204,11 @@ const ProductSelection = ({
           {productSelectionContent[productNum].subHeader}{" "}
           <InlineLink
             href="#"
-            to="details"
-            smooth={true}
-            duration={500}
             onClick={() => {
               setDetail("features")
+              scroll.scrollTo(
+                document.getElementById("details").offsetTop - 100
+              )
             }}
           >
             Learn more
@@ -251,11 +252,11 @@ const ProductSelection = ({
           Ships in 2-3 weeks. See{" "}
           <InlineLink
             href="#"
-            to="details"
-            smooth={true}
-            duration={500}
             onClick={() => {
               setDetail("shipping")
+              scroll.scrollTo(
+                document.getElementById("details").offsetTop - 100
+              )
             }}
           >
             shipping details

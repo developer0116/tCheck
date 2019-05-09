@@ -16,20 +16,36 @@ const DetailsContainer = styled.section``
 const DetailsTabContainer = styled.div`
   border-bottom: 1px solid ${Dada};
   margin: 2rem auto 0;
-  max-width: 63rem;
+  max-width: 45rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 `
 
 const DetailsTab = styled(Lead)`
   margin: 1rem auto;
   font-size: 1.25rem;
   cursor: pointer;
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    width: min-content;
+  }
 `
 
 const DetailsText = styled(Body)`
-  max-width: 46rem;
+  max-width: 41rem;
   margin: 2rem auto 3.5rem;
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    padding: 0 3rem;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    padding: 0 1rem;
+  }
 `
 
 const ProductDetails = React.memo(({ productNum, setDetail, detail }) => {
