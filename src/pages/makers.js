@@ -8,7 +8,7 @@ import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
 import CustomerSegmentCarousel from "../components/CustomerSegmentCarousel"
 import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCenterTestingBlurb"
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
-// import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
+import CustomerSegmentApp from "../components/CustomerSegmentApp"
 
 import { Ghost } from "../lib/colors"
 
@@ -16,6 +16,8 @@ import MakersHero from "../images/hero_edible.png"
 import ValueProp1 from "../images/edible_cancompliant.svg"
 import ValueProp2 from "../images/edible_productline.svg"
 import ValueProp3 from "../images/edible_newrecipes.svg"
+import EdiblesBackgroundApp from "../images/ediblesApp.jpg"
+import EdiblesApp from "../images/app_edbl.svg"
 
 import { sizes } from "../lib/layout"
 
@@ -77,12 +79,14 @@ const Makers = () => (
           "tCheck, along with the Expansion Kit gives you everything you need to do 9 flower tests. Need to test more? Just order another bottle of reagent."
         }
       />
-      {/* <CustomerSegmentQuestion2
+      <CustomerSegmentApp
+        background={EdiblesBackgroundApp}
         header={"Make any oil work for any recipe"}
         body={
-          "Our built-in calculator allows you to customize your infused oil, butter, or alcohol tincture to any recipe. Just input the required material into the calculator and it will tell you exactly how much of your infusion to add to your recipe to get to that perfect desired dose. "
+          "Our built-in calculator allows you to customize your infused oil, butter, or alcohol tincture to any recipe. Just input the required material into the calculator and it will tell you exactly how much of your infusion to add to your recipe to get to that perfect desired dose."
         }
-      /> */}
+        app={EdiblesApp}
+      />
     </PaddingContainer>
   </Layout>
 )

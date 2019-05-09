@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import ProductSelection from "../components/ProductSelection"
 import ProductDetails from "../components/ProductDetails"
 import ProductFAQ from "../components/ProductFAQ"
+import ProductFeatureRundown from "../components/ProductFeatureRundown"
 
 import { sizes } from "../lib/layout"
 
@@ -49,6 +50,7 @@ const ProductPage = () => {
         detail={detail}
       />
       <ProductFAQ />
+      <ProductFeatureRundown />
 
       <PaddingContainer />
     </Layout>

@@ -8,7 +8,7 @@ import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
 import CustomerSegmentCarousel from "../components/CustomerSegmentCarousel"
 import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCenterTestingBlurb"
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
-// import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
+import CustomerSegmentApp from "../components/CustomerSegmentApp"
 
 import { Ghost } from "../lib/colors"
 
@@ -16,6 +16,8 @@ import ProcessorsHero from "../images/hero_processor.png"
 import ValueProp1 from "../images/processors_maxpotency.svg"
 import ValueProp2 from "../images/processors_controlyield.svg"
 import ValueProp3 from "../images/processors_cannaloss.svg"
+import ProcessorsBackgroundApp from "../images/processorsApp.jpg"
+import ProcessorsApp from "../images/app_proc.svg"
 
 import { sizes } from "../lib/layout"
 
@@ -76,12 +78,14 @@ const Processors = () => (
           "tCheck, along with the Expansion Kit gives you everything you need to do 9 concentrate tests. Need to test more? Just order another bottle of reagent."
         }
       />
-      {/* <CustomerSegmentQuestion2
+      <CustomerSegmentApp
+        background={ProcessorsBackgroundApp}
         header={"We make testing concentrates easy"}
         body={
           "When you log in to the free tCheck app, you can see all your past test results in the user log. You can add notes about that test, such as what strain it is, or the nutrients for that grow. You can track the progress of how green your thumb is with real, live potency testing- in the palm of your hands."
         }
-      /> */}
+        app={ProcessorsApp}
+      />
     </PaddingContainer>
   </Layout>
 )
