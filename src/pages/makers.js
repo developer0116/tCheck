@@ -8,7 +8,7 @@ import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
 import CustomerSegmentCarousel from "../components/CustomerSegmentCarousel"
 import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCenterTestingBlurb"
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
-import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
+// import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
 
 import { Ghost } from "../lib/colors"
 
@@ -77,12 +77,12 @@ const Makers = () => (
           "tCheck, along with the Expansion Kit gives you everything you need to do 9 flower tests. Need to test more? Just order another bottle of reagent."
         }
       />
-      <CustomerSegmentQuestion2
+      {/* <CustomerSegmentQuestion2
         header={"Make any oil work for any recipe"}
         body={
           "Our built-in calculator allows you to customize your infused oil, butter, or alcohol tincture to any recipe. Just input the required material into the calculator and it will tell you exactly how much of your infusion to add to your recipe to get to that perfect desired dose. "
         }
-      />
+      /> */}
     </PaddingContainer>
   </Layout>
 )

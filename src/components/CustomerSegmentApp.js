@@ -10,11 +10,15 @@ const CustomerSegmentQ2Container = styled.section`
   margin: 0 -80px;
   display: flex;
   justify-content: space-evenly;
-  padding: 6rem 0;
   background-color: ${Ghost};
   align-items: center;
+  ${({ background }) => {
+    return `background: url(${background}) no-repeat; background-size: cover;`
+  }}
 
-  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${
+  sizes.mobileL
+}) {
     justify-content: space-around;
     padding: 3rem 0;
     margin: 0;
@@ -28,10 +32,8 @@ const CustomerSegmentQ2Container = styled.section`
   }
 `
 
-const CustomerSegmentQ2Img = styled.div`
-  background-color: ${tBlue};
-  width: 28rem;
-  height: 21.5rem;
+const CustomerSegmentQ2Img = styled.img`
+  height: 100%;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     width: 21rem;
@@ -79,18 +81,18 @@ const CustomerSegmentQ2Paragraph1 = styled(Body)`
 `
 
 // What do I call this thing?
-const CustomerSegmentQuestion2 = React.memo(({ header, body }) => {
+const CustomerSegmentApp = React.memo(({ background, header, body, app }) => {
   return (
-    <CustomerSegmentQ2Container>
+    <CustomerSegmentQ2Container background={background}>
       <CustomerSegmentQ2TextContainer>
         <CustomerSegmentQ2Header>{header}</CustomerSegmentQ2Header>
         <CustomerSegmentQ2Paragraph1 secondary>
           {body}
         </CustomerSegmentQ2Paragraph1>
       </CustomerSegmentQ2TextContainer>
-      <CustomerSegmentQ2Img />
+      <CustomerSegmentQ2Img src={app} />
     </CustomerSegmentQ2Container>
   )
 })
 
-export default CustomerSegmentQuestion2
+export default CustomerSegmentApp

@@ -8,7 +8,7 @@ import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
 import CustomerSegmentCarousel from "../components/CustomerSegmentCarousel"
 import CustomerSegmentCenterTestingBlurb from "../components/CustomerSegmentCenterTestingBlurb"
 import CustomerSegmentQuestion1 from "../components/CustomerSegmentQuestion1"
-import CustomerSegmentQuestion2 from "../components/CustomerSegmentQuestion2"
+import CustomerSegmentApp from "../components/CustomerSegmentApp"
 import { Body } from "../components/Typography"
 
 import { Ghost } from "../lib/colors"
@@ -17,6 +17,8 @@ import GrowersHero from "../images/hero_grower.png"
 import ValueProp1 from "../images/growers_improvestrains.svg"
 import ValueProp2 from "../images/growers_abtest.svg"
 import ValueProp3 from "../images/growers_harvestpeak.svg"
+import GrowersBackgroundApp from "../images/growersApp.jpg"
+import GrowersApp from "../images/app_grow.svg"
 
 import { sizes } from "../lib/layout"
 
@@ -99,11 +101,13 @@ const Growers = React.memo(() => (
           "tCheck, along with the Expansion Kit gives you everything you need to do 9 flower tests. Need to test more? Just order another bottle of reagent."
         }
       />
-      <CustomerSegmentQuestion2
+      <CustomerSegmentApp
+        background={GrowersBackgroundApp}
         header={"Track each test right from the tCheck app"}
         body={
           "When you log in to the free tCheck app, you can see all your past test results in the user log. You can add notes about that test, such as what strain it is, or the nutrients for that grow. You can track the progress of how green your thumb is with real, live potency testing- in the palm of your hands."
         }
+        app={GrowersApp}
       />
     </PaddingContainer>
   </Layout>
