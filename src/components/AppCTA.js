@@ -85,9 +85,11 @@ const AppStoreImg = styled.img`
 
   transition: all 300ms 0s ease;
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+    }
   }
 `
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
 import Layout from "../components/Layout"
@@ -34,6 +34,24 @@ const ProductPage = () => {
   // features, included, shipping, or specs
   const [detail, setDetail] = useState("features")
 
+  // tracks the quantity a user wants to purchase
+  const [quantity, setQuantity] = useState(1)
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 425)
+
+  const checkResize = () => {
+    // 425 === sizes.mobileL
+    setIsMobile(window.innerWidth < 425)
+  }
+
+  // for conditional rendering
+  useEffect(() => {
+    window.addEventListener("resize", checkResize)
+    return () => {
+      window.removeEventListener("resize", checkResize)
+    }
+  }, [])
+
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -43,6 +61,9 @@ const ProductPage = () => {
         productColor={productColor}
         changeColor={changeColor}
         setDetail={setDetail}
+        quantity={quantity}
+        setQuantity={setQuantity}
+        isMobile={isMobile}
       />
       <ProductDetails
         productNum={productNum}

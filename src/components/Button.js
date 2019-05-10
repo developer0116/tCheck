@@ -29,7 +29,4 @@ const Button = styled.button`
   }
 `
 
-// &:active {
-//   background-color: ${tGreenSelected};
-// }
 export default Button

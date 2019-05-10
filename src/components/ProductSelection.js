@@ -17,8 +17,9 @@ import WhiteCheckMark from "../images/ic_checkmark_w.svg"
 
 const ProductSelectionContainer = styled.section`
   display: flex;
-  padding: 3.5rem 6.25rem;
+  padding: 3.5rem 3.25rem;
   background-color: ${Ghost};
+  justify-content: space-between;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     padding: 1.5rem;
@@ -43,10 +44,15 @@ const ProductCarouselContainer = styled.div`
   @media (max-width: ${sizes.modifiedTablet}) {
     width: 100%;
   }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    height: auto;
+    flex-direction: column;
+  }
 `
 
 const ProductSelectionModule = styled.div`
-  width: 50%;
+  width: 40%;
   border-radius: 8px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   background-color: ${Flour};
@@ -59,14 +65,28 @@ const ProductSelectionModule = styled.div`
   }
 `
 
-const ProductSelectionTitle = styled(Header4)``
+const ProductSelectionTitle = styled(Header4)`
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    margin: 3rem 0 0 0;
+    text-align: center;
+  }
+`
 
 const ProductSelectionHeader = styled(Lead)`
   font-size: 1.25rem;
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    text-align: center;
+  }
 `
 
 const ProductSelectionBody = styled(Body)`
   min-height: 3rem;
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    margin: 0 0 2rem 0;
+    text-align: center;
+  }
 `
 
 const ProductSelectionButton = styled.div`
@@ -102,6 +122,35 @@ const ProductSelectionPrice = styled(Body)`
   color: inherit;
 `
 
+const ProductSelectionQuantityContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 171px;
+  height: 56px;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  border: solid 3px ${Dada};
+  background-color: ${Flour};
+`
+
+const ProductSelectionQuantity = styled(Lead)`
+  text-align: center;
+  width: 32%;
+  font-size: 1.25rem;
+`
+
+const ProductSelectionQuantityModifiers = styled(Lead)`
+  width: 32%;
+  text-align: center;
+  cursor: pointer;
+  fonst-size: 1.5rem;
+`
+
+const ProductSelectionQuantityLine = styled.span`
+  border: 1px solid ${Dada};
+  height: 85%;
+`
+
 const ProductColorSelectContainer = styled.div`
   text-align: center;
   margin: 2rem 0;
@@ -114,6 +163,10 @@ const ProductColorLead = styled(ProductSelectionHeader)`
 const Misc = styled(Body)`
   text-align: center;
   margin: 2rem 0 0 0;
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    margin: 0;
+  }
 `
 
 const ProductColorRow = styled.div`
@@ -179,10 +232,46 @@ const ProductSelection = ({
   productColor,
   changeColor,
   setDetail,
+  quantity,
+  setQuantity,
+  isMobile,
 }) => {
+  const incrementQuantity = () => {
+    const newQuantity = quantity == 99 ? 99 : quantity + 1
+    setQuantity(newQuantity)
+  }
+
+  const decrementQuantity = () => {
+    const newQuantity = quantity == 1 ? 1 : quantity - 1
+    setQuantity(newQuantity)
+  }
   return (
     <ProductSelectionContainer>
       <ProductCarouselContainer>
+        {isMobile ? (
+          <>
+            <ProductSelectionTitle>
+              {productSelectionContent[productNum].title}
+            </ProductSelectionTitle>
+            <ProductSelectionHeader>
+              {productSelectionContent[productNum].header}
+            </ProductSelectionHeader>
+            <ProductSelectionBody secondary>
+              {productSelectionContent[productNum].subHeader}{" "}
+              <InlineLink
+                href="#"
+                onClick={() => {
+                  setDetail("features")
+                  scroll.scrollTo(
+                    document.getElementById("details").offsetTop - 100
+                  )
+                }}
+              >
+                Learn more
+              </InlineLink>
+            </ProductSelectionBody>
+          </>
+        ) : null}
         <ProductCarousel>
           {productCarouselImages[productColor].map(img => {
             return (
@@ -194,26 +283,30 @@ const ProductSelection = ({
         </ProductCarousel>
       </ProductCarouselContainer>
       <ProductSelectionModule>
-        <ProductSelectionTitle>
-          {productSelectionContent[productNum].title}
-        </ProductSelectionTitle>
-        <ProductSelectionHeader>
-          {productSelectionContent[productNum].header}
-        </ProductSelectionHeader>
-        <ProductSelectionBody secondary>
-          {productSelectionContent[productNum].subHeader}{" "}
-          <InlineLink
-            href="#"
-            onClick={() => {
-              setDetail("features")
-              scroll.scrollTo(
-                document.getElementById("details").offsetTop - 100
-              )
-            }}
-          >
-            Learn more
-          </InlineLink>
-        </ProductSelectionBody>
+        {isMobile ? null : (
+          <>
+            <ProductSelectionTitle>
+              {productSelectionContent[productNum].title}
+            </ProductSelectionTitle>
+            <ProductSelectionHeader>
+              {productSelectionContent[productNum].header}
+            </ProductSelectionHeader>
+            <ProductSelectionBody secondary>
+              {productSelectionContent[productNum].subHeader}{" "}
+              <InlineLink
+                href="#"
+                onClick={() => {
+                  setDetail("features")
+                  scroll.scrollTo(
+                    document.getElementById("details").offsetTop - 100
+                  )
+                }}
+              >
+                Learn more
+              </InlineLink>
+            </ProductSelectionBody>
+          </>
+        )}
         <Misc secondary>Select your purchase</Misc>
         <ProductSelectionButtonsContainer>
           <ProductSelectionButton
@@ -262,6 +355,17 @@ const ProductSelection = ({
             shipping details
           </InlineLink>
         </Misc>
+        <ProductSelectionQuantityContainer>
+          <ProductSelectionQuantityModifiers onClick={decrementQuantity}>
+            -
+          </ProductSelectionQuantityModifiers>
+          <ProductSelectionQuantityLine />
+          <ProductSelectionQuantity>{quantity}</ProductSelectionQuantity>
+          <ProductSelectionQuantityLine />
+          <ProductSelectionQuantityModifiers onClick={incrementQuantity}>
+            +
+          </ProductSelectionQuantityModifiers>
+        </ProductSelectionQuantityContainer>
         <ProductColorSelectContainer>
           <ProductColorLead color={Fade}>Pick your color</ProductColorLead>
           <ProductColorRow>
