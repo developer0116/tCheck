@@ -12,7 +12,7 @@ const CustomerSegmentAppContainer = styled.section`
   justify-content: space-evenly;
   background-color: ${Ghost};
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
   ${({ background }) => {
     return `background: url(${background}) no-repeat; background-size: cover; background-position: bottom;`
   }}
