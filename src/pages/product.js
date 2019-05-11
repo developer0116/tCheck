@@ -19,63 +19,96 @@ const PaddingContainer = styled.div`
   }
 `
 
-const ProductPage = () => {
-  // to select between
-  // 1. tCheck and Kit
-  // 2. tCheck
-  // 3. Kit
-  const [productNum, setProductNum] = useState(1)
+class ProductPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      // to select between
+      // 1. tCheck and Kit
+      // 2. tCheck
+      // 3. Kit
+      productNum: 1,
 
-  // options are
-  // black, green, blue, white
-  const [productColor, changeColor] = useState("black")
+      // options are
+      // black, green, blue, white
+      productColor: "black",
 
-  // detail would be a string of
-  // features, included, shipping, or specs
-  const [detail, setDetail] = useState("features")
+      // detail would be a string of
+      // features, included, shipping, or specs
+      detail: "features",
 
-  // tracks the quantity a user wants to purchase
-  const [quantity, setQuantity] = useState(1)
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 425)
-
-  const checkResize = () => {
-    // 425 === sizes.mobileL
-    setIsMobile(window.innerWidth < 425)
+      // tracks the quantity a user wants to purchase
+      quantity: 1,
+      isMobile: false,
+    }
   }
 
-  // for conditional rendering
-  useEffect(() => {
-    window.addEventListener("resize", checkResize)
-    return () => {
-      window.removeEventListener("resize", checkResize)
-    }
-  }, [])
+  componentDidMount = () => {
+    this.setState({
+      isMobile: window.innerWidth < 425,
+    })
+    window.addEventListener("resize", this.checkResize)
+  }
 
-  return (
-    <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <ProductSelection
-        productNum={productNum}
-        setProductNum={setProductNum}
-        productColor={productColor}
-        changeColor={changeColor}
-        setDetail={setDetail}
-        quantity={quantity}
-        setQuantity={setQuantity}
-        isMobile={isMobile}
-      />
-      <ProductDetails
-        productNum={productNum}
-        setDetail={setDetail}
-        detail={detail}
-      />
-      <ProductFAQ />
-      <ProductFeatureRundown />
+  setProductNum = num => {
+    this.setState({
+      productNum: num,
+    })
+  }
 
-      <PaddingContainer />
-    </Layout>
-  )
+  changeColor = color => {
+    this.setState({
+      productColor: color,
+    })
+  }
+
+  setDetail = detail => {
+    this.setState({
+      detail,
+    })
+  }
+
+  setQuantity = quantity => {
+    this.setState({
+      quantity,
+    })
+  }
+
+  checkResize = () => {
+    // 425 === sizes.mobileL
+    this.setState({
+      isMobile: window.innerWidth < 425,
+    })
+  }
+
+  render = () => {
+    const { productNum, productColor, detail, quantity, isMobile } = this.state
+
+    return (
+      <Layout>
+        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <ProductSelection
+          productNum={productNum}
+          setProductNum={this.setProductNum}
+          productColor={productColor}
+          changeColor={this.changeColor}
+          setDetail={this.setDetail}
+          quantity={quantity}
+          setQuantity={this.setQuantity}
+          isMobile={isMobile}
+        />
+        <ProductDetails
+          productNum={productNum}
+          setDetail={this.setDetail}
+          detail={detail}
+        />
+        <ProductFAQ />
+        <ProductFeatureRundown />
+
+        <PaddingContainer />
+      </Layout>
+    )
+  }
 }
 
 export default ProductPage
