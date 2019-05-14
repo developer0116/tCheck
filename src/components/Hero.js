@@ -1,6 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, navigate } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
@@ -9,8 +8,6 @@ import Button from "./Button"
 
 import { Flour } from "../lib/colors"
 import { sizes } from "../lib/layout"
-
-import whiteBottom from "../images/Whitebottom.svg"
 
 const HeroContentContainer = styled.div`
   text-align: center;
@@ -43,6 +40,7 @@ const HeroHeader = styled(Header4)`
 `
 
 const HeroLead = styled(Lead)`
+  font-size: 1.25rem;
   @media (max-width: ${sizes.modifiedTablet}) {
     font-size: 1rem;
   }
@@ -51,6 +49,7 @@ const HeroLead = styled(Lead)`
 const HeroButton = styled(Button)`
   width: 232px;
   margin: 0 auto;
+  cursor: pointer;
 `
 
 const BR1 = styled.br`
@@ -106,7 +105,16 @@ const Hero = () => {
                 flower, and concentrate with tCheck.
               </HeroLead>
               <BR2 />
-              <HeroButton>Buy Now</HeroButton>
+
+              <HeroButton
+                onClick={e => {
+                  e.preventDefault()
+                  navigate("/product")
+                }}
+              >
+                Buy Now
+              </HeroButton>
+
               <BR3 />
               <HeroButton tertiary>Learn More</HeroButton>
             </HeroContentContainer>

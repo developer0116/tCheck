@@ -68,7 +68,7 @@ const CustomerSegmentAppHeader = styled(Header5)`
 
 const CustomerSegmentAppParagraph = styled(Body)`
   margin-top: 2rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: ${Fade};
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {

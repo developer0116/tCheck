@@ -78,7 +78,6 @@ const LogoImg = styled.img`
 const LinksButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  transition: flex 0.3s ease-out;
 
   @media (max-width: ${sizes.modifiedTablet}) {
     ${({ open }) => {
@@ -105,7 +104,32 @@ const ResponsiveButton = styled(Button)`
   }
 `
 
+const MobileResponsiveButton = styled(Button)`
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    display: unset;
+  }
+`
+
+const MobileButtonLink = styled(Link)`
+  ${({ isProductPage }) => {
+    return isProductPage ? `display: none !important;` : null
+  }}
+  display: none;
+  text-decoration: none;
+
+  @media (max-width: ${sizes.modifiedTablet}) {
+    margin-left: auto;
+    display: unset;
+  }
+`
+
 const ButtonLink = styled(Link)`
+  ${({ isProductPage }) => {
+    return isProductPage ? `display: none !important;` : null
+  }}
   text-decoration: none;
 `
 
@@ -114,10 +138,11 @@ const MobileMenuIconStyles = styled.div`
 
   @media (max-width: ${sizes.modifiedTablet}) {
     display: block;
+    margin-left: 2rem;
   }
 `
 
-const Header = React.memo(props => {
+const Header = React.memo(({ isProductPage }) => {
   const [open, toggleOpen] = useState(false)
 
   return (
@@ -133,13 +158,13 @@ const Header = React.memo(props => {
             </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/processors" activeStyle={{ color: tBlue }}>
-              Processors
+            <TLink to="/growers" activeStyle={{ color: tBlue }}>
+              Growers
             </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/growers" activeStyle={{ color: tBlue }}>
-              Growers
+            <TLink to="/processors" activeStyle={{ color: tBlue }}>
+              Processors
             </TLink>
           </LinkContainer>
           <LinkContainer>
@@ -155,10 +180,13 @@ const Header = React.memo(props => {
               Support
             </ExternalLink>
           </LinkContainer>
-          <ButtonLink to="/product">
+          <ButtonLink to="/product" isProductPage={isProductPage}>
             <ResponsiveButton>Buy Now</ResponsiveButton>
           </ButtonLink>
         </LinksButtonContainer>
+        <MobileButtonLink to="/product" isProductPage={isProductPage}>
+          <MobileResponsiveButton>Buy Now</MobileResponsiveButton>
+        </MobileButtonLink>
 
         <MobileMenuIconStyles
           onClick={() => {

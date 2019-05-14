@@ -213,9 +213,9 @@ const Footer = React.memo(props => {
                 About
               </FooterLink>
             </FooterLinkContainer>
-            <FooterLinkContainer>
+            {/* <FooterLinkContainer>
               <FooterLink color={Fade}>Mission Statement</FooterLink>
-            </FooterLinkContainer>
+            </FooterLinkContainer> */}
           </FooterColumnExpand>
           <FooterColumnExpand headerText="Work with Us">
             <FooterLinkContainer>

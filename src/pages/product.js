@@ -22,6 +22,7 @@ const PaddingContainer = styled.div`
 class ProductPage extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
       // to select between
       // 1. tCheck and Kit
@@ -85,7 +86,7 @@ class ProductPage extends React.Component {
     const { productNum, productColor, detail, quantity, isMobile } = this.state
 
     return (
-      <Layout>
+      <Layout isProductPage={true}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <ProductSelection
           productNum={productNum}

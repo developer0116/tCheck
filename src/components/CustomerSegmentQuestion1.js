@@ -70,7 +70,7 @@ const CustomerSegmentQ1Header = styled(Header5)`
 
 const CustomerSegmentQ1Paragraph1 = styled(Body)`
   margin-top: 2rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: ${Fade};
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
@@ -89,7 +89,7 @@ const CustomerSegmentUL = styled.ul`
   line-height: 1.5;
   letter-spacing: normal;
   font-family: Lato;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: ${Fade};
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
@@ -103,7 +103,7 @@ const CustomerSegmentUL = styled.ul`
 
 const CustomerSegmentQ1Paragraph2 = styled(Body)`
   margin-top: 2rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: ${Fade};
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {

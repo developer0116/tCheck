@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { animateScroll as scroll } from "react-scroll"
 
-import { Body, Lead, Header4 } from "./Typography"
+import { Body, Lead, Header5 } from "./Typography"
 import Button from "./Button"
 import ProductCarousel from "./ProductCarousel"
 
@@ -65,7 +65,7 @@ const ProductSelectionModule = styled.div`
   }
 `
 
-const ProductSelectionTitle = styled(Header4)`
+const ProductSelectionTitle = styled(Header5)`
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     margin: 3rem 0 0 0;
     text-align: center;
@@ -73,7 +73,8 @@ const ProductSelectionTitle = styled(Header4)`
 `
 
 const ProductSelectionHeader = styled(Lead)`
-  font-size: 1.25rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     text-align: center;
@@ -198,12 +199,13 @@ const ProductColorCircle = styled.div`
 `
 
 const ProductAddToCartButton = styled(Button)`
+  height: 3.5rem;
   width: 75%;
   margin: 0 auto;
 `
 
 const ProductPoliciesContainer = styled.div`
-  max-width: 16rem;
+  max-width: 18rem;
   margin: 0 auto;
 `
 
@@ -411,7 +413,7 @@ const ProductSelection = ({
           </ProductPolicyContainer>
           <ProductPolicyContainer>
             <ProductPolicyCheckMark src={CheckMark} />
-            <Body>6 month warranty</Body>
+            <Body>6 month warranty on tCheck device</Body>
           </ProductPolicyContainer>
         </ProductPoliciesContainer>
       </ProductSelectionModule>

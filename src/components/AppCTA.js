@@ -45,7 +45,8 @@ const AppTextContainer = styled.div`
 `
 
 const Header = styled(Header4)`
-  margin-bottom: 3rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     font-size: 1.5rem;

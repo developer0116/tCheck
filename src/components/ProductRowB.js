@@ -3,10 +3,8 @@ import styled from "styled-components"
 
 import { Body, Header5 } from "./Typography"
 
-import { Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
-import hexagonLarge from "../images/hexagon_large.svg"
 import ExpansionKit from "../images/kit.png"
 import GreenHex from "../images/hex_green.svg"
 
@@ -39,7 +37,7 @@ const ProductTextSection = styled.div`
 `
 
 const ProductTitle = styled(Header5)`
-  margin-bottom: 48px;
+  margin-bottom: 2rem;
   position: relative;
 
   &:before {
@@ -81,7 +79,7 @@ const ProductRowB = () => {
         <ProductTitle>
           Expansion kit for flower and concentrate testing
         </ProductTitle>
-        <ProductBody color={Fade}>
+        <ProductBody secondary>
           Properly test flower and concentrate potency using a tCheck 2 and
           these compoents. Each item included has been carefully selected to
           ensure the highest level of testing accuracy with tCheck 2.

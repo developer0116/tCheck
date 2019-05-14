@@ -3,10 +3,8 @@ import styled from "styled-components"
 
 import { Body, Header5 } from "./Typography"
 
-import { Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
-import hexagonLarge from "../images/hexagon_large.svg"
 import CannabisTester from "../images/Cannabistester.png"
 import OrangeHex from "../images/hex_orange.svg"
 
@@ -36,7 +34,7 @@ const ProductTextSection = styled.div`
 `
 
 const ProductTitle = styled(Header5)`
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   position: relative;
 
   &:before {
@@ -74,7 +72,7 @@ const ProductRowA = () => {
     <ProductRowContainer>
       <ProductTextSection>
         <ProductTitle>Cannabis tester for infusions</ProductTitle>
-        <ProductBody color={Fade}>
+        <ProductBody secondary>
           Collect live readings of your sample in minutes using the tCheck 2 and
           your phone. Test infused olive oil, coconut oil, alcohol, or butter.
         </ProductBody>

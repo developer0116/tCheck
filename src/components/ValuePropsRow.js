@@ -74,7 +74,7 @@ const ValuePropsRow = React.memo(() => {
         <ValuePropImg src={Snap} />
         <ValuePropHeader color={tGreen}>Start testing in mins.</ValuePropHeader>
         <ValuePropText>
-          Designed for everyone, tCheck is easy to use and
+          Designed for everyone, tCheck is easy to get up and running.
         </ValuePropText>
       </ValueProp>
     </ValuePropsContainer>

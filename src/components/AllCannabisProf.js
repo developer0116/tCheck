@@ -37,14 +37,17 @@ const CannabisTextContainer = styled.div`
 `
 
 const Header = styled(Header4)`
+  font-size: 2rem;
   margin-bottom: 2rem;
 
   @media (max-width: ${sizes.modifiedTablet}) {
+    font-size: 2rem;
     margin: 40px 40px;
   }
 `
 
 const CannabisLead = styled(Lead)`
+  font-size: 1.25rem;
   margin-top: 1.5rem;
 `
 
