@@ -46,7 +46,7 @@ class ProductPage extends React.Component {
 
   componentDidMount = () => {
     this.setState({
-      isMobile: window.innerWidth < 425,
+      isMobile: window.innerWidth < 800,
     })
     window.addEventListener("resize", this.checkResize)
   }
@@ -76,9 +76,9 @@ class ProductPage extends React.Component {
   }
 
   checkResize = () => {
-    // 425 === sizes.mobileL
+    // 800 === sizes.modifiedTablet
     this.setState({
-      isMobile: window.innerWidth < 425,
+      isMobile: window.innerWidth < 800,
     })
   }
 

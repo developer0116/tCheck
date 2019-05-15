@@ -31,6 +31,7 @@ const DetailsTab = styled(Lead)`
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1rem;
     width: min-content;
   }
 `

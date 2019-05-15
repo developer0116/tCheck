@@ -21,14 +21,20 @@ const ProductSelectionContainer = styled.section`
   background-color: ${Ghost};
   justify-content: space-between;
 
+  @media (max-width: ${sizes.laptop}) and (min-width: ${sizes.modifiedTablet}) {
+    padding: 3.5rem 1rem;
+  }
+
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     padding: 1.5rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    padding: 0;
     flex-direction: column;
     align-items: center;
-    padding: 0;
   }
 `
 
@@ -45,7 +51,7 @@ const ProductCarouselContainer = styled.div`
     width: 100%;
   }
 
-  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileS}) {
     height: auto;
     flex-direction: column;
   }
@@ -159,11 +165,13 @@ const ProductColorSelectContainer = styled.div`
 
 const ProductColorLead = styled(ProductSelectionHeader)`
   margin-bottom: 2rem;
+  font-size: 0.875rem;
 `
 
 const Misc = styled(Body)`
   text-align: center;
   margin: 2rem 0 0 0;
+  font-size: 0.875rem;
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     margin: 0;

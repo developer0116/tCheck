@@ -1,16 +1,10 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
 import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
 
 import { Header4, Lead } from "./Typography"
 
 import { Flour } from "../lib/colors"
 import { sizes } from "../lib/layout"
-
-// const CustomerSegmentHeroBackground = styled(BackgroundImage)`
-//   height: 30rem;
-// `
 
 const CustomerSegmentHeroBackground = styled.div`
   background: url(${({ heroImgURL }) => {
@@ -22,6 +16,10 @@ const CustomerSegmentHeroBackground = styled.div`
   background-position: bottom !important;
   background-color: ${Flour} !important;
   padding-top: 4.5rem;
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    height: 24rem;
+  }
 `
 
 const CustomerSegmentContentContainer = styled.div`
@@ -72,37 +70,14 @@ const HeroLead = styled(Lead)`
 
 const CustomerSegmentHero = React.memo(
   ({ heroImgURL, heroHeader, heroLead }) => {
-    // return (
-    // <StaticQuery
-    //   query={graphql`
-    //   query {
-    //     hero: file(relativePath: { eq: ${heroImgURL} }) {
-    //       childImageSharp {
-    //         fluid(quality: 100, maxWidth: 1440) {
-    //           ...GatsbyImageSharpFluid_withWebp
-    //         }
-    //       }
-    //     }
-    //   }
-    // `}
-    //   render={data => {
     return (
-      // <CustomerSegmentHeroBackground
-      //   Tag="section"
-      //   fluid={data.hero.childImageSharp.fluid}
-      //   backgroundColor={`#040e18`}
-      // >
       <CustomerSegmentHeroBackground heroImgURL={heroImgURL}>
         <CustomerSegmentContentContainer>
           <Header color={Flour}>{heroHeader}</Header>
           <HeroLead color={Flour}>{heroLead}</HeroLead>
         </CustomerSegmentContentContainer>
       </CustomerSegmentHeroBackground>
-      // </CustomerSegmentHeroBackground>
     )
-    //   }}
-    // />
-    // )
   }
 )
 
