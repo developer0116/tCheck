@@ -1,12 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header4 } from "./Typography"
-
-const DetailsText = styled(Body)`
-  max-width: 46rem;
-  margin: 1rem auto 0;
-`
+import { Body } from "./Typography"
 
 const DetailsTextTitle = styled(Body)`
   margin: 2rem 0 0 0;

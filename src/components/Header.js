@@ -42,7 +42,9 @@ const TLink = styled(Link)`
   line-height: 2.29;
   letter-spacing: normal;
   text-decoration: none;
-  color: ${Ink};
+  color: ${({ isActive }) => {
+    return isActive ? tBlue : Ink
+  }};
   font-size: 0.875rem;
 
   &:hover {
@@ -142,7 +144,7 @@ const MobileMenuIconStyles = styled.div`
   }
 `
 
-const Header = React.memo(({ isProductPage }) => {
+const Header = React.memo(({ isProductPage, pathName }) => {
   const [open, toggleOpen] = useState(false)
 
   return (
@@ -153,17 +155,29 @@ const Header = React.memo(({ isProductPage }) => {
         </TLink>
         <LinksButtonContainer open={open}>
           <LinkContainer>
-            <TLink to="/makers" activeStyle={{ color: tBlue }}>
+            <TLink
+              to="/makers"
+              activeStyle={{ color: tBlue }}
+              isActive={pathName === "/makers/"}
+            >
               Edible Makers
             </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/growers" activeStyle={{ color: tBlue }}>
+            <TLink
+              to="/growers"
+              activeStyle={{ color: tBlue }}
+              isActive={pathName === "/growers/"}
+            >
               Growers
             </TLink>
           </LinkContainer>
           <LinkContainer>
-            <TLink to="/processors" activeStyle={{ color: tBlue }}>
+            <TLink
+              to="/processors"
+              activeStyle={{ color: tBlue }}
+              isActive={pathName === "/processors/"}
+            >
               Processors
             </TLink>
           </LinkContainer>

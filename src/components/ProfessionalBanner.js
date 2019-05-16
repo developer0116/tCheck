@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Body, Lead, Header5 } from "./Typography"
+import { Lead, Header5 } from "./Typography"
 
-import { Flour, Fade, tGreen, Ink, tBlue, Ghost } from "../lib/colors"
+import { Flour, Ghost } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import PicPrice from "../images/pic_price.png"

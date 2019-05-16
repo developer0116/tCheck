@@ -22,7 +22,7 @@ const CenterContainer = styled.div`
   max-width: ${maxWidth}px;
 `
 
-const Layout = ({ isProductPage = false, children }) => (
+const Layout = ({ isProductPage = false, pathName, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -39,6 +39,7 @@ const Layout = ({ isProductPage = false, children }) => (
         <Header
           siteTitle={data.site.siteMetadata.title}
           isProductPage={isProductPage}
+          pathName={pathName}
         />
         <CenterContainer>
           <main>{children}</main>

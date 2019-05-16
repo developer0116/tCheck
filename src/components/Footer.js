@@ -1,7 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { Link, StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { Caption } from "./Typography"
@@ -139,6 +136,7 @@ const Footer = React.memo(props => {
               alt="facebook logo link"
               href="https://www.facebook.com/t.chker/"
               target="_blank"
+              rel="noopener"
             >
               <SocialImage src={facebook} />
             </a>
@@ -146,6 +144,7 @@ const Footer = React.memo(props => {
               alt="instagram logo link"
               href="https://www.instagram.com/tcheck.me/"
               target="_blank"
+              rel="noopener"
             >
               <SocialImage src={instagram} />
             </a>
@@ -153,6 +152,7 @@ const Footer = React.memo(props => {
               alt="linked in logo link"
               href="https://www.linkedin.com/company/17901741"
               target="_blank"
+              rel="noopener"
             >
               <SocialImage src={linkedIn} />
             </a>
@@ -209,6 +209,7 @@ const Footer = React.memo(props => {
                 href="https://medium.com/tcheck/about-engineered-medical-technologies-e76ce1544cb8"
                 target="_blank"
                 color={Fade}
+                rel="noopener"
               >
                 About
               </FooterLink>
@@ -223,6 +224,7 @@ const Footer = React.memo(props => {
                 target="_blank"
                 href="https://tcheckme.growsumo.com"
                 color={Fade}
+                rel="noopener"
               >
                 Affiliate Program
               </FooterLink>
@@ -235,6 +237,7 @@ const Footer = React.memo(props => {
                 target="_blank"
                 href="https://www.indeed.com/cmp/Tcheck-1"
                 color={Fade}
+                rel="noopener"
               >
                 Careers
               </FooterLink>
@@ -246,6 +249,7 @@ const Footer = React.memo(props => {
                 color={Fade}
                 target="_blank"
                 href="https://medium.com/tcheck/tcheck-agreements-ee293283431f"
+                rel="noopener"
               >
                 Agreements
               </FooterLink>
@@ -255,6 +259,7 @@ const Footer = React.memo(props => {
                 target="_blank"
                 href="https://medium.com/tcheck/tcheck-privacy-policy-36fdf200ce9"
                 color={Fade}
+                rel="noopener"
               >
                 Privacy
               </FooterLink>
@@ -266,6 +271,7 @@ const Footer = React.memo(props => {
                 target="_blank"
                 href="https://www.youtube.com/channel/UCj842lZb3wYeOuK3XB9nQSA"
                 color={Fade}
+                rel="noopener"
               >
                 How-to Videos
               </FooterLink>
@@ -275,6 +281,7 @@ const Footer = React.memo(props => {
                 target="_blank"
                 href="https://medium.com/tcheck/tcheck-2-user-manual-c94fe50b2a47"
                 color={Fade}
+                rel="noopener"
               >
                 User Manuals
               </FooterLink>
@@ -284,6 +291,7 @@ const Footer = React.memo(props => {
                 target="_blank"
                 href="https://medium.com/tcheck/site-faqs-a69db16e2c1d"
                 color={Fade}
+                rel="noopener"
               >
                 FAQs
               </FooterLink>

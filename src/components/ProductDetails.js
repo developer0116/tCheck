@@ -7,7 +7,7 @@ import ProductDetailsIncludes from "./ProductDetailsIncludes"
 import ProductDetailsShipping from "./ProductDetailsShipping"
 import ProductDetailsSpecs from "./ProductDetailsSpecs"
 
-import { Fade, Dada, Ink, Ghost } from "../lib/colors"
+import { Fade, Dada, Ink } from "../lib/colors"
 import { sizes } from "../lib/layout"
 import productDetailsContent from "../lib/productDetailsContent"
 
@@ -84,7 +84,6 @@ const ProductDetails = React.memo(({ productNum, setDetail, detail }) => {
         <DetailsTab
           onClick={() => setDetail("shipping")}
           tabIndex="0"
-          color={Fade}
           color={detail === "shipping" ? Ink : Fade}
         >
           Shipping
@@ -92,7 +91,6 @@ const ProductDetails = React.memo(({ productNum, setDetail, detail }) => {
         <DetailsTab
           onClick={() => setDetail("specs")}
           tabIndex="0"
-          color={Fade}
           color={detail === "specs" ? Ink : Fade}
         >
           Specs

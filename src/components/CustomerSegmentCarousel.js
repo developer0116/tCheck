@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled, { keyframes } from "styled-components"
 import { Flipper, Flipped } from "react-flip-toolkit"
-import { CSSTransition, TransitionGroup } from "react-transition-group"
+import { TransitionGroup } from "react-transition-group"
 import "array.prototype.move"
 
 import { Header5, Body } from "./Typography"
@@ -9,25 +9,34 @@ import { Header5, Body } from "./Typography"
 import { Ghost, Fade } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
+import Case1 from "../images/case_droils.jpg"
+import Case2 from "../images/case_steph.jpg"
+
+const arrayOfImages = [Case1, Case2]
+
 const CarouselContainer = styled.section`
   background-color: ${Ghost};
-  border: 1px solid blue;
   padding: 0 4rem 4rem;
   display: flex;
   justify-content: space-between;
-  height: calc(100vw * 0.42);
-  max-height: 600px;
-  align-items: center;
+  height: 600px;
 
-  @media (max-width: ${sizes.modifiedTablet}) {
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     margin: 0;
+  }
+
+  @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    text-align: center;
+    margin: 0 auto;
   }
 `
 
 const TextContainer = styled.div`
-  border: 1px solid red;
   flex-basis: 40%;
   max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 const KeyFrame = keyframes`
@@ -49,22 +58,20 @@ const AnimationContainerForText = styled.div`
 `
 
 const ImagesContainer = styled.div`
-  border: 1px solid green;
   flex-basis: 50%;
   position: relative;
   height: 100%;
 `
 
-const Image = styled.div`
-  background-color: ${({ color }) => color};
+const Image = styled.img`
   top: 13%;
   bottom: 0;
   left: 0;
   right: 120px;
   position: absolute;
   z-index: 3;
-  max-width: 400px;
-  max-height: 400px;
+  width: 400px;
+  height: 400px;
 
   &:nth-of-type(2) {
     transform: translate(67px) scale(0.94);
@@ -117,19 +124,18 @@ const Quote = styled(Header5)``
 
 const DescriptionBody = styled(Body)``
 
-const CustomerSegmentCarousel = React.memo(() => {
+const CustomerSegmentCarousel = props => {
   // someone.... anyone...
   // find a better way of doing this, please
   const [photoNum, changePhotoNum] = useState(0)
 
-  const arrayOfImages = [
-    <Flipped flipId="red">
-      <Image photoNum={photoNum} color={"red"} />
-    </Flipped>,
-    <Flipped flipId="green">
-      <Image photoNum={photoNum} color={"green"} />
-    </Flipped>,
-  ]
+  const arrayOfImageComponents = arrayOfImages.map((img, index) => {
+    return (
+      <Flipped flipId={`flip-${index}`}>
+        <Image photoNum={photoNum} src={img} />
+      </Flipped>
+    )
+  })
 
   const arrayOfText = [
     <AnimationContainerForText>
@@ -161,7 +167,7 @@ const CustomerSegmentCarousel = React.memo(() => {
     </AnimationContainerForText>,
   ]
 
-  arrayOfImages.move(photoNum, 0)
+  arrayOfImageComponents.move(photoNum, 0)
   arrayOfText.move(photoNum, 0)
 
   return (
@@ -190,7 +196,7 @@ const CustomerSegmentCarousel = React.memo(() => {
       </TextContainer>
       <ImagesContainer>
         <Flipper applyTransformOrigin={false} flipKey={photoNum}>
-          {arrayOfImages}
+          {arrayOfImageComponents}
           {/* <Image photoNum={photoNum} color={"red"} />
             <Image photoNum={photoNum} color={"green"} />
             <Image color={"blue"} /> */}
@@ -198,6 +204,6 @@ const CustomerSegmentCarousel = React.memo(() => {
       </ImagesContainer>
     </CarouselContainer>
   )
-})
+}
 
 export default CustomerSegmentCarousel

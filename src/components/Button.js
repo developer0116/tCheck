@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { tGreen, Ink, Flour, tGreenSelected } from "../lib/colors"
+import { tGreen, Ink, Flour } from "../lib/colors"
 
 const Button = styled.button`
   height: ${props => {

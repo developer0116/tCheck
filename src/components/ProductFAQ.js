@@ -5,7 +5,7 @@ import styled from "styled-components"
 import ProductFAQDropDown from "./ProductFAQDropDown"
 import { Body, Header5, Header6 } from "./Typography"
 
-import { tBlue, Fade, Ghost } from "../lib/colors"
+import { Ghost } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import Arrow from "../images/ic_chevron.svg"

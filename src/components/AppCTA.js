@@ -1,10 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { Body, Lead, Header4 } from "./Typography"
+import { Body, Header4 } from "./Typography"
 
-import { Flour, tGreen, tBlue, Fade } from "../lib/colors"
+import { Flour } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 import AppStorePicture from "../images/app-store.svg"

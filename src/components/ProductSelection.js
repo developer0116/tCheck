@@ -110,6 +110,7 @@ const ProductSelectionButton = styled.div`
       ? `border: solid 2px ${tBlue}; box-shadow: 0 4px 10px 0 rgba(16, 156, 179, 0.2);`
       : `box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);`
   }}
+  margin-bottom: 1rem;
 `
 
 const ProductSelectionName = styled(Lead)`
@@ -247,12 +248,12 @@ const ProductSelection = ({
   isMobile,
 }) => {
   const incrementQuantity = () => {
-    const newQuantity = quantity == 99 ? 99 : quantity + 1
+    const newQuantity = quantity === 99 ? 99 : quantity + 1
     setQuantity(newQuantity)
   }
 
   const decrementQuantity = () => {
-    const newQuantity = quantity == 1 ? 1 : quantity - 1
+    const newQuantity = quantity === 1 ? 1 : quantity - 1
     setQuantity(newQuantity)
   }
   return (
@@ -320,7 +321,7 @@ const ProductSelection = ({
         <Misc secondary>Select your purchase</Misc>
         <ProductSelectionButtonsContainer>
           <ProductSelectionButton
-            selected={productNum == 1}
+            selected={productNum === 1}
             onClick={() => setProductNum(1)}
           >
             <ProductSelectionName>
@@ -330,9 +331,9 @@ const ProductSelection = ({
               $479.98
             </ProductSelectionPrice>
           </ProductSelectionButton>
-          <br />
+
           <ProductSelectionButton
-            selected={productNum == 2}
+            selected={productNum === 2}
             onClick={() => setProductNum(2)}
           >
             <ProductSelectionName>tCheck 2 device only</ProductSelectionName>
@@ -340,9 +341,9 @@ const ProductSelection = ({
               $279.99
             </ProductSelectionPrice>
           </ProductSelectionButton>
-          <br />
+
           <ProductSelectionButton
-            selected={productNum == 3}
+            selected={productNum === 3}
             onClick={() => setProductNum(3)}
           >
             <ProductSelectionName>Expansion kit only</ProductSelectionName>

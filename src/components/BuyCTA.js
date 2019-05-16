@@ -11,8 +11,6 @@ import PicPrice from "../images/pic_price.png"
 
 const CTAContainer = styled.section`
   width: 100%;
-  border-radius: 8px;
-  background-color: ${tBlue};
   margin: 6rem 0;
   display: flex;
   justify-content: space-between;
@@ -26,12 +24,24 @@ const CTAContainer = styled.section`
     border-radius: 0px;
     margin: 100px 0 0 0;
     align-items: unset;
+    height: auto;
   }
 `
 
 const CTATextSection = styled.div`
   text-align: center;
-  padding: 0 45px;
+  padding: 4.5rem 3rem;
+  border-radius: 8px;
+  background-color: ${tBlue};
+  flex-basis: content;
+
+  @media (max-width: ${sizes.laptopL}) and (min-width: ${sizes.laptop}) {
+    padding: 2.5rem 0;
+  }
+
+  @media (max-width: ${sizes.laptop}) and (min-width: ${sizes.modifiedTablet}) {
+    padding: 2rem;
+  }
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     padding: 2rem 0;
@@ -39,18 +49,25 @@ const CTATextSection = styled.div`
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     order: 2;
-
+    height: auto;
     text-align: center;
     padding: 2rem;
+    border-radius: 0;
   }
 `
 
 const CTATitle = styled(Header5)`
+  width: 77%;
   margin: 0 auto 2rem;
-  width: 90%;
+
+  @media (max-width: ${sizes.laptop}) and (min-width: ${sizes.modifiedTablet}) {
+  }
+
+  @media (max-width: ${sizes.laptop}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1.5rem;
+  }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
-    font-size: 1.5rem;
     width: 100%;
     margin: 0 0 1.5rem 0;
   }
@@ -59,7 +76,12 @@ const CTATitle = styled(Header5)`
 const CTALead = styled(Lead)`
   font-size: 1.25rem;
   width: 60%;
-  margin: 0 auto 10%;
+  margin: 0 auto 4.5rem;
+
+  @media (max-width: ${sizes.laptop}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1rem;
+    margin: 0 auto 2.5rem;
+  }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     font-size: 1rem;
@@ -69,7 +91,7 @@ const CTALead = styled(Lead)`
 `
 
 const CTAImage = styled.img`
-  width: 50%;
+  width: 65%;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
   }
