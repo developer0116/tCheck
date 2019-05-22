@@ -127,8 +127,8 @@ const CustomerSegmentQuestion1 = React.memo(
             {paragraph1}
           </CustomerSegmentQ1Paragraph1>
           <CustomerSegmentUL>
-            {list.map(text => {
-              return <li>{text}</li>
+            {list.map((text, index) => {
+              return <li key={index}>{text}</li>
             })}
           </CustomerSegmentUL>
           <CustomerSegmentQ1Paragraph2>

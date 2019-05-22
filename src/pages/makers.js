@@ -18,8 +18,8 @@ import ValueProp2 from "../images/edible_productline.svg"
 import ValueProp3 from "../images/edible_newrecipes.svg"
 import EdiblesBackgroundApp from "../images/ediblesApp.jpg"
 import EdiblesApp from "../images/app_edbl.svg"
-import Case1 from "../images/case_droils.jpg"
-import Case2 from "../images/case_steph.jpg"
+import Case1 from "../images/case_steph.jpg"
+import Case2 from "../images/case_droils.jpg"
 
 import { sizes } from "../lib/layout"
 
@@ -30,6 +30,19 @@ const list = [
 ]
 
 const arrayOfImages = [Case1, Case2]
+
+const arrayOfQuotes = [
+  {
+    quote: "tCheck was a lifesaver during the development of our cookbook",
+    background:
+      "Stephanie Hua is the founder and chief confectioner at Mellows. She started her business in 2016 after noticing a gap in the market for low-dose, tasty edibles. One of the biggest challenges Mellows have faced recently is an increase in regulation. Stephanie began using tCheck when Mellows were developing their cookbook. Their tCheck device provided them with the opportunity to quickly test their infusions throughout their research and development.",
+  },
+  {
+    quote: "With tCheck we accurately and easily test all of our products",
+    background:
+      "Doctor W Oils create cannabis oils, for humans and animals. They have helped nearly 50 people with Parkinson's disease, epilepsy or cancer. Helping others is at the heart of everything they do. tCheck has revolutionised the way they work. They have no access to testing facilities so tCheck was the first and only way they have been able to verify the strength of their oils. Before tCheck, they were relying on estimates and assumptions. With tCheck, they are now able to easily and accurately test their oils.",
+  },
+]
 
 const PaddingContainer = styled.div`
   padding: 0 80px;
@@ -70,7 +83,10 @@ const Makers = props => {
           valueProp3Img={ValueProp3}
           valueProp3Text={"Develop new recipes"}
         />
-        <CustomerSegmentCarousel />
+        <CustomerSegmentCarousel
+          arrayOfImages={arrayOfImages}
+          arrayOfQuotes={arrayOfQuotes}
+        />
       </GhostBackground>
       <PaddingContainer>
         <CustomerSegmentCenterTestingBlurb
@@ -92,6 +108,7 @@ const Makers = props => {
           }
         />
         <CustomerSegmentApp
+          arrayOfImages={arrayOfImages}
           background={EdiblesBackgroundApp}
           header={"Make any oil work for any recipe"}
           body={

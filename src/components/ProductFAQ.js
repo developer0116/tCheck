@@ -96,7 +96,7 @@ const ProductFAQ = () => {
                   toggleOpen(!isOpen)
                 }}
               >
-                <Header6>What can I measure?</Header6>
+                <Header6>What cannabinoids does tCheck measure?</Header6>
                 <ChevronArrowImg src={Arrow} flip={isOpen} />
               </FAQHeaderContainer>
               <CSSTransition
@@ -107,13 +107,8 @@ const ProductFAQ = () => {
               >
                 <FAQAnswer>
                   <Body secondary>
-                    tCheck2 will be able to measure infused butter, coconut oil,
-                    alcohol and olive oil at initial release. The Expanison Kit
-                    allows you to test flower and concentrates. Additional oils
-                    and base solvents will be added in future module upgrades.
-                    Because we add capabilities based on customer demand, please
-                    drop us a line with your vote on the base you want (e.g. VG,
-                    honey, grapeseed oil, etc).{" "}
+                    tCheck is currently able to measure the concentration of
+                    THC, CBD, or THCa (with expansion kit).
                   </Body>
                 </FAQAnswer>
               </CSSTransition>
@@ -131,7 +126,7 @@ const ProductFAQ = () => {
                   toggleOpen(!isOpen)
                 }}
               >
-                <Header6>How do you clean the tray?</Header6>
+                <Header6>Do I need an expansion kit?</Header6>
                 <ChevronArrowImg src={Arrow} flip={isOpen} />
               </FAQHeaderContainer>
               <CSSTransition
@@ -142,13 +137,9 @@ const ProductFAQ = () => {
               >
                 <FAQAnswer>
                   <Body secondary>
-                    tCheck2 will be able to measure infused butter, coconut oil,
-                    alcohol and olive oil at initial release. The Expanison Kit
-                    allows you to test flower and concentrates. Additional oils
-                    and base solvents will be added in future module upgrades.
-                    Because we add capabilities based on customer demand, please
-                    drop us a line with your vote on the base you want (e.g. VG,
-                    honey, grapeseed oil, etc).{" "}
+                    If you are testing flower or concentrates (including full
+                    extract cannabis oil, wax/crumble, shatter, rosin, and
+                    resin, you will be to purchase the expansion kit.
                   </Body>
                 </FAQAnswer>
               </CSSTransition>
@@ -166,7 +157,7 @@ const ProductFAQ = () => {
                   toggleOpen(!isOpen)
                 }}
               >
-                <Header6>What phone devices are supported?</Header6>
+                <Header6>What is the accuracy of tCheck results?</Header6>
                 <ChevronArrowImg src={Arrow} flip={isOpen} />
               </FAQHeaderContainer>
               <CSSTransition
@@ -177,13 +168,39 @@ const ProductFAQ = () => {
               >
                 <FAQAnswer>
                   <Body secondary>
-                    tCheck2 will be able to measure infused butter, coconut oil,
-                    alcohol and olive oil at initial release. The Expanison Kit
-                    allows you to test flower and concentrates. Additional oils
-                    and base solvents will be added in future module upgrades.
-                    Because we add capabilities based on customer demand, please
-                    drop us a line with your vote on the base you want (e.g. VG,
-                    honey, grapeseed oil, etc).{" "}
+                    tCheck result accuracy has a +/- 15% of full scale
+                  </Body>
+                </FAQAnswer>
+              </CSSTransition>
+            </>
+          )
+        }}
+      </ProductFAQDropDown>
+      <BR />
+      <ProductFAQDropDown>
+        {(isOpen, toggleOpen) => {
+          return (
+            <>
+              <FAQHeaderContainer
+                onClick={() => {
+                  toggleOpen(!isOpen)
+                }}
+              >
+                <Header6>
+                  Can I test infusions outside the tCheck’s measurement range?
+                </Header6>
+                <ChevronArrowImg src={Arrow} flip={isOpen} />
+              </FAQHeaderContainer>
+              <CSSTransition
+                in={isOpen}
+                timeout={transitionDuration}
+                classNames={transitionName}
+                unmountOnExit
+              >
+                <FAQAnswer>
+                  <Body secondary>
+                    Yes, you can. You need to dilute your infusion to a point
+                    where the tCheck can measure it. See our guide.
                   </Body>
                 </FAQAnswer>
               </CSSTransition>

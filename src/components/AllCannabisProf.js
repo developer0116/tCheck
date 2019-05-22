@@ -102,6 +102,14 @@ const AllCannabisProf = () => {
     <CannabisContainer>
       <CannabisTextContainer>
         <Header>For every cannabis professional</Header>
+        <CannabisLead color={tGreen}>Edible Makers</CannabisLead>
+        <CannabisBody secondary>
+          Never have another edible mishap with tCheck in hand.
+        </CannabisBody>
+        <CannabisLink to="/makers">
+          Learn More <ArrowIcon icon={faLongArrowAltRight} />
+        </CannabisLink>
+
         <CannabisLead color={tGreen}>Growers</CannabisLead>
         <CannabisBody secondary>
           Indoor and outdoor growers face different challenges, testing
@@ -117,14 +125,6 @@ const AllCannabisProf = () => {
           your final product.
         </CannabisBody>
         <CannabisLink to="/processors">
-          Learn More <ArrowIcon icon={faLongArrowAltRight} />
-        </CannabisLink>
-
-        <CannabisLead color={tGreen}>Edible Makers</CannabisLead>
-        <CannabisBody secondary>
-          Never have another edible mishap with tCheck in hand.
-        </CannabisBody>
-        <CannabisLink to="/makers">
           Learn More <ArrowIcon icon={faLongArrowAltRight} />
         </CannabisLink>
       </CannabisTextContainer>

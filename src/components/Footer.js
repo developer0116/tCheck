@@ -222,7 +222,7 @@ const Footer = React.memo(props => {
             <FooterLinkContainer>
               <FooterLink
                 target="_blank"
-                href="https://tcheckme.growsumo.com"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe8S0rHvDZqex39lP_099Np9j2f7ztubp8dHmzn1M0ssDaOWQ/viewform"
                 color={Fade}
                 rel="noopener"
               >
@@ -230,7 +230,14 @@ const Footer = React.memo(props => {
               </FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
-              <FooterLink color={Fade}>Wholesale</FooterLink>
+              <FooterLink
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSecbi6liB9A3KXelqWDGJ_JlxJnnlVENXUubjMlPAfeLxyYxw/viewform"
+                color={Fade}
+                rel="noopener"
+              >
+                Wholesale
+              </FooterLink>
             </FooterLinkContainer>
             <FooterLinkContainer>
               <FooterLink
