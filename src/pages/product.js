@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 import ProductSelection from "../components/ProductSelection"
@@ -86,7 +85,7 @@ class ProductPage extends React.Component {
     const { productNum, productColor, detail, quantity, isMobile } = this.state
 
     return (
-      <Layout isProductPage={true}>
+      <>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <ProductSelection
           productNum={productNum}
@@ -107,7 +106,7 @@ class ProductPage extends React.Component {
         <ProductFeatureRundown />
 
         <PaddingContainer />
-      </Layout>
+      </>
     )
   }
 }

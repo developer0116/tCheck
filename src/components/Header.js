@@ -1,8 +1,7 @@
 import React, { useState } from "react"
-import PropTypes from "prop-types"
+
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { useSpring, animated } from "react-spring"
 
 import Button from "./Button"
 import MobileMenuIcon from "./MobileMenuIcon"
@@ -214,13 +213,5 @@ const Header = React.memo(({ isProductPage, pathName }) => {
     </HeaderTag>
   )
 })
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

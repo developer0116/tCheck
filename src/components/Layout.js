@@ -1,18 +1,11 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Header from "./Header"
 import Footer from "./Footer"
 import GlobalStyle from "./GlobalStyles"
+import { ContextProvider } from "./Context"
 
 import { maxWidth } from "../lib/layout"
 
@@ -22,33 +15,25 @@ const CenterContainer = styled.div`
   max-width: ${maxWidth}px;
 `
 
-const Layout = ({ isProductPage = false, pathName, children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <GlobalStyle />
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          isProductPage={isProductPage}
-          pathName={pathName}
-        />
-        <CenterContainer>
-          <main>{children}</main>
-          <Footer />
-        </CenterContainer>
-      </>
-    )}
-  />
-)
+const Layout = props => {
+  const {
+    location: { pathname },
+    children,
+  } = props
+
+  const isProductPage = pathname === "/product"
+
+  return (
+    <ContextProvider>
+      <GlobalStyle />
+      <Header isProductPage={isProductPage} pathName={pathname} />
+      <CenterContainer>
+        <main>{children}</main>
+        <Footer />
+      </CenterContainer>
+    </ContextProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

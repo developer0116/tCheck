@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import Layout from "../components/Layout"
+// import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import ValuePropsRow from "../components/ValuePropsRow"
@@ -23,7 +23,7 @@ const PaddingContainer = styled.div`
 `
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Hero />
     <PaddingContainer>
@@ -35,7 +35,7 @@ const IndexPage = () => (
       <AppCTA />
       <AsSeenIn />
     </PaddingContainer>
-  </Layout>
+  </>
 )
 
 export default IndexPage

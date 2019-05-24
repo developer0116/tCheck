@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import CustomerSegmentHero from "../components/CustomerSegmentHero"
 import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
@@ -46,7 +45,7 @@ const Processors = props => {
   } = props
 
   return (
-    <Layout pathName={pathname}>
+    <>
       <SEO title="Processors" keywords={[`tCheck`, `cannabis`, `infusion`]} />
       <CustomerSegmentHero
         heroImgURL={ProcessorsHero}
@@ -92,7 +91,7 @@ const Processors = props => {
           app={ProcessorsApp}
         />
       </PaddingContainer>
-    </Layout>
+    </>
   )
 }
 

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import CustomerSegmentHero from "../components/CustomerSegmentHero"
 import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
@@ -76,7 +75,7 @@ const Growers = props => {
   } = props
 
   return (
-    <Layout pathName={pathname}>
+    <>
       <SEO title="Growers" keywords={[`tCheck`, `cannabis`, `infusion`]} />
       <CustomerSegmentHero
         heroImgURL={GrowersHero}
@@ -130,7 +129,7 @@ const Growers = props => {
           app={GrowersApp}
         />
       </PaddingContainer>
-    </Layout>
+    </>
   )
 }
 
