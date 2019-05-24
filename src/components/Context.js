@@ -3,43 +3,13 @@ import PropTypes from "prop-types"
 
 import Client from "shopify-buy"
 
-// Sets up shopfiy client
-const client = Client.buildClient({
-  storefrontAccessToken: "e6cc5db98b21bd12b4657197f2014038",
-  domain: "tcheck-me.myshopify.com",
-  appId: "6",
-})
-
-let allProducts
-
-// fetches all products from shopify store
-client.product.fetchAll().then(products => {
-  allProducts = products
-})
-
-// checks if existing "checkout" exsists,
-// if so, fetches those items to show later on the product page
-// else creates a new checkout and stores the id in locale storage
-if (localStorage.getItem("lastCheckoutId")) {
-  client.checkout
-    .fetch(localStorage.getItem("lastCheckoutId"))
-    .then(checkout => {
-      console.log(checkout)
-    })
-} else {
-  client.checkout.create().then(checkout => {
-    localStorage.setItem("lastCheckoutId", checkout.id)
-    console.log(checkout)
-  })
-}
-
 // here, we start setting up context as a global for
 // product information
 // followed this pretty closely
 // https://www.gatsbyjs.org/packages/gatsby-plugin-layout/
 
 const defaultContextValue = {
-  allProducts: allProducts,
+  allProducts: {},
 }
 
 const { Provider, Consumer } = React.createContext(defaultContextValue)
@@ -50,6 +20,37 @@ class ContextProvider extends React.Component {
 
     this.state = {
       ...defaultContextValue,
+    }
+  }
+
+  componentDidMount() {
+    // Sets up shopfiy client
+    const client = Client.buildClient({
+      storefrontAccessToken: "e6cc5db98b21bd12b4657197f2014038",
+      domain: "tcheck-me.myshopify.com",
+      appId: "6",
+    })
+
+    let allProducts
+
+    // fetches all products from shopify store
+    client.product.fetchAll().then(products => {
+      this.setState({
+        allProducts: products,
+      })
+    })
+
+    // checks if existing "checkout" exsists,
+    // if so, fetches those items to show later on the product page
+    // else creates a new checkout and stores the id in locale storage
+    if (localStorage.getItem("lastCheckoutId")) {
+      client.checkout
+        .fetch(localStorage.getItem("lastCheckoutId"))
+        .then(checkout => {})
+    } else {
+      client.checkout.create().then(checkout => {
+        localStorage.setItem("lastCheckoutId", checkout.id)
+      })
     }
   }
 

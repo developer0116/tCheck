@@ -17,6 +17,7 @@ import ValueProp2 from "../images/processors_controlyield.svg"
 import ValueProp3 from "../images/processors_cannaloss.svg"
 import ProcessorsBackgroundApp from "../images/processorsApp.jpg"
 import ProcessorsApp from "../images/app_proc.svg"
+import Case1 from "../images/case_thera.jpg"
 
 import { sizes } from "../lib/layout"
 
@@ -25,6 +26,17 @@ const list = [
   "tCheck 2",
   "Expansion Kit",
   "6 minutes of your time",
+]
+
+const arrayOfImages = [Case1]
+
+const arrayOfQuotes = [
+  {
+    quote:
+      "We bought our tCheck so we are able to test our flowers and products at home",
+    background:
+      "Brandon is the owner of Therapeutic Concepts, a small family owned medical marijuana farm in Oregon. He grows and sells high-quality products on a small scale. He was gifted a tCheck device by his wife and has found it a useful and cost-effective device for testing the potency of his products. He uses his tCheck as an alternative to lab testing wherever possible, due to its low cost and the small sample you need to test your flowers.",
+  },
 ]
 
 const PaddingContainer = styled.div`
@@ -63,7 +75,10 @@ const Processors = props => {
           valueProp3Img={ValueProp3}
           valueProp3Text={"Identify areas of cannabinoid loss"}
         />
-        <CustomerSegmentCarousel />
+        <CustomerSegmentCarousel
+          arrayOfImages={arrayOfImages}
+          arrayOfQuotes={arrayOfQuotes}
+        />
       </GhostBackground>
       <PaddingContainer>
         <CustomerSegmentCenterTestingBlurb
