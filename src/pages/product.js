@@ -7,6 +7,7 @@ import ProductSelection from "../components/ProductSelection"
 import ProductDetails from "../components/ProductDetails"
 import ProductFAQ from "../components/ProductFAQ"
 import ProductFeatureRundown from "../components/ProductFeatureRundown"
+import ProductConsumer from "../components/Context"
 
 import { sizes } from "../lib/layout"
 
@@ -87,16 +88,28 @@ class ProductPage extends React.Component {
     return (
       <>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <ProductSelection
-          productNum={productNum}
-          setProductNum={this.setProductNum}
-          productColor={productColor}
-          changeColor={this.changeColor}
-          setDetail={this.setDetail}
-          quantity={quantity}
-          setQuantity={this.setQuantity}
-          isMobile={isMobile}
-        />
+        <ProductConsumer>
+          {({ allProducts }) => {
+            /* allProducts is an array of 5  "Graph Modules"
+             * -- allProducts[0] contains an array of 8 variants
+             * -- -- variants[0] through [3] are just the device as a different color (black, white, blue, green),
+             * -- -- variants[4] through [7] are the device + the kit with the same color schemes
+             * -- allProducts[1] is just the kit
+             */
+            return (
+              <ProductSelection
+                productNum={productNum}
+                setProductNum={this.setProductNum}
+                productColor={productColor}
+                changeColor={this.changeColor}
+                setDetail={this.setDetail}
+                quantity={quantity}
+                setQuantity={this.setQuantity}
+                isMobile={isMobile}
+              />
+            )
+          }}
+        </ProductConsumer>
         <ProductDetails
           productNum={productNum}
           setDetail={this.setDetail}
