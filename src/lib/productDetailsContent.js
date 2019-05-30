@@ -3,7 +3,7 @@
 // 3. Kit
 
 const productDetailsContent = {
-  1: {
+  tCheckAndKit: {
     features: {
       paragraphsArray: [
         `tCheck 2 is a potency tester that allows you to measure the strength of your infusions. Using just a few drops of butter, coconut oil, olive oil, or alcohol, you can accurately measure the strength of your infusion in less than 45 seconds.`,
@@ -106,7 +106,7 @@ const productDetailsContent = {
       },
     ],
   },
-  2: {
+  tCheck: {
     features: {
       paragraphsArray: [
         `tCheck 2 is a potency tester that allows you to measure the strength of your infusions. Using just a few drops of butter, coconut oil, olive oil, or alcohol, you can accurately measure the strength of your infusion in less than 45 seconds.`,
@@ -185,7 +185,7 @@ const productDetailsContent = {
       },
     ],
   },
-  3: {
+  kit: {
     features: {
       paragraphsArray: [
         `The expansion kit provides all the materials needed to properly test your flower and concentrates using your tCheck 2. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,

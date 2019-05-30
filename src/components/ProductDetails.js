@@ -49,8 +49,8 @@ const DetailsText = styled(Body)`
   }
 `
 
-const ProductDetails = React.memo(({ productNum, setDetail, detail }) => {
-  const obj = productDetailsContent[productNum][detail]
+const ProductDetails = React.memo(({ product, setDetail, detail }) => {
+  const obj = productDetailsContent[product][detail]
 
   let detailText
 

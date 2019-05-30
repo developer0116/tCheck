@@ -7,7 +7,6 @@ import ProductSelection from "../components/ProductSelection"
 import ProductDetails from "../components/ProductDetails"
 import ProductFAQ from "../components/ProductFAQ"
 import ProductFeatureRundown from "../components/ProductFeatureRundown"
-import ProductConsumer from "../components/Context"
 
 import { sizes } from "../lib/layout"
 
@@ -28,7 +27,7 @@ class ProductPage extends React.Component {
       // 1. tCheck and Kit
       // 2. tCheck
       // 3. Kit
-      productNum: 1,
+      product: "tCheckAndKit",
 
       // options are
       // black, green, blue, white
@@ -40,6 +39,7 @@ class ProductPage extends React.Component {
 
       // tracks the quantity a user wants to purchase
       quantity: 1,
+
       isMobile: false,
     }
   }
@@ -51,9 +51,9 @@ class ProductPage extends React.Component {
     window.addEventListener("resize", this.checkResize)
   }
 
-  setProductNum = num => {
+  setProductName = productName => {
     this.setState({
-      productNum: num,
+      product: productName,
     })
   }
 
@@ -82,43 +82,56 @@ class ProductPage extends React.Component {
     })
   }
 
+  createCheckout = () => {
+    const {
+      state: { productInfo, checkoutId },
+      shopifyClient,
+    } = this.props
+
+    const { quantity, product, productColor } = this.state
+
+    const lineItemsToAdd = [
+      {
+        variantId:
+          product === "kit"
+            ? productInfo[product].id
+            : productInfo[product][productColor].id,
+        quantity,
+      },
+    ]
+
+    // Add an item to the checkout
+    shopifyClient.checkout
+      .addLineItems(checkoutId, lineItemsToAdd)
+      .then(checkout => {
+        window.open(checkout.webUrl, "_blank")
+      })
+  }
+
   render = () => {
-    const { productNum, productColor, detail, quantity, isMobile } = this.state
+    const { product, productColor, detail, quantity, isMobile } = this.state
 
     return (
       <>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <ProductConsumer>
-          {({ allProducts }) => {
-            /* allProducts is an array of 5  "Graph Modules"
-             * -- allProducts[0] contains an array of 8 variants
-             * -- -- variants[0] through [3] are just the device as a different color (black, white, blue, green),
-             * -- -- variants[4] through [7] are the device + the kit with the same color schemes
-             * -- allProducts[1] is just the kit
-             */
-            return (
-              <ProductSelection
-                productNum={productNum}
-                setProductNum={this.setProductNum}
-                productColor={productColor}
-                changeColor={this.changeColor}
-                setDetail={this.setDetail}
-                quantity={quantity}
-                setQuantity={this.setQuantity}
-                isMobile={isMobile}
-              />
-            )
-          }}
-        </ProductConsumer>
+        <ProductSelection
+          product={product}
+          setProductName={this.setProductName}
+          productColor={productColor}
+          changeColor={this.changeColor}
+          setDetail={this.setDetail}
+          quantity={quantity}
+          setQuantity={this.setQuantity}
+          isMobile={isMobile}
+          createCheckout={this.createCheckout}
+        />
         <ProductDetails
-          productNum={productNum}
+          product={product}
           setDetail={this.setDetail}
           detail={detail}
         />
         <ProductFAQ />
         <ProductFeatureRundown />
-
-        <PaddingContainer />
       </>
     )
   }

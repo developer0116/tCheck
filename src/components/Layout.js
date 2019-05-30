@@ -5,7 +5,7 @@ import styled from "styled-components"
 import Header from "./Header"
 import Footer from "./Footer"
 import GlobalStyle from "./GlobalStyles"
-import { ContextProvider } from "./Context"
+import ProductConsumer, { ContextProvider } from "./Context"
 
 import { maxWidth } from "../lib/layout"
 
@@ -28,7 +28,19 @@ const Layout = props => {
       <GlobalStyle />
       <Header isProductPage={isProductPage} pathName={pathname} />
       <CenterContainer>
-        <main>{children}</main>
+        {isProductPage ? (
+          <ProductConsumer>
+            {({ state, shopifyClient }) => {
+              return (
+                <main>
+                  {React.cloneElement(children, { state, shopifyClient })}
+                </main>
+              )
+            }}
+          </ProductConsumer>
+        ) : (
+          <main>{children}</main>
+        )}
         <Footer />
       </CenterContainer>
     </ContextProvider>

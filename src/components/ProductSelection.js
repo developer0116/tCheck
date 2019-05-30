@@ -114,7 +114,7 @@ const ProductSelectionButton = styled.div`
 `
 
 const ProductSelectionName = styled(Lead)`
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 `
 
 const ProductSelectionButtonsContainer = styled.div`
@@ -197,7 +197,12 @@ const ProductColorCircle = styled.div`
   }};
   cursor: pointer;
   background-image: url(${({ productColor, isSelected }) => {
-    if (productColor === "black" && isSelected) {
+    if (
+      (productColor === "black" ||
+        productColor === "blue" ||
+        productColor === "green") &&
+      isSelected
+    ) {
       return WhiteCheckMark
     } else if (isSelected) {
       return BlackCheckMark
@@ -238,14 +243,15 @@ const InlineLink = styled.a`
 `
 
 const ProductSelection = ({
-  productNum,
-  setProductNum,
+  product,
+  setProductName,
   productColor,
   changeColor,
   setDetail,
   quantity,
   setQuantity,
   isMobile,
+  createCheckout,
 }) => {
   const incrementQuantity = () => {
     const newQuantity = quantity === 99 ? 99 : quantity + 1
@@ -256,19 +262,21 @@ const ProductSelection = ({
     const newQuantity = quantity === 1 ? 1 : quantity - 1
     setQuantity(newQuantity)
   }
+
+  console.log("product :", product)
   return (
     <ProductSelectionContainer>
       <ProductCarouselContainer>
         {isMobile ? (
           <>
             <ProductSelectionTitle>
-              {productSelectionContent[productNum].title}
+              {productSelectionContent[product].title}
             </ProductSelectionTitle>
             <ProductSelectionHeader>
-              {productSelectionContent[productNum].header}
+              {productSelectionContent[product].header}
             </ProductSelectionHeader>
             <ProductSelectionBody secondary>
-              {productSelectionContent[productNum].subHeader}{" "}
+              {productSelectionContent[product].subHeader}{" "}
               <InlineLink
                 href="#"
                 onClick={() => {
@@ -297,13 +305,13 @@ const ProductSelection = ({
         {isMobile ? null : (
           <>
             <ProductSelectionTitle>
-              {productSelectionContent[productNum].title}
+              {productSelectionContent[product].title}
             </ProductSelectionTitle>
             <ProductSelectionHeader>
-              {productSelectionContent[productNum].header}
+              {productSelectionContent[product].header}
             </ProductSelectionHeader>
             <ProductSelectionBody secondary>
-              {productSelectionContent[productNum].subHeader}{" "}
+              {productSelectionContent[product].subHeader}{" "}
               <InlineLink
                 href="#"
                 onClick={() => {
@@ -321,8 +329,8 @@ const ProductSelection = ({
         <Misc secondary>Select your purchase</Misc>
         <ProductSelectionButtonsContainer>
           <ProductSelectionButton
-            selected={productNum === 1}
-            onClick={() => setProductNum(1)}
+            selected={product === "tCheckAndKit"}
+            onClick={() => setProductName("tCheckAndKit")}
           >
             <ProductSelectionName>
               tCheck 2 & Expansion Kit
@@ -333,8 +341,8 @@ const ProductSelection = ({
           </ProductSelectionButton>
 
           <ProductSelectionButton
-            selected={productNum === 2}
-            onClick={() => setProductNum(2)}
+            selected={product === "tCheck"}
+            onClick={() => setProductName("tCheck")}
           >
             <ProductSelectionName>tCheck 2 device only</ProductSelectionName>
             <ProductSelectionPrice fontWeight={900}>
@@ -343,8 +351,8 @@ const ProductSelection = ({
           </ProductSelectionButton>
 
           <ProductSelectionButton
-            selected={productNum === 3}
-            onClick={() => setProductNum(3)}
+            selected={product === "kit"}
+            onClick={() => setProductName("kit")}
           >
             <ProductSelectionName>Expansion kit only</ProductSelectionName>
             <ProductSelectionPrice fontWeight={900}>
@@ -413,7 +421,13 @@ const ProductSelection = ({
               productColor={productColor}
             />
           </ProductColorRow>
-          <ProductAddToCartButton>Add to Cart</ProductAddToCartButton>
+          <ProductAddToCartButton
+            onClick={() => {
+              createCheckout()
+            }}
+          >
+            Add to Cart
+          </ProductAddToCartButton>
         </ProductColorSelectContainer>
         <ProductPoliciesContainer>
           <ProductPolicyContainer>
