@@ -115,7 +115,7 @@ const MobileResponsiveButton = styled(Button)`
   }
 `
 
-const MobileButtonLink = styled(Link)`
+const MobileButtonLink = styled.a`
   ${({ isProductPage }) => {
     return isProductPage ? `display: none !important;` : null
   }}
@@ -128,7 +128,7 @@ const MobileButtonLink = styled(Link)`
   }
 `
 
-const ButtonLink = styled(Link)`
+const ButtonLink = styled.a`
   ${({ isProductPage }) => {
     return isProductPage ? `display: none !important;` : null
   }}
@@ -209,14 +209,21 @@ const Header = React.memo(({ isProductPage, pathName }) => {
                 Support
               </ExternalLink>
             </LinkContainer>
-            <ButtonLink to="/product" isProductPage={isProductPage}>
+            <ButtonLink
+              href="/product"
+              target="_blank"
+              isProductPage={isProductPage}
+            >
               <ResponsiveButton>Buy Now</ResponsiveButton>
             </ButtonLink>
           </LinksButtonContainer>
-          <MobileButtonLink to="/product" isProductPage={isProductPage}>
+          <MobileButtonLink
+            target="_blank"
+            href="/product"
+            isProductPage={isProductPage}
+          >
             <MobileResponsiveButton>Buy Now</MobileResponsiveButton>
           </MobileButtonLink>
-
           <MobileMenuIconStyles
             onClick={() => {
               toggleOpen(!open)

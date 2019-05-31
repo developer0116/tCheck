@@ -21,7 +21,7 @@ const Layout = props => {
     children,
   } = props
 
-  const isProductPage = pathname === "/product"
+  const isProductPage = pathname === "/product/"
 
   return (
     <ContextProvider>

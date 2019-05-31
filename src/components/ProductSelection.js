@@ -263,7 +263,6 @@ const ProductSelection = ({
     setQuantity(newQuantity)
   }
 
-  console.log("product :", product)
   return (
     <ProductSelectionContainer>
       <ProductCarouselContainer>

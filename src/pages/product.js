@@ -100,11 +100,25 @@ class ProductPage extends React.Component {
       },
     ]
 
-    // Add an item to the checkout
+    const lineItemIdsToRemove = [this.state.currentLineItem]
+
+    // First, remove line old line item that may be there, if the user goes back to
+    // the product page
+
+    // Second, add a new line item, with the new item they choose
+
     shopifyClient.checkout
-      .addLineItems(checkoutId, lineItemsToAdd)
+      .removeLineItems(checkoutId, lineItemIdsToRemove)
       .then(checkout => {
-        window.open(checkout.webUrl, "_blank")
+        shopifyClient.checkout
+          .addLineItems(checkoutId, lineItemsToAdd)
+          .then(checkout => {
+            this.setState({
+              currentLineItem: checkout.lineItems[0].id,
+            })
+
+            window.open(checkout.webUrl, "_blank")
+          })
       })
   }
 

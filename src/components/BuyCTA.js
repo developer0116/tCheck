@@ -108,7 +108,7 @@ const CTAButton = styled(Button)`
   cursor: pointer;
 `
 
-const CTAButtonLink = styled(Link)`
+const CTAButtonLink = styled.a`
   text-decoration: none;
   cursor: pointer;
 `
@@ -126,7 +126,7 @@ const BuyCTA = () => {
         <CTALead color={Flour}>
           Test infusions, flower, and concentrates for $478.99.
         </CTALead>
-        <CTAButtonLink to="/product">
+        <CTAButtonLink href="/product" target="_blank">
           <CTAButton secondary tertiary>
             Buy Now
           </CTAButton>

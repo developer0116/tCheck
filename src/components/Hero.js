@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery, navigate } from "gatsby"
+import { graphql, StaticQuery, navigate, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
@@ -74,6 +74,11 @@ const BR3 = styled.br`
   line-height: 1.5rem;
 `
 
+const HeroButtonLink = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+`
+
 const Hero = () => {
   return (
     <StaticQuery
@@ -105,15 +110,9 @@ const Hero = () => {
                 flower, and concentrate with tCheck.
               </HeroLead>
               <BR2 />
-
-              <HeroButton
-                onClick={e => {
-                  e.preventDefault()
-                  navigate("/product")
-                }}
-              >
-                Buy Now
-              </HeroButton>
+              <HeroButtonLink href="/product" target="_blank">
+                <HeroButton>Buy Now</HeroButton>
+              </HeroButtonLink>
 
               <BR3 />
               <HeroButton tertiary>Learn More</HeroButton>

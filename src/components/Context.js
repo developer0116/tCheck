@@ -127,27 +127,12 @@ class ContextProvider extends React.Component {
         kit,
       }
 
-      // checks if existing "checkout" exists,
-      // if so, fetches those items to show later on the product page
-      // else creates a new checkout and stores the id in locale storage and state
-      if (localStorage.getItem("lastCheckoutId")) {
-        client.checkout
-          .fetch(localStorage.getItem("lastCheckoutId"))
-          .then(checkout => {
-            this.setState({
-              checkoutId: checkout.id,
-              productInfo,
-            })
-          })
-      } else {
-        client.checkout.create().then(checkout => {
-          localStorage.setItem("lastCheckoutId", checkout.id)
-          this.setState({
-            checkoutId: checkout.id,
-            productInfo,
-          })
+      client.checkout.create().then(checkout => {
+        this.setState({
+          checkoutId: checkout.id,
+          productInfo,
         })
-      }
+      })
     })
   }
 
