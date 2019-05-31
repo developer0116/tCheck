@@ -149,67 +149,83 @@ const Header = React.memo(({ isProductPage, pathName }) => {
 
   return (
     <HeaderTag>
-      <HeaderContainer>
-        <TLink to="/">
+      {isProductPage ? (
+        <HeaderContainer>
           <LogoImg src={Logo} />
-        </TLink>
-        <LinksButtonContainer open={open}>
-          <LinkContainer>
-            <TLink
-              to="/makers"
-              activeStyle={{ color: tBlue }}
-              isActive={pathName === "/makers/"}
-            >
-              Edible Makers
-            </TLink>
-          </LinkContainer>
-          <LinkContainer>
-            <TLink
-              to="/growers"
-              activeStyle={{ color: tBlue }}
-              isActive={pathName === "/growers/"}
-            >
-              Growers
-            </TLink>
-          </LinkContainer>
-          <LinkContainer>
-            <TLink
-              to="/processors"
-              activeStyle={{ color: tBlue }}
-              isActive={pathName === "/processors/"}
-            >
-              Processors
-            </TLink>
-          </LinkContainer>
-          <LinkContainer>
-            <ExternalLink href="https://medium.com/tcheck" target="_blank">
-              Blog
-            </ExternalLink>
-          </LinkContainer>
-          <LinkContainer>
-            <ExternalLink
-              href="https://medium.com/tcheck/i-need-help-e7ede86f2191"
-              target="_blank"
-            >
-              Support
-            </ExternalLink>
-          </LinkContainer>
-          <ButtonLink to="/product" isProductPage={isProductPage}>
-            <ResponsiveButton>Buy Now</ResponsiveButton>
-          </ButtonLink>
-        </LinksButtonContainer>
-        <MobileButtonLink to="/product" isProductPage={isProductPage}>
-          <MobileResponsiveButton>Buy Now</MobileResponsiveButton>
-        </MobileButtonLink>
+          <LinksButtonContainer open={open}>
+            <LinkContainer>
+              <ExternalLink
+                href="https://medium.com/tcheck/i-need-help-e7ede86f2191"
+                target="_blank"
+              >
+                Support
+              </ExternalLink>
+            </LinkContainer>
+          </LinksButtonContainer>
+        </HeaderContainer>
+      ) : (
+        <HeaderContainer>
+          <TLink to="/">
+            <LogoImg src={Logo} />
+          </TLink>
+          <LinksButtonContainer open={open}>
+            <LinkContainer>
+              <TLink
+                to="/makers"
+                activeStyle={{ color: tBlue }}
+                isActive={pathName === "/makers/"}
+              >
+                Edible Makers
+              </TLink>
+            </LinkContainer>
+            <LinkContainer>
+              <TLink
+                to="/growers"
+                activeStyle={{ color: tBlue }}
+                isActive={pathName === "/growers/"}
+              >
+                Growers
+              </TLink>
+            </LinkContainer>
+            <LinkContainer>
+              <TLink
+                to="/processors"
+                activeStyle={{ color: tBlue }}
+                isActive={pathName === "/processors/"}
+              >
+                Processors
+              </TLink>
+            </LinkContainer>
+            <LinkContainer>
+              <ExternalLink href="https://medium.com/tcheck" target="_blank">
+                Blog
+              </ExternalLink>
+            </LinkContainer>
+            <LinkContainer>
+              <ExternalLink
+                href="https://medium.com/tcheck/i-need-help-e7ede86f2191"
+                target="_blank"
+              >
+                Support
+              </ExternalLink>
+            </LinkContainer>
+            <ButtonLink to="/product" isProductPage={isProductPage}>
+              <ResponsiveButton>Buy Now</ResponsiveButton>
+            </ButtonLink>
+          </LinksButtonContainer>
+          <MobileButtonLink to="/product" isProductPage={isProductPage}>
+            <MobileResponsiveButton>Buy Now</MobileResponsiveButton>
+          </MobileButtonLink>
 
-        <MobileMenuIconStyles
-          onClick={() => {
-            toggleOpen(!open)
-          }}
-        >
-          <MobileMenuIcon />
-        </MobileMenuIconStyles>
-      </HeaderContainer>
+          <MobileMenuIconStyles
+            onClick={() => {
+              toggleOpen(!open)
+            }}
+          >
+            <MobileMenuIcon />
+          </MobileMenuIconStyles>
+        </HeaderContainer>
+      )}
     </HeaderTag>
   )
 })

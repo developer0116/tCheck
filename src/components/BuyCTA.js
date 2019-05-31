@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import { Lead, Header5 } from "./Typography"
 import Button from "./Button"
@@ -91,7 +92,7 @@ const CTALead = styled(Lead)`
 `
 
 const CTAImage = styled.img`
-  width: 65%;
+  width: 55%;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
   }
@@ -104,6 +105,12 @@ const CTAImage = styled.img`
 const CTAButton = styled(Button)`
   width: 13.5rem;
   margin: 0 auto;
+  cursor: pointer;
+`
+
+const CTAButtonLink = styled(Link)`
+  text-decoration: none;
+  cursor: pointer;
 `
 
 // What do I call this thing?
@@ -119,9 +126,11 @@ const BuyCTA = () => {
         <CTALead color={Flour}>
           Test infusions, flower, and concentrates for $478.99.
         </CTALead>
-        <CTAButton secondary tertiary>
-          Buy Now
-        </CTAButton>
+        <CTAButtonLink to="/product">
+          <CTAButton secondary tertiary>
+            Buy Now
+          </CTAButton>
+        </CTAButtonLink>
       </CTATextSection>
     </CTAContainer>
   )
