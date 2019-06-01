@@ -19,6 +19,7 @@ import ValueProp3 from "../images/growers_harvestpeak.svg"
 import GrowersBackgroundApp from "../images/growersApp.jpg"
 import GrowersApp from "../images/app_grow.svg"
 import Case1 from "../images/case_thera.jpg"
+import Case2 from "../images/case_gabriel.jpg"
 
 import { sizes } from "../lib/layout"
 
@@ -29,7 +30,7 @@ const list = [
   "5 minutes of your time",
 ]
 
-const arrayOfImages = [Case1]
+const arrayOfImages = [Case1, Case2]
 
 const arrayOfQuotes = [
   {
@@ -37,6 +38,11 @@ const arrayOfQuotes = [
       "We bought our tCheck so we are able to test our flowers and products at home",
     background:
       "Brandon is the owner of Therapeutic Concepts, a small family owned medical marijuana farm in Oregon. He grows and sells high-quality products on a small scale. He was gifted a tCheck device by his wife and has found it a useful and cost-effective device for testing the potency of his products. He uses his tCheck as an alternative to lab testing wherever possible, due to its low cost and the small sample you need to test your flowers.",
+  },
+  {
+    quote: "Knowing the potency is important to my friends",
+    background:
+      "Gabriel maintains a small grow operation on his property. He grows a couple strains that he gives to friends suffering from arthritis. These friends are always asking him how potent his crop is so that they could dose properly. Gabriel's yield is so small, its too expensive to send his plants to the lab every time. Gabriel starting using a tCheck so that he could easy measure each bud and keep his friends informed on how strong his strains are.",
   },
 ]
 

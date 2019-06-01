@@ -103,10 +103,16 @@ const AppCTA = () => {
           Collect live readings of your sample in minutes using the tCheck 2 and
           your phone. Test infused olive oil, coconut oil, alcohol, or butter.
         </AppBody>
-        <a href="https://play.google.com/store/apps/details?id=me.tcheck.tc2">
+        <a
+          target="_blank"
+          href="https://play.google.com/store/apps/details?id=me.tcheck.tc2"
+        >
           <AppStoreImg src={GoogleStorePicture} />
         </a>
-        <a href="https://itunes.apple.com/us/app/tcheck/id1325740228?mt=8">
+        <a
+          target="_blank"
+          href="https://itunes.apple.com/us/app/tcheck/id1325740228?mt=8"
+        >
           <AppStoreImg src={AppStorePicture} />
         </a>
       </AppTextContainer>

@@ -17,7 +17,8 @@ import ValueProp2 from "../images/processors_controlyield.svg"
 import ValueProp3 from "../images/processors_cannaloss.svg"
 import ProcessorsBackgroundApp from "../images/processorsApp.jpg"
 import ProcessorsApp from "../images/app_proc.svg"
-import Case1 from "../images/case_thera.jpg"
+import Case1 from "../images/case_janet.jpg"
+import Case2 from "../images/case_thera.jpg"
 
 import { sizes } from "../lib/layout"
 
@@ -28,9 +29,14 @@ const list = [
   "6 minutes of your time",
 ]
 
-const arrayOfImages = [Case1]
+const arrayOfImages = [Case1, Case2]
 
 const arrayOfQuotes = [
+  {
+    quote: "I needed to make sure my team is producing in a consistent manner.",
+    background:
+      "Janet runs a rosin startup out of Ventura, CA. Yield and quality are her top priorities, and she was struggling with ensuring that each of her production associates were meeting her expectations. Janet needed a way to track her manufacturing processes  and quickly test her team's output. She started using tCheck to measure both her incoming material and her final product. Using this data, she could measure consistency from his staff and refine her training techniques.",
+  },
   {
     quote:
       "We bought our tCheck so we are able to test our flowers and products at home",

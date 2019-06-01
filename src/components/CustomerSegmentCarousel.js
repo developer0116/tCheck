@@ -11,10 +11,10 @@ import { sizes } from "../lib/layout"
 
 const CarouselContainer = styled.section`
   background-color: ${Ghost};
-  padding: 0 4rem 4rem;
+  padding: 0 4rem 4rem 1rem;
   display: flex;
   height: 600px;
-  border: 1px solid blue;
+  justify-content: space-around;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
     margin: 0;
@@ -23,7 +23,7 @@ const CarouselContainer = styled.section`
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     flex-direction: column-reverse;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 8rem;
     padding: 0 1rem;
   }
 `
@@ -58,11 +58,12 @@ const ImagesContainer = styled.div`
   flex-basis: 40%;
   position: relative;
   height: 100%;
-  border: 1px solid red;
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
-    height: calc(100vw * 0.55);
+    height: calc(100vw * 0.65);
     top: unset;
+    display: table;
+    margin: 3rem 0;
   }
 `
 
@@ -84,8 +85,13 @@ const Image = styled.img`
 
   transition-duration: 500ms;
 
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileS}) {
+    left: 5%;
+    font-size: 1.5rem;
+  }
+
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
-    width: calc(100vw * 0.55);
+    width: calc(100vw * 0.65);
     top: unset;
   }
 `
@@ -100,6 +106,10 @@ const DotList = styled.ul`
   margin: 10px 0;
   padding-inline-start: 0;
   width: 100%;
+
+  li + li {
+    margin: 0 8px;
+  }
 `
 
 const Dot = styled.li`
@@ -115,7 +125,6 @@ const Dot = styled.li`
   height: 1rem;
   cursor: pointer;
   display: inline-block;
-  margin: 0 8px;
 
   ${({ clicked }) => {
     return clicked
@@ -129,9 +138,27 @@ const Dot = styled.li`
 // opacity: 0.3;
 //   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 
-const Quote = styled(Header5)``
+const Quote = styled(Header5)`
+  margin-bottom: 2rem;
 
-const DescriptionBody = styled(Body)``
+  @media (max-width: ${sizes.laptopL}) and (min-width: ${sizes.laptop}) {
+  }
+
+  @media (max-width: ${sizes.laptop}) and (min-width: ${sizes.modifiedTablet}) {
+  }
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1.5rem;
+  }
+`
+
+const DescriptionBody = styled(Body)`
+  margin-bottom: 2rem;
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileS}) {
+    font-size: 1rem;
+  }
+`
 
 const CustomerSegmentCarousel = props => {
   const { arrayOfImages, arrayOfQuotes } = props
@@ -148,16 +175,14 @@ const CustomerSegmentCarousel = props => {
     )
   })
 
-  const carouselText = arrayOfQuotes => {
-    return arrayOfQuotes.map((textObj, index) => {
-      return (
-        <AnimationContainerForText key={index}>
-          <Quote>{`"${textObj.quote}"`}</Quote>
-          <DescriptionBody secondary>{textObj.background}</DescriptionBody>
-        </AnimationContainerForText>
-      )
-    })
-  }
+  const carouselText = (
+    <AnimationContainerForText>
+      <Quote>{`"${arrayOfQuotes[photoNum].quote}"`}</Quote>
+      <DescriptionBody secondary>
+        {arrayOfQuotes[photoNum].background}
+      </DescriptionBody>
+    </AnimationContainerForText>
+  )
 
   const arrayOfDots = []
 
@@ -209,9 +234,7 @@ const CustomerSegmentCarousel = props => {
   return (
     <CarouselContainer>
       <TextContainer>
-        <TransitionGroup className="generic">
-          {carouselText(arrayOfQuotes)[photoNum]}
-        </TransitionGroup>
+        <TransitionGroup className="generic">{carouselText}</TransitionGroup>
         <DotList>{arrayOfDots}</DotList>
       </TextContainer>
       <ImagesContainer>
