@@ -196,40 +196,8 @@ const CustomerSegmentCarousel = props => {
       />
     )
   }
-  // const arrayOfText = [
-  //   <AnimationContainerForText>
-  //     <Quote>“I can check if its worth processing the trim”</Quote>
-  //     <DescriptionBody secondary>
-  //       Marc is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-  //       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-  //       minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-  //       ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-  //       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-  //       sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-  //       mollit anim id est laborum.
-  //     </DescriptionBody>
-  //   </AnimationContainerForText>,
-  //   <AnimationContainerForText>
-  //     <Quote>
-  //       “We bought tCheck so we are able to test our flowers and products at
-  //       home”
-  //     </Quote>
-  //     <DescriptionBody secondary>
-  //       Brandon is the owner of Therapeutic Concepts, a small family owned
-  //       medical marijuana farm in Oregon. He grows and sells high-quality
-  //       products on a small scale. He was gifted a tCheck device by his wife and
-  //       has found it a useful and cost-effective device for testing the potency
-  //       of his products. He uses his tCheck as an alternative to lab testing
-  //       wherever possible, due to its low cost and the small sample you need to
-  //       test your flowers.
-  //     </DescriptionBody>
-  //   </AnimationContainerForText>,
-  // ]
 
   arrayOfImageComponents.move(photoNum, 0)
-  // arrayOfText.move(photoNum, 0)
-
-  // arrayOfImageComponents.move(photoNum, 0)
 
   return (
     <CarouselContainer>
