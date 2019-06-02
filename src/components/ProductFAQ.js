@@ -34,6 +34,10 @@ const FAQHeaderContainer = styled.div`
   cursor: pointer;
 `
 
+const FAQHeader = styled(Header6)`
+  flex-basis: 95%;
+`
+
 const ChevronArrowImg = styled.img`
   width: 24px;
   height: 24px;
@@ -96,7 +100,7 @@ const ProductFAQ = () => {
                   toggleOpen(!isOpen)
                 }}
               >
-                <Header6>What cannabinoids does tCheck measure?</Header6>
+                <FAQHeader>What cannabinoids does tCheck measure?</FAQHeader>
                 <ChevronArrowImg src={Arrow} flip={isOpen} />
               </FAQHeaderContainer>
               <CSSTransition
@@ -126,7 +130,7 @@ const ProductFAQ = () => {
                   toggleOpen(!isOpen)
                 }}
               >
-                <Header6>Do I need an expansion kit?</Header6>
+                <FAQHeader>Do I need an expansion kit?</FAQHeader>
                 <ChevronArrowImg src={Arrow} flip={isOpen} />
               </FAQHeaderContainer>
               <CSSTransition
@@ -157,7 +161,7 @@ const ProductFAQ = () => {
                   toggleOpen(!isOpen)
                 }}
               >
-                <Header6>What is the accuracy of tCheck results?</Header6>
+                <FAQHeader>What is the accuracy of tCheck results?</FAQHeader>
                 <ChevronArrowImg src={Arrow} flip={isOpen} />
               </FAQHeaderContainer>
               <CSSTransition
@@ -186,9 +190,9 @@ const ProductFAQ = () => {
                   toggleOpen(!isOpen)
                 }}
               >
-                <Header6>
+                <FAQHeader>
                   Can I test infusions outside the tCheck’s measurement range?
-                </Header6>
+                </FAQHeader>
                 <ChevronArrowImg src={Arrow} flip={isOpen} />
               </FAQHeaderContainer>
               <CSSTransition
