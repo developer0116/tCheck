@@ -47,6 +47,10 @@ const ProductCarouselContainer = styled.div`
   position: relative;
   z-index: 1;
 
+  .carousel.carousel-slider {
+    padding-bottom: 2rem;
+  }
+
   @media (max-width: ${sizes.modifiedTablet}) {
     width: 100%;
   }

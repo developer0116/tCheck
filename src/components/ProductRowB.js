@@ -25,7 +25,6 @@ const ProductTextSection = styled.div`
   width: 35%;
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
-    margin-right: calc(100vw - 93%);
     width: 45%;
   }
 

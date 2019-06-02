@@ -9,7 +9,7 @@ export default ({
   infiniteLoop = false,
 }) => (
   <Carousel
-    swipeable={false}
+    swipeable={true}
     showArrows={false}
     showStatus={false}
     showThumbs={false}

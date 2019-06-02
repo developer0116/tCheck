@@ -10,17 +10,18 @@ import { Flour } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 const HeroContentContainer = styled.div`
-  text-align: center;
   max-width: 625px;
-  margin: 4.5rem auto 4.5rem;
+  margin: 4.5rem 0 4.5rem 4.5rem;
   color: ${Flour};
 
   @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileL}) {
+    text-align: center;
     margin: 3rem auto 4rem;
     max-width: 21rem;
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    text-align: center;
     margin: 3rem auto 4rem;
     max-width: 21rem;
   }
@@ -48,8 +49,11 @@ const HeroLead = styled(Lead)`
 
 const HeroButton = styled(Button)`
   width: 232px;
-  margin: 0 auto;
   cursor: pointer;
+
+  @media (max-width: ${sizes.modifiedTablet}) and (min-width: ${sizes.mobileS}) {
+    margin: 0 auto;
+  }
 `
 
 const BR1 = styled.br`
