@@ -24,8 +24,7 @@ const CustomerSegmentQ1Container = styled.section`
   }
 `
 
-const CustomerSegmentQ1Img = styled.div`
-  background-color: ${tBlue};
+const CustomerSegmentQ1Img = styled.img`
   width: 28rem;
   height: 21.5rem;
 
@@ -117,10 +116,10 @@ const CustomerSegmentQ1Paragraph2 = styled(Body)`
 
 // What do I call this thing?
 const CustomerSegmentQuestion1 = React.memo(
-  ({ header, paragraph1, list, paragraph2 }) => {
+  ({ header, paragraph1, img, list, paragraph2 }) => {
     return (
       <CustomerSegmentQ1Container>
-        <CustomerSegmentQ1Img />
+        <CustomerSegmentQ1Img src={img} />
         <CustomerSegmentQ1TextContainer>
           <CustomerSegmentQ1Header>{header}</CustomerSegmentQ1Header>
           <CustomerSegmentQ1Paragraph1 secondary>

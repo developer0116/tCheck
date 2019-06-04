@@ -19,6 +19,7 @@ import ProcessorsBackgroundApp from "../images/processorsApp.jpg"
 import ProcessorsApp from "../images/app_proc.svg"
 import Case1 from "../images/case_janet.jpg"
 import Case2 from "../images/case_thera.jpg"
+import Question1 from "../images/HowtoTest_p.svg"
 
 import { sizes } from "../lib/layout"
 
@@ -98,6 +99,7 @@ const Processors = props => {
           paragraph1={
             "From closed-loop to rosin press, all you need to test any concentrate is provided in our expansion kit, to go along with your tCheck. Heres what you need: "
           }
+          img={Question1}
           list={list}
           paragraph2={
             "tCheck, along with the Expansion Kit gives you everything you need to do 9 concentrate tests. Need to test more? Just order another bottle of reagent."

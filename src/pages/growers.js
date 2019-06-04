@@ -20,6 +20,7 @@ import GrowersBackgroundApp from "../images/growersApp.jpg"
 import GrowersApp from "../images/app_grow.svg"
 import Case1 from "../images/case_thera.jpg"
 import Case2 from "../images/case_gabriel.jpg"
+import Question1 from "../images/HowtoTest_g.svg"
 
 import { sizes } from "../lib/layout"
 
@@ -121,6 +122,7 @@ const Growers = props => {
           paragraph1={
             "Whether this is your first crop, or you're a seasoned green thumb, we have designed tCheck to be simple enough for virtually anyone to use. Here’s all you need: "
           }
+          img={Question1}
           list={list}
           paragraph2={
             "tCheck, along with the Expansion Kit gives you everything you need to do 9 flower tests. Need to test more? Just order another bottle of reagent."

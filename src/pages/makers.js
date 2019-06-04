@@ -19,6 +19,7 @@ import EdiblesBackgroundApp from "../images/ediblesApp.jpg"
 import EdiblesApp from "../images/app_edbl.svg"
 import Case1 from "../images/case_steph.jpg"
 import Case2 from "../images/case_droils.jpg"
+import Question1 from "../images/HowtoTest_e.svg"
 
 import { sizes } from "../lib/layout"
 
@@ -101,6 +102,7 @@ const Makers = props => {
           paragraph1={
             "Once you have infused your base oil, butter, or alcohol, testing the potency is simple enough for anyone. Here's all you need: "
           }
+          img={Question1}
           list={list}
           paragraph2={
             "tCheck, along with the Expansion Kit gives you everything you need to do 9 flower tests. Need to test more? Just order another bottle of reagent."
