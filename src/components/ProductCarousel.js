@@ -7,10 +7,11 @@ export default ({
   autoPlay = false,
   interval = 0,
   infiniteLoop = false,
+  arrows = false,
 }) => (
   <Carousel
     swipeable={true}
-    showArrows={false}
+    showArrows={arrows}
     showStatus={false}
     showThumbs={false}
     autoPlay={autoPlay}

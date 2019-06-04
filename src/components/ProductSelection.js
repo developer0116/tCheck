@@ -294,7 +294,7 @@ const ProductSelection = ({
             </ProductSelectionBody>
           </>
         ) : null}
-        <ProductCarousel>
+        <ProductCarousel arrows={true}>
           {productCarouselImages[productColor].map(img => {
             return (
               <ProductCarouselImgContainer>
@@ -389,41 +389,45 @@ const ProductSelection = ({
           </ProductSelectionQuantityModifiers>
         </ProductSelectionQuantityContainer>
         <ProductColorSelectContainer>
-          <ProductColorLead color={Fade}>Pick your color</ProductColorLead>
-          <ProductColorRow>
-            <ProductColorCircle
-              color={Ink}
-              onClick={e => {
-                changeColor("black")
-              }}
-              isSelected={productColor === "black"}
-              productColor={productColor}
-            />
-            <ProductColorCircle
-              color={tGreen}
-              onClick={e => {
-                changeColor("green")
-              }}
-              isSelected={productColor === "green"}
-              productColor={productColor}
-            />
-            <ProductColorCircle
-              color={tBlue}
-              onClick={e => {
-                changeColor("blue")
-              }}
-              isSelected={productColor === "blue"}
-              productColor={productColor}
-            />
-            <ProductColorCircle
-              color={Flour}
-              onClick={e => {
-                changeColor("white")
-              }}
-              isSelected={productColor === "white"}
-              productColor={productColor}
-            />
-          </ProductColorRow>
+          {product === "kit" ? null : (
+            <>
+              <ProductColorLead color={Fade}>Pick your color</ProductColorLead>
+              <ProductColorRow>
+                <ProductColorCircle
+                  color={Ink}
+                  onClick={e => {
+                    changeColor("black")
+                  }}
+                  isSelected={productColor === "black"}
+                  productColor={productColor}
+                />
+                <ProductColorCircle
+                  color={tGreen}
+                  onClick={e => {
+                    changeColor("green")
+                  }}
+                  isSelected={productColor === "green"}
+                  productColor={productColor}
+                />
+                <ProductColorCircle
+                  color={tBlue}
+                  onClick={e => {
+                    changeColor("blue")
+                  }}
+                  isSelected={productColor === "blue"}
+                  productColor={productColor}
+                />
+                <ProductColorCircle
+                  color={Flour}
+                  onClick={e => {
+                    changeColor("white")
+                  }}
+                  isSelected={productColor === "white"}
+                  productColor={productColor}
+                />
+              </ProductColorRow>
+            </>
+          )}
           <ProductAddToCartButton
             onClick={() => {
               createCheckout()
