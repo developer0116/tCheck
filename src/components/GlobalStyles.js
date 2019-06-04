@@ -30,6 +30,10 @@ const GlobalStyle = createGlobalStyle`
     text-align: left !important;
   }
 
+  .control-arrow {
+    background: rgba(0,0,0,.2) !important;
+  }
+
   .carousel .control-dots .dot.selected {
     width: 1rem !important;
     height: 1rem !important;
