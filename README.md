@@ -1,3 +1,111 @@
+## tCheck File Structure and Need to Knows
+
+This site is built using Gatsby.js, an application generating tool built ontop of webpack and GraphQL, using React.  The original documentation that Gatsby provides is below. 
+
+There are few things that need to be pointed out about the repo that will help you get up to speed with how things work, and where things are.
+
+### Pages
+
+Gatsby creates pages three different ways.  The way that made the most sense in this case was to create pages using the `pages` directory.  Each `.js` file is a `page` with `index.js` being the landing page, `processors.js` being the processors customer segment page, etc.  A good place to start tracing things in through the `pages` folder.
+
+Each page uses the`SEO` component to allow custom meta information for each page.  They also all import their own images and components to be used.  
+
+:rotating_light: The customer segment pages all use the same components.  If you modify one of them, you will modify the other two customer segment pages as well. :rotating_light:
+
+### Layout Component and `gatsby-plugin-layout`
+
+The `Layout` component is a component that is on every page.  You can think of it like a shell, that has the `Header` and `Footer` components.  All other pages render in the `Layout` component.  
+
+Because of an earlier requirement to load the product information from shopify at any time, on any page, this website uses `gatsby-plugin-layout`.  From [the docs](https://www.gatsbyjs.org/packages/gatsby-plugin-layout/)
+
+> This plugin enables adding components which live above the page components and persist across page changes.
+
+This makes it so that no matter what page the user hits, the shopify client with initialize, and fetch the product information.  It's important to know this subtle different, because the `Layout` component sort of acts like a global state in this way.
+
+### Components
+
+All the components, even the `SEO` and `Layout` components, live in the `components` directory :neutral_face:.  Some are prefixed with a reference to what page the belong too.  For example, `CustomerSegmentCarousel.js` is the carousel used on all three customer segment pages.  `ProductDetails.js` is used exclusively on the product page, etc. 
+
+#### Special Components :star:
+
+1. `GlobalStyles.js` - This is a global styles component from `styled-components`. It's used as you would expect from the name.  It is used only in the `Layout` component.
+
+2. `Typography.js` - This is just a collection of commonly used typography tags that were originlly created as part of the **stems** design system.
+
+3. `Context.js` - This component is used to provide a React Context for:
+
+   1. The Shopify Client
+   2. All product information from the client
+   3. A massaged data output with all relevant product information, including color, to be used on the product page.
+   4. A checkout to be used to… checkout.
+
+   If anything goes wrong with the Shopify integration, I'd start here. 
+
+### Styles
+
+This app uses styled components exclusively.  There are no inline styles.  Each component file has a number of styled-components above the actual component.  It should be easy enough to understand what is going on from just looking at the code, but the overall concept is that a sytled component is just a styled `div` or other tag, that is locally scoped, and gaurunteed not to have any collisions.  Further, there are a number of handy tools styled-components provide you, to extend styles.
+
+See there doc [here](https://www.styled-components.com/)
+
+### Configuration and MetaData
+
+Gatsby lives off of a `gatsby-config.js` folder a the root of your directory.  That file lists all the plugins this project needs.  Some useful ones to point out are:
+
+1. Google analytics
+2. Google fonts
+3. Styled components
+
+In that same config file lives the `siteMetadata`.  This is a convenient way gatsby provides information to all pages.  Typically, you can put meta data here that can be used in your SEO, to title your tabs, etc.
+
+## Getting Started
+
+Make sure you have node@8, nom, and gatsby installed globally.  To install these items, google it.
+
+First, fork the repo by clicking on the `fork` button on the upper right hand corner.  This will create a "copy" of this repo under your github account.
+
+Second, clone **your** newly forked repo.  You clone a repo by clicking on the green button which says "Clone or Download", copying the link, and:
+
+1. Opening up you terminal.
+
+2. Navigate to a directory where you want your repo to live, on your local machine, and cloning the repo
+
+   ```bash
+   cd Documents
+   mkdir forks
+   cd forks
+   git clone https://url.that.github.gives.you.com/account/repo
+   cd into newly created folder (tCheck)
+   ```
+
+Third, npm install your dependencies in your new git repo on your local machine
+
+```bash
+npm install
+```
+
+Fourth, run `gatsby build` to start the development server, which will automatically update your browser while you edit your code.
+
+Fifth, hack :computer:
+
+### Assets
+
+Gatsby generates static assets that make up your entire web app.  When you are ready to build your app, type
+
+```bash
+gatsby build
+```
+
+which will trigger gatsby to build production ready assets that you will host.  Those assets end up in the public folder, in the root of your directory. 
+
+To test those assets before deploying, you can run 
+
+```bash
+gatsby serve
+```
+
+which will locally host your assets on localhost:9000.
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
