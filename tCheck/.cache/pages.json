@@ -1,0 +1,32 @@
+[
+    {
+        "componentChunkName": "component---src-pages-index-js",
+        "jsonName": "index",
+        "path": "/"
+    },
+    {
+        "componentChunkName": "component---src-pages-growers-js",
+        "jsonName": "growers-d3b",
+        "path": "/growers/"
+    },
+    {
+        "componentChunkName": "component---src-pages-index-backup-js",
+        "jsonName": "index-backup-d24",
+        "path": "/index.backup/"
+    },
+    {
+        "componentChunkName": "component---src-pages-makers-js",
+        "jsonName": "makers-234",
+        "path": "/makers/"
+    },
+    {
+        "componentChunkName": "component---src-pages-processors-js",
+        "jsonName": "processors-7a8",
+        "path": "/processors/"
+    },
+    {
+        "componentChunkName": "component---src-pages-product-backup-js",
+        "jsonName": "product-backup-7da",
+        "path": "/product.backup/"
+    }
+]
