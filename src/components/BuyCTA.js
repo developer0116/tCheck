@@ -121,10 +121,10 @@ const BuyCTA = () => {
 
       <CTATextSection>
         <CTATitle color={Flour}>
-          Start testing infusions with tCheck for $279.99
+          Everything you need to test infusions with tCheck for $279.99
         </CTATitle>
         <CTALead color={Flour}>
-          Test infusions, flower, and concentrates for $478.99.
+          Want to also test flower and concentrate? Get the tCheck and Expansion kit for $478.99.
         </CTALead>
         <CTAButtonLink href="/product" target="_blank">
           <CTAButton secondary tertiary>

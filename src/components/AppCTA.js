@@ -100,7 +100,7 @@ const AppCTA = () => {
       <AppTextContainer>
         <Header>Get the tCheck app</Header>
         <AppBody secondary>
-          Collect live readings of your sample in minutes using the tCheck 2 and
+          Collect live readings of your sample in minutes using the tCheck and
           your phone. Test infused olive oil, coconut oil, alcohol, or butter.
         </AppBody>
         <a

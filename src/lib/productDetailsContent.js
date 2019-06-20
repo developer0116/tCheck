@@ -6,9 +6,9 @@ const productDetailsContent = {
   tCheckAndKit: {
     features: {
       paragraphsArray: [
-        `tCheck 2 is a potency tester that allows you to measure the strength of your infusions. Using just a few drops of butter, coconut oil, olive oil, or alcohol, you can accurately measure the strength of your infusion in less than 45 seconds.`,
-        `Results from tCheck 2 will be an aggregate of all compounds combined.`,
-        `The expansion kit provides all the materials needed to properly test your flower and concentrates using your tCheck 2. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,
+        `tCheck is a potency tester that allows you to measure the strength of your infusions. Using just a few drops of butter, coconut oil, olive oil, or alcohol, you can accurately measure the strength of your infusion in less than 45 seconds.`,
+        `tCheck provides an aggregate of all compounds with the prevalent compound shown.`,
+        `The expansion kit provides all the materials needed to properly test your flower and concentrates using your tCheck. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,
       ],
       listItemsArray: [
         `Ultra Violet spectrometer`,
@@ -16,8 +16,8 @@ const productDetailsContent = {
         `Test infusions, get results and dose recipes`,
         `Battery operated`,
         `Tests flower, concentrate, butter, coconut oil, olive oil, and alcohol based tinctures`,
-        `Ability to run 9 flower or concentrate tests with 100ml bottle of reagent`,
-        `Results in CBV`,
+        `Ability to run 9 flower or concentrate tests with 100ML bottle of reagent`,
+        `Results in MG/ML`,
         `UL, CE, FCC certified`,
         `Bluetooth LE`,
       ],
@@ -25,40 +25,37 @@ const productDetailsContent = {
     included: {
       unorderedListsArray: [
         {
-          title: `tCheck 2`,
+          title: `tCheck`,
           listItems: [
             `tCheck device`,
             `Reusable testing tray`,
-            `Eye Dropper`,
+            `Eye dropper`,
             `3 AAA batteries`,
-            `Quick start guide`,
           ],
         },
         {
           title: `Expansion kit`,
           listItems: [
             `Scale`,
-            `100ml reagent`,
+            `100ML reagent`,
             `Eye dropper`,
             `Swizzle stick`,
             `Syringe`,
             `3 spoons`,
             `3 containers`,
-            `Quick start guide`,
           ],
         },
       ],
     },
 
     shipping: [
-      `Before we ship, every tCheck 2 and the kit is carefully tested.`,
-      `Ships in 2-3 weeks. At this time, tCheck 2 is not shipping into any EU nation.`,
+      `Before we ship, each tCheck and kit is carefully tested to ensure top quality.`,
     ],
     specs: [
       {
         title: `BREAKDOWN`,
         textArray: [
-          `tCheck 2 tests: Compound by Volume (CBV), THC, CBD, or THCa (with expansion kit)`,
+          `tCheck tests: Compound by Volume (CBV), THx, CBx, or THxa.`,
         ],
       },
       {
@@ -78,17 +75,17 @@ const productDetailsContent = {
       {
         title: `MEASUREMENT RANGES`,
         textArray: [
-          `Olive Oil: 0 ~ 15 mg/ml`,
-          `Butter/Ghee: 0 ~ 15 mg/ml`,
-          `Coconut/MCT Oil: 0 ~ 15 mg/ml`,
-          `Alcohol Tinctures: 0 ~ 15 mg/ml`,
+          `Olive Oil: 0 ~ 15 MG/ML`,
+          `Butter/Ghee: 0 ~ 15 MG/ML`,
+          `Coconut/MCT Oil: 0 ~ 15 MG/ML`,
+          `Alcohol Tinctures: 0 ~ 15 MG/ML`,
         ],
       },
       {
         title: `BATTERY`,
         textArray: [
           `3 AAA Alkaline, Lithium, NiMH`,
-          `DO NOT USE NiCd batteries in t2`,
+          `DO NOT USE NiCd batteries in device`,
           `Batteries should last 4-6 months with average use`,
         ],
       },
@@ -97,11 +94,11 @@ const productDetailsContent = {
         textArray: [`UL Listed, CE Mark, and FCC compliant`],
       },
       {
-        title: `BATTERY`,
+        title: `KIT REQUIREMENTS`,
         textArray: [
-          `80-120mg of flower material`,
-          `10-15mg of concentrate material`,
-          `10ml of t2 Special Reagent`,
+          `50-250MG of flower material`,
+          `30-110MG of concentrate material`,
+          `10ML of Reagent`,
         ],
       },
     ],
@@ -109,15 +106,15 @@ const productDetailsContent = {
   tCheck: {
     features: {
       paragraphsArray: [
-        `tCheck 2 is a potency tester that allows you to measure the strength of your infusions. Using just a few drops of butter, coconut oil, olive oil, or alcohol, you can accurately measure the strength of your infusion in less than 45 seconds.`,
-        `Results from tCheck 2 will be an aggregate of all compounds combined.`,
+        `tCheck is a potency tester that allows you to measure the strength of your infusions. Using just a few drops of butter, coconut oil, olive oil, or alcohol, you can accurately measure the strength of your infusion in less than 45 seconds.`,
+        `tCheck provides an aggregate of all compounds with the prevalent compound shown.`,
       ],
       listItemsArray: [
         `Ultra Violet spectrometer`,
         `Reusable sample tray`,
         `Test infusions, get results and dose recipes`,
         `Battery operated`,
-        `Results in CBV`,
+        `Results in MG/ML`,
         `UL, CE, FCC certified`,
         `Bluetooth LE`,
       ],
@@ -129,28 +126,28 @@ const productDetailsContent = {
           listItems: [
             `tCheck device`,
             `Reusable testing tray`,
-            `Eye Dropper`,
+            `Eye dropper`,
             `3 AAA batteries`,
-            `Quick start guide`,
           ],
         },
       ],
     },
 
     shipping: [
-      `Before we ship, every tCheck 2 and the kit is carefully tested.`,
-      `Ships in 2-3 weeks. At this time, tCheck 2 is not shipping into any EU nation.`,
+      `Before we ship, each tCheck and kit is carefully tested to ensure top quality.`,
+      
     ],
     specs: [
       {
         title: `BREAKDOWN`,
         textArray: [
-          `tCheck 2 tests: Compound by Volume (CBV), THC, CBD, or THCa (with expansion kit)`,
+          `tCheck tests: Compound by Volume (CBV), THx, CBx, or THxa.`
         ],
       },
       {
         title: `ACCURACY`,
-        textArray: [`+/- 15% Decarbed material`],
+        textArray: [`+/- 15% Decarbed material`
+      ],
       },
       {
         title: `OPTIMAL TEMPERATURE`,
@@ -165,17 +162,17 @@ const productDetailsContent = {
       {
         title: `MEASUREMENT RANGES`,
         textArray: [
-          `Olive Oil: 0 ~ 15 mg/ml`,
-          `Butter/Ghee: 0 ~ 15 mg/ml`,
-          `Coconut/MCT Oil: 0 ~ 15 mg/ml`,
-          `Alcohol Tinctures: 0 ~ 15 mg/ml`,
+          `Olive Oil: 0 ~ 15 MG/ML`,
+          `Butter/Ghee: 0 ~ 15 MG/ML`,
+          `Coconut/MCT Oil: 0 ~ 15 MG/ML`,
+          `Alcohol Tinctures: 0 ~ 15 MG/ML`,
         ],
       },
       {
         title: `BATTERY`,
         textArray: [
           `3 AAA Alkaline, Lithium, NiMH`,
-          `DO NOT USE NiCd batteries in t2`,
+          `DO NOT USE NiCd batteries in device`,
           `Batteries should last 4-6 months with average use`,
         ],
       },
@@ -188,7 +185,7 @@ const productDetailsContent = {
   kit: {
     features: {
       paragraphsArray: [
-        `The expansion kit provides all the materials needed to properly test your flower and concentrates using your tCheck 2. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,
+        `The expansion kit provides all the materials needed to properly test your flower and concentrates using your tCheck. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,
       ],
       listItemsArray: [
         `Ability to run 9 flower or concentrate tests with 100ml bottle of reagent`,
@@ -200,20 +197,19 @@ const productDetailsContent = {
           title: ``,
           listItems: [
             `Scale`,
-            `100ml reagent`,
+            `100ML reagent`,
             `Eye dropper`,
             `Swizzle stick`,
             `Syringe`,
             `3 spoons`,
             `3 containers`,
-            `Quick start guide`,
           ],
         },
       ],
     },
     shipping: [
-      `Before we ship, every tCheck 2 and the kit is carefully tested.`,
-      `Ships in 2-3 weeks. At this time, tCheck 2 is not shipping into any EU nation.`,
+      `Before we ship, each tCheck and kit is carefully tested to ensure top quality.`,
+      
     ],
     specs: [
       {
@@ -223,9 +219,9 @@ const productDetailsContent = {
       {
         title: `KIT REQUIREMENTS`,
         textArray: [
-          `80-120mg of flower material`,
-          `10-15mg of concentrate material`,
-          `10ml of t2 Special Reagent`,
+          `50-250MG of flower material`,
+          `30-110MG of concentrate material`,
+          `10ML of Reagent`,
         ],
       },
     ],

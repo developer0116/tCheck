@@ -24,7 +24,7 @@ const PaddingContainer = styled.div`
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="tCheck potency tester for THC or CBD in flower and infusions" keywords={[`potency tester`, `cannabis potency testing`, `THC tester`, `edibles strong`, `tcheck reviews`, `cbd tester`, `microdosing`, `edibles recipes`, `cannabutter`, `marijuana`]} />
     <Hero />
     <PaddingContainer>
       <ValuePropsRow />

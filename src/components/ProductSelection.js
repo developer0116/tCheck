@@ -364,7 +364,7 @@ const ProductSelection = ({
           </ProductSelectionButton>
         </ProductSelectionButtonsContainer>
         <Misc secondary>
-          Ships in 2-3 weeks. See{" "}
+          Orders filled and mailed within 48-72 hours. See{" "}
           <InlineLink
             href="#"
             onClick={() => {

@@ -106,7 +106,7 @@ const Hero = () => {
           >
             <HeroContentContainer>
               <HeroHeader color={Flour}>
-                From seed to sale, tCheck can tell you the potency{" "}
+                From seed to sale, tCheck will tell you the potency{" "}
               </HeroHeader>
               <BR1 />
               <HeroLead color={Flour}>
@@ -119,9 +119,13 @@ const Hero = () => {
               </HeroButtonLink>
 
               <BR3 />
-              <HeroButton tertiary>Learn More</HeroButton>
+              <HeroButtonLink href="https://youtu.be/1-GbI-y1BWk"
+                target="_blank">
+              <HeroButton tertiary >Learn More</HeroButton>
+              </HeroButtonLink>
             </HeroContentContainer>
           </HeroBackground>
+
         )
       }}
     />

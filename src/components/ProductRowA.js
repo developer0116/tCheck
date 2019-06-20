@@ -73,8 +73,8 @@ const ProductRowA = () => {
       <ProductTextSection>
         <ProductTitle>Cannabis tester for infusions</ProductTitle>
         <ProductBody secondary>
-          Collect live readings of your sample in minutes using the tCheck 2 and
-          your phone. Test infused olive oil, coconut oil, alcohol, or butter.
+          Collect live readings of your sample in minutes using the tCheck and
+          your phone. Test infused olive oil, coconut oil, alcohol, or butter for THC, THCa, or CBD.
         </ProductBody>
       </ProductTextSection>
 

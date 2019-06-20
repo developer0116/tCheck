@@ -100,7 +100,7 @@ const ProductFAQ = () => {
                   toggleOpen(!isOpen)
                 }}
               >
-                <FAQHeader>What cannabinoids does tCheck measure?</FAQHeader>
+                <FAQHeader>What botanicals does tCheck measure?</FAQHeader>
                 <ChevronArrowImg src={Arrow} flip={isOpen} />
               </FAQHeaderContainer>
               <CSSTransition
@@ -112,7 +112,7 @@ const ProductFAQ = () => {
                 <FAQAnswer>
                   <Body secondary>
                     tCheck is currently able to measure the concentration of
-                    THC, CBD, or THCa (with expansion kit).
+                    THx, CBx, or THxa.
                   </Body>
                 </FAQAnswer>
               </CSSTransition>
@@ -142,8 +142,8 @@ const ProductFAQ = () => {
                 <FAQAnswer>
                   <Body secondary>
                     If you are testing flower or concentrates (including full
-                    extract cannabis oil, wax/crumble, shatter, rosin, and
-                    resin, you will be to purchase the expansion kit.
+                    extract oil, wax/crumble, shatter, rosin, etc, you will need 
+                    to purchase the expansion kit.
                   </Body>
                 </FAQAnswer>
               </CSSTransition>

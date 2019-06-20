@@ -25,7 +25,7 @@ import { sizes } from "../lib/layout"
 
 const list = [
   "3-5 drops of your infusion",
-  "tCheck 2",
+  "tCheck",
   "2 minutes of your time",
 ]
 
@@ -40,7 +40,7 @@ const arrayOfQuotes = [
   {
     quote: "With tCheck we accurately and easily test all of our products",
     background:
-      "Doctor W Oils create cannabis oils, for humans and animals. They have helped nearly 50 people with Parkinson's disease, epilepsy or cancer. Helping others is at the heart of everything they do. tCheck has revolutionised the way they work. They have no access to testing facilities so tCheck was the first and only way they have been able to verify the strength of their oils. Before tCheck, they were relying on estimates and assumptions. With tCheck, they are now able to easily and accurately test their oils.",
+      "Doctor W. Oils create cannabis oils, for humans and animals. They have helped people with Parkinson's disease, epilepsy and cancer. Helping others is at the heart of everything they do. They have no access to testing facilities and weren't able to verify the strength of their oils. They were relying on estimates and assumptions. With tCheck, they are now able to easily and accurately test their oils.",
   },
 ]
 
@@ -71,7 +71,7 @@ const Makers = props => {
         heroImgURL={MakersHero}
         heroHeader={"Accurate dosing is a recipe for success"}
         heroLead={
-          "Better butter, or coconut oil, olive oil, or alcohol tinctures. The choice is yours with tCheck in hand."
+          "Better butter, coconut oil, olive oil, or alcohol tinctures. The choice is yours with tCheck in hand."
         }
       />
       <GhostBackground>

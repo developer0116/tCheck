@@ -7,9 +7,7 @@ import { Flour } from "../lib/colors"
 import { sizes } from "../lib/layout"
 
 const CustomerSegmentHeroBackground = styled.div`
-  background: url(${({ heroImgURL }) => {
-    return heroImgURL
-  }});
+  background: url(${({ heroImgURL }) => heroImgURL});
   height: 28rem;
   background-repeat: no-repeat;
   background-size: cover;

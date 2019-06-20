@@ -127,7 +127,7 @@ class ProductPage extends React.Component {
 
     return (
       <>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Order Page" keywords={[`potency tester`, `cannabis potency testing`, `THC tester`, `tcheck order`, `tcheck reviews`, `cbd tester`, `expansion kit`, `order page`, `shipping`, `marijuana`]} />
         <ProductSelection
           product={product}
           setProductName={this.setProductName}

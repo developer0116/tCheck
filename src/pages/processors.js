@@ -18,14 +18,14 @@ import ValueProp3 from "../images/processors_cannaloss.svg"
 import ProcessorsBackgroundApp from "../images/processorsApp.jpg"
 import ProcessorsApp from "../images/app_proc.svg"
 import Case1 from "../images/case_janet.jpg"
-import Case2 from "../images/case_thera.jpg"
+import Case2 from "../images/case_harris.jpg"
 import Question1 from "../images/HowtoTest_p.svg"
 
 import { sizes } from "../lib/layout"
 
 const list = [
-  "50-80 ML of concentrate",
-  "tCheck 2",
+  "50-80ML of concentrate",
+  "tCheck",
   "Expansion Kit",
   "6 minutes of your time",
 ]
@@ -36,13 +36,13 @@ const arrayOfQuotes = [
   {
     quote: "I needed to make sure my team is producing in a consistent manner.",
     background:
-      "Janet runs a rosin startup out of Ventura, CA. Yield and quality are her top priorities, and she was struggling with ensuring that each of her production associates were meeting her expectations. Janet needed a way to track her manufacturing processes  and quickly test her team's output. She started using tCheck to measure both her incoming material and her final product. Using this data, she could measure consistency from his staff and refine her training techniques.",
+      "Janet runs a rosin startup out of Ventura, CA. Yield and quality are her top priorities, and she was struggling with ensuring that each of her production associates was meeting her expectations. Janet needed a way to track her manufacturing processes and quickly test her team's output. She started using tCheck to measure both her incoming material and her final product. Using this data, she could measure consistency from her staff and refine her training techniques.",
   },
   {
     quote:
-      "We bought our tCheck so we are able to test our flowers and products at home",
+      "Optimizing wherever possible will keep me competitive.",
     background:
-      "Brandon is the owner of Therapeutic Concepts, a small family owned medical marijuana farm in Oregon. He grows and sells high-quality products on a small scale. He was gifted a tCheck device by his wife and has found it a useful and cost-effective device for testing the potency of his products. He uses his tCheck as an alternative to lab testing wherever possible, due to its low cost and the small sample you need to test your flowers.",
+      "Harris is building a BHO concentrate startup. He is very aware that if he wants to gain a foothold in the industry, he needs to provide a consistent yield at the best price for his new clients. To do this, he is constantly experimenting with new techniques and equipment to optimize his process. Upon recommendation of a colleague, Harris purchased a tCheck so he could test the potency of each experiment’s yield and determine which experiments are a success.",
   },
 ]
 

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `tCheck Sister Site`,
-    description: `Companion site for tCheck`,
+    title: `tCheck`,
+    description: `tCheck is a cannabis infusion, flower, and concentrate potency tester used to collect live readings of your sample in mins for commercial or personal use.`,
     author: `Maxwell DeMers @maxuuell`,
   },
   plugins: [
