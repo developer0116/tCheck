@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, StaticQuery, navigate, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
+import Modal from 'react-bootstrap/Modal'
 
 import { Header4, Lead } from "./Typography"
 import Button from "./Button"
@@ -83,7 +84,13 @@ const HeroButtonLink = styled.a`
   cursor: pointer;
 `
 
+const ModalHeaderExtended = styled(Modal.Header)`
+ border: none !important;
+`
+
 const Hero = () => {
+  const [show, toggleModalShow] = useState(false);
+  console.log(show)
   return (
     <StaticQuery
       query={graphql`
@@ -119,10 +126,13 @@ const Hero = () => {
               </HeroButtonLink>
 
               <BR3 />
-              <HeroButtonLink href="https://youtu.be/1-GbI-y1BWk"
-                target="_blank">
-              <HeroButton tertiary >Learn More</HeroButton>
+              <HeroButtonLink>
+              <HeroButton tertiary onClick={() => toggleModalShow(true)}>Learn More</HeroButton>
               </HeroButtonLink>
+              <Modal centered size="lg" show={show} onHide={() => toggleModalShow(false)}>
+                <ModalHeaderExtended closeButton/>
+                <Modal.Body><iframe width="100%" height="400" src="https://www.youtube.com/embed/1-GbI-y1BWk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Modal.Body>
+              </Modal>
             </HeroContentContainer>
           </HeroBackground>
 
