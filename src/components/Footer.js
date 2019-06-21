@@ -112,7 +112,8 @@ const FooterLink = styled.a`
   letter-spacing: 0.2px;
 
   &:hover {
-    color: ${({ hoverColor = tBlue }) => hoverColor};
+    color: ${({ hoverColor = tBlue }) => hoverColor};    
+    text-decoration: none;
   }
 `
 

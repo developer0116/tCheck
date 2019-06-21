@@ -111,6 +111,10 @@ const CTAButton = styled(Button)`
 const CTAButtonLink = styled.a`
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
 `
 
 // What do I call this thing?

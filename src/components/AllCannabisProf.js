@@ -67,6 +67,10 @@ const CannabisLink = styled(Link)`
   line-height: 2.29;
   letter-spacing: normal;
   font-size: 0.875rem;
+
+  &:hover {
+    text-decoration: none;
+  }
 `
 
 const CannabisProfCarousel = styled.div`

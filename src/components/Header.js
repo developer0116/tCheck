@@ -49,6 +49,7 @@ const TLink = styled(Link)`
 
   &:hover {
     color: ${tBlue};
+    text-decoration: none;
   }
 `
 
@@ -65,6 +66,7 @@ const ExternalLink = styled.a`
 
   &:hover {
     color: ${tBlue};
+    text-decoration: none;
   }
 `
 
@@ -133,6 +135,10 @@ const ButtonLink = styled.a`
     return isProductPage ? `display: none !important;` : null
   }}
   text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 `
 
 const MobileMenuIconStyles = styled.div`

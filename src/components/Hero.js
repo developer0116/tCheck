@@ -82,10 +82,29 @@ const BR3 = styled.br`
 const HeroButtonLink = styled.a`
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
 `
 
 const ModalHeaderExtended = styled(Modal.Header)`
  border: none !important;
+`
+
+const IframeContainer = styled.div`
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+
+  iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
 `
 
 const Hero = () => {
@@ -131,7 +150,11 @@ const Hero = () => {
               </HeroButtonLink>
               <Modal centered size="lg" show={show} onHide={() => toggleModalShow(false)}>
                 <ModalHeaderExtended closeButton/>
-                <Modal.Body><iframe width="100%" height="400" src="https://www.youtube.com/embed/1-GbI-y1BWk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Modal.Body>
+                <Modal.Body>
+                  <IframeContainer>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/1-GbI-y1BWk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  </IframeContainer>
+                </Modal.Body>
               </Modal>
             </HeroContentContainer>
           </HeroBackground>
