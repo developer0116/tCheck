@@ -49,7 +49,7 @@ const productDetailsContent = {
     },
 
     shipping: [
-      `Before we ship, each tCheck and kit is carefully tested to ensure top quality.`,
+      `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority.`,
     ],
     specs: [
       {
@@ -134,7 +134,7 @@ const productDetailsContent = {
     },
 
     shipping: [
-      `Before we ship, each tCheck and kit is carefully tested to ensure top quality.`,
+      `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority.`,
       
     ],
     specs: [
@@ -208,7 +208,7 @@ const productDetailsContent = {
       ],
     },
     shipping: [
-      `Before we ship, each tCheck and kit is carefully tested to ensure top quality.`,
+      `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority.`,
       
     ],
     specs: [
