@@ -17,7 +17,11 @@ const productDetailsContent = {
         `Battery operated`,
         `Tests flower, concentrate, butter, coconut oil, olive oil, and alcohol based tinctures`,
         `Ability to run 9 flower or concentrate tests with 100ml bottle of reagent`,
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
         `Results in CBV`,
+=======
+        `Results in mg/ml`,
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
         `UL, CE, FCC certified`,
         `Bluetooth LE`,
       ],
@@ -34,7 +38,7 @@ const productDetailsContent = {
           ],
         },
         {
-          title: `Expansion kit`,
+          title: `Expansion Kit`,
           listItems: [
             `Scale`,
             `100ml reagent`,
@@ -43,14 +47,22 @@ const productDetailsContent = {
             `Syringe`,
             `3 spoons`,
             `3 containers`,
+            `2 AA batteries`,
           ],
         },
       ],
     },
 
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
     shipping: [
       `Before we ship, every tCheck and the kit is carefully tested.`,
       `Ships in 2-3 weeks. At this time, tCheck is not shipping into any EU nation.`,
+=======
+    shipping: 
+    [
+      `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority. 
+      Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country`,
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
     ],
     specs: [
       {
@@ -76,10 +88,17 @@ const productDetailsContent = {
       {
         title: `MEASUREMENT RANGES`,
         textArray: [
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
           `Olive Oil: 0 ~ 15 mg/ml`,
           `Butter/Ghee: 0 ~ 15 mg/ml`,
           `Coconut/MCT Oil: 0 ~ 15 mg/ml`,
           `Alcohol Tinctures: 0 ~ 15 mg/ml`,
+=======
+          `Olive Oil: 1.5 ~ 15 mg/ml`,
+          `Butter/Ghee: 1.5 ~ 15 mg/ml`,
+          `Coconut/MCT Oil: 1.5 ~ 15 mg/ml`,
+          `Alcohol Tinctures: 1.5 ~ 15 mg/ml`,
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
         ],
       },
       {
@@ -97,8 +116,13 @@ const productDetailsContent = {
       {
         title: `KIT REQUIREMENTS`,
         textArray: [
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
           `80-120mg of flower material`,
           `10-15mg of concentrate material`,
+=======
+          `100-250mg of flower material`,
+          `30-110mg of concentrate material`,
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
           `10ml of Reagent`,
         ],
       },
@@ -115,7 +139,11 @@ const productDetailsContent = {
         `Reusable sample tray`,
         `Test infusions, get results and dose recipes`,
         `Battery operated`,
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
         `Results in CBV`,
+=======
+        `Results in mg/ml`,
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
         `UL, CE, FCC certified`,
         `Bluetooth LE`,
       ],
@@ -135,14 +163,24 @@ const productDetailsContent = {
     },
 
     shipping: [
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
       `Before we ship, every tCheck and the kit is carefully tested.`,
       `Ships in 2-3 weeks. At this time, tCheck is not shipping into any EU nation.`,
+=======
+      `Before we ship, each device and flower kit is assembled by hand and tested. Building quality products is our top priority. 
+      Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country.`,
+      
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
     ],
     specs: [
       {
-        title: `BREAKDOWN`,
+        title: `TEST CAPABILITY`,
         textArray: [
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
           `tCheck 2 tests: Compound by Volume (CBV), THx, CBx, or THxa (with expansion kit)`,
+=======
+          `tCheck tests: Compound by Volume (CBV), THx, CBx, or THxa`
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
         ],
       },
       {
@@ -162,10 +200,17 @@ const productDetailsContent = {
       {
         title: `MEASUREMENT RANGES`,
         textArray: [
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
           `Olive Oil: 0 ~ 15 mg/ml`,
           `Butter/Ghee: 0 ~ 15 mg/ml`,
           `Coconut/MCT Oil: 0 ~ 15 mg/ml`,
           `Alcohol Tinctures: 0 ~ 15 mg/ml`,
+=======
+          `Olive Oil: 1.5 ~ 15 mg/ml`,
+          `Butter/Ghee: 1.5 ~ 15 mg/ml`,
+          `Coconut/MCT Oil: 1.5 ~ 15 mg/ml`,
+          `Alcohol: 1.5 ~ 15 mg/ml`,
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
         ],
       },
       {
@@ -185,7 +230,11 @@ const productDetailsContent = {
   kit: {
     features: {
       paragraphsArray: [
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
         `The expansion kit provides all the materials needed to properly test your flower and concentrates using your tCheck 2. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,
+=======
+        `The Expansion Kit provides all the materials needed to properly test your flower and concentrates using your tCheck. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
       ],
       listItemsArray: [
         `Ability to run 9 flower or concentrate tests with 100ml bottle of reagent`,
@@ -203,13 +252,20 @@ const productDetailsContent = {
             `Syringe`,
             `3 spoons`,
             `3 containers`,
+            `2 AA batteries`,
           ],
         },
       ],
     },
     shipping: [
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
       `Before we ship, every tCheck 2 and the kit is carefully tested.`,
       `Ships in 2-3 weeks. At this time, tCheck 2 is not shipping into any EU nation.`,
+=======
+      `Before we ship, each device and flower kit is assembled by hand and tested. Building quality products is our top priority. 
+      Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country.`,
+      
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
     ],
     specs: [
       {
@@ -219,8 +275,13 @@ const productDetailsContent = {
       {
         title: `KIT REQUIREMENTS`,
         textArray: [
+<<<<<<< HEAD:tCheck/src/lib/productDetailsContent.js
           `80-120mg of flower material`,
           `10-15mg of concentrate material`,
+=======
+          `100-250mg of flower material`,
+          `30-110mg of concentrate material`,
+>>>>>>> team requested edits:src/lib/productDetailsContent.js
           `10ml of Reagent`,
         ],
       },

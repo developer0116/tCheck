@@ -25,7 +25,7 @@ import Question1 from "../images/HowtoTest_p.svg"
 import { sizes } from "../lib/layout"
 
 const list = [
-  "50-80ML of concentrate",
+  "50-80ml of concentrate",
   "tCheck",
   "Expansion Kit",
   "6 minutes of your time",
@@ -97,7 +97,7 @@ const Processors = props => {
         <CustomerSegmentQuestion1
           header={"How do I test the potency?"}
           paragraph1={
-            "From closed-loop to rosin press, all you need to test any concentrate is provided in our expansion kit, to go along with your tCheck. Heres what you need: "
+            "From closed-loop to rosin press, all you need to test any concentrate is provided in our Expansion Kit, to go along with your tCheck. Here's what you need: "
           }
           img={Question1}
           list={list}
@@ -109,7 +109,7 @@ const Processors = props => {
           background={ProcessorsBackgroundApp}
           header={"We make testing concentrates easy"}
           body={
-            "When you log in to the free tCheck app, you can see all your past test results in the user log. You can add notes about that test, such as what strain it is, or the nutrients for that grow. You can track the progress of how green your thumb is with real, live potency testing- in the palm of your hands."
+            "When you log in to the free tCheck app, you can see test results history in the user log. You can add notes about that test, such as what strain it is, or the nutrients for that grow. You can track the progress of how green your thumb is with real, live potency testing- in the palm of your hands."
           }
           app={ProcessorsApp}
         />
