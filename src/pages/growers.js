@@ -43,7 +43,7 @@ const arrayOfQuotes = [
   {
     quote: "Knowing the potency is important to my friends",
     background:
-      "Gabriel maintains a small grow operation on his property. He grows a couple of strains which he gives to friends suffering from arthritis. His friends were always asking him how potent his crop was so that they could dose properly. Since Gabriel's yield is so small, its too expensive to send his plants to the lab every time. Gabriel started using tCheck so that he could easily measure each bud and keep his friends informed on how strong his strains are.",
+      "Gabriel maintains a small grow operation on his property. He currently grows Trainwreck which he shares with two friends suffering from Parkinson's Disease. His friends were always asking him how potent his crop was so that they could dose properly. Since Gabriel's yield is so small, its too expensive to send his plants to the lab every time. Gabriel started using tCheck so that he could easily measure each bud and keep his friends informed on how strong his strains are.",
   },
 ]
 

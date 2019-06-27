@@ -172,7 +172,7 @@ const ProductFAQ = () => {
               >
                 <FAQAnswer>
                   <Body secondary>
-                    tCheck result accuracy has a +/- 15% of full scale
+                    tCheck result accuracy has a +/- 15% of full scale.
                   </Body>
                 </FAQAnswer>
               </CSSTransition>

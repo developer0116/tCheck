@@ -16,8 +16,8 @@ const productDetailsContent = {
         `Test infusions, get results and dose recipes`,
         `Battery operated`,
         `Tests flower, concentrate, butter, coconut oil, olive oil, and alcohol based tinctures`,
-        `Ability to run 9 flower or concentrate tests with 100ML bottle of reagent`,
-        `Results in MG/ML`,
+        `Ability to run 9 flower or concentrate tests with 100ml bottle of reagent`,
+        `Results in mg/ml`,
         `UL, CE, FCC certified`,
         `Bluetooth LE`,
       ],
@@ -34,22 +34,25 @@ const productDetailsContent = {
           ],
         },
         {
-          title: `Expansion kit`,
+          title: `Expansion Kit`,
           listItems: [
             `Scale`,
-            `100ML reagent`,
+            `100ml reagent`,
             `Eye dropper`,
             `Swizzle stick`,
             `Syringe`,
             `3 spoons`,
             `3 containers`,
+            `2 AA batteries`,
           ],
         },
       ],
     },
 
-    shipping: [
-      `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority.`,
+    shipping: 
+    [
+      `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority. 
+      Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country`,
     ],
     specs: [
       {
@@ -75,10 +78,10 @@ const productDetailsContent = {
       {
         title: `MEASUREMENT RANGES`,
         textArray: [
-          `Olive Oil: 0 ~ 15 MG/ML`,
-          `Butter/Ghee: 0 ~ 15 MG/ML`,
-          `Coconut/MCT Oil: 0 ~ 15 MG/ML`,
-          `Alcohol Tinctures: 0 ~ 15 MG/ML`,
+          `Olive Oil: 1.5 ~ 15 mg/ml`,
+          `Butter/Ghee: 1.5 ~ 15 mg/ml`,
+          `Coconut/MCT Oil: 1.5 ~ 15 mg/ml`,
+          `Alcohol Tinctures: 1.5 ~ 15 mg/ml`,
         ],
       },
       {
@@ -96,9 +99,9 @@ const productDetailsContent = {
       {
         title: `KIT REQUIREMENTS`,
         textArray: [
-          `50-250MG of flower material`,
-          `30-110MG of concentrate material`,
-          `10ML of Reagent`,
+          `100-250mg of flower material`,
+          `30-110mg of concentrate material`,
+          `10ml of Reagent`,
         ],
       },
     ],
@@ -114,7 +117,7 @@ const productDetailsContent = {
         `Reusable sample tray`,
         `Test infusions, get results and dose recipes`,
         `Battery operated`,
-        `Results in MG/ML`,
+        `Results in mg/ml`,
         `UL, CE, FCC certified`,
         `Bluetooth LE`,
       ],
@@ -134,14 +137,15 @@ const productDetailsContent = {
     },
 
     shipping: [
-      `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority.`,
+      `Before we ship, each device and flower kit is assembled by hand and tested. Building quality products is our top priority. 
+      Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country.`,
       
     ],
     specs: [
       {
-        title: `BREAKDOWN`,
+        title: `TEST CAPABILITY`,
         textArray: [
-          `tCheck tests: Compound by Volume (CBV), THx, CBx, or THxa.`
+          `tCheck tests: Compound by Volume (CBV), THx, CBx, or THxa`
         ],
       },
       {
@@ -162,10 +166,10 @@ const productDetailsContent = {
       {
         title: `MEASUREMENT RANGES`,
         textArray: [
-          `Olive Oil: 0 ~ 15 MG/ML`,
-          `Butter/Ghee: 0 ~ 15 MG/ML`,
-          `Coconut/MCT Oil: 0 ~ 15 MG/ML`,
-          `Alcohol Tinctures: 0 ~ 15 MG/ML`,
+          `Olive Oil: 1.5 ~ 15 mg/ml`,
+          `Butter/Ghee: 1.5 ~ 15 mg/ml`,
+          `Coconut/MCT Oil: 1.5 ~ 15 mg/ml`,
+          `Alcohol: 1.5 ~ 15 mg/ml`,
         ],
       },
       {
@@ -185,7 +189,7 @@ const productDetailsContent = {
   kit: {
     features: {
       paragraphsArray: [
-        `The expansion kit provides all the materials needed to properly test your flower and concentrates using your tCheck. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,
+        `The Expansion Kit provides all the materials needed to properly test your flower and concentrates using your tCheck. Each item included has been carefully selected to ensure the highest level of testing accuracy with tCheck.`,
       ],
       listItemsArray: [
         `Ability to run 9 flower or concentrate tests with 100ml bottle of reagent`,
@@ -197,18 +201,20 @@ const productDetailsContent = {
           title: ``,
           listItems: [
             `Scale`,
-            `100ML reagent`,
+            `100ml reagent`,
             `Eye dropper`,
             `Swizzle stick`,
             `Syringe`,
             `3 spoons`,
             `3 containers`,
+            `2 AA batteries`,
           ],
         },
       ],
     },
     shipping: [
-      `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority.`,
+      `Before we ship, each device and flower kit is assembled by hand and tested. Building quality products is our top priority. 
+      Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country.`,
       
     ],
     specs: [
@@ -219,9 +225,9 @@ const productDetailsContent = {
       {
         title: `KIT REQUIREMENTS`,
         textArray: [
-          `50-250MG of flower material`,
-          `30-110MG of concentrate material`,
-          `10ML of Reagent`,
+          `100-250mg of flower material`,
+          `30-110mg of concentrate material`,
+          `10ml of Reagent`,
         ],
       },
     ],
