@@ -295,13 +295,25 @@ const ProductSelection = ({
           </>
         ) : null}
         <ProductCarousel arrows={true}>
-          {productCarouselImages[productColor].map(img => {
-            return (
-              <ProductCarouselImgContainer>
-                <img src={img} />
-              </ProductCarouselImgContainer>
-            )
-          })}
+        {product === "kit" ? productCarouselImages['kit'].map(img => {
+return (
+<ProductCarouselImgContainer>
+<img src={img} />
+</ProductCarouselImgContainer>
+)
+}) : product === 'tCheckAndKit' ? productCarouselImages.tCheckAndKit[productColor].map(img => {
+return (
+<ProductCarouselImgContainer>
+<img src={img} />
+</ProductCarouselImgContainer>
+)
+}) : productCarouselImages.tCheck[productColor].map(img => {
+return (
+<ProductCarouselImgContainer>
+<img src={img} />
+</ProductCarouselImgContainer>
+)
+})}
         </ProductCarousel>
       </ProductCarouselContainer>
       <ProductSelectionModule>
@@ -336,7 +348,7 @@ const ProductSelection = ({
             onClick={() => setProductName("tCheckAndKit")}
           >
             <ProductSelectionName>
-              tCheck 2 & Expansion Kit
+              tCheck & Expansion Kit
             </ProductSelectionName>
             <ProductSelectionPrice fontWeight={900}>
               $479.98
@@ -347,7 +359,7 @@ const ProductSelection = ({
             selected={product === "tCheck"}
             onClick={() => setProductName("tCheck")}
           >
-            <ProductSelectionName>tCheck 2 device only</ProductSelectionName>
+            <ProductSelectionName>tCheck device only</ProductSelectionName>
             <ProductSelectionPrice fontWeight={900}>
               $279.99
             </ProductSelectionPrice>
