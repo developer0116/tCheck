@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import CustomerSegmentHero from "../components/CustomerSegmentHero"
 import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
@@ -39,8 +40,7 @@ const arrayOfQuotes = [
       "Janet runs a rosin startup out of Ventura, CA. Yield and quality are her top priorities, and she was struggling with ensuring that each of her production associates was meeting her expectations. Janet needed a way to track her manufacturing processes and quickly test her team's output. She started using tCheck to measure both her incoming material and her final product. Using this data, she could measure consistency from her staff and refine her training techniques.",
   },
   {
-    quote:
-      "Optimizing wherever possible will keep me competitive.",
+    quote: "Optimizing wherever possible will keep me competitive.",
     background:
       "Harris is building a BHO concentrate startup. He is very aware that if he wants to gain a foothold in the industry, he needs to provide a consistent yield at the best price for his new clients. To do this, he is constantly experimenting with new techniques and equipment to optimize his process. Upon recommendation of a colleague, Harris purchased a tCheck so he could test the potency of each experiment’s yield and determine which experiments are a success.",
   },
@@ -64,7 +64,7 @@ const Processors = props => {
   } = props
 
   return (
-    <>
+    <Layout pathName={pathname}>
       <SEO title="Processors" keywords={[`tCheck`, `cannabis`, `infusion`]} />
       <CustomerSegmentHero
         heroImgURL={ProcessorsHero}
@@ -114,7 +114,7 @@ const Processors = props => {
           app={ProcessorsApp}
         />
       </PaddingContainer>
-    </>
+    </Layout>
   )
 }
 

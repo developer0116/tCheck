@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { graphql, StaticQuery, navigate, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
-import Modal from 'react-bootstrap/Modal'
+import Modal from "react-bootstrap/Modal"
 
 import { Header4, Lead } from "./Typography"
 import Button from "./Button"
@@ -89,27 +89,27 @@ const HeroButtonLink = styled.a`
 `
 
 const ModalHeaderExtended = styled(Modal.Header)`
- border: none !important;
+  border: none !important;
 `
 
 const IframeContainer = styled.div`
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 
   iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 `
 
 const Hero = () => {
-  const [show, toggleModalShow] = useState(false);
-  console.log(show)
+  const [show, toggleModalShow] = useState(false)
+
   return (
     <StaticQuery
       query={graphql`
@@ -146,19 +146,32 @@ const Hero = () => {
 
               <BR3 />
               <HeroButtonLink>
-              <HeroButton tertiary onClick={() => toggleModalShow(true)}>Learn More</HeroButton>
+                <HeroButton tertiary onClick={() => toggleModalShow(true)}>
+                  Learn More
+                </HeroButton>
               </HeroButtonLink>
-              <Modal centered size="lg" show={show} onHide={() => toggleModalShow(false)}>
-                <ModalHeaderExtended closeButton/>
+              <Modal
+                centered
+                size="lg"
+                show={show}
+                onHide={() => toggleModalShow(false)}
+              >
+                <ModalHeaderExtended closeButton />
                 <Modal.Body>
                   <IframeContainer>
-                    <iframe width="420" height="315" src="https://www.youtube.com/embed/1-GbI-y1BWk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe
+                      width="420"
+                      height="315"
+                      src="https://www.youtube.com/embed/1-GbI-y1BWk"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
                   </IframeContainer>
                 </Modal.Body>
               </Modal>
             </HeroContentContainer>
           </HeroBackground>
-
         )
       }}
     />

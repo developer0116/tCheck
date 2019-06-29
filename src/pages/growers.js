@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import CustomerSegmentHero from "../components/CustomerSegmentHero"
 import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
@@ -82,8 +83,22 @@ const Growers = props => {
   } = props
 
   return (
-    <>
-      <SEO title="Growers" keywords={[`potency tester`, `cannabis potency testing`, `THCa tester`, `THC tester`, `harvest`, `cbd tester`, `microdosing`, `edibles recipes`, `cannabutter`, `marijuana`]} />
+    <Layout pathName={pathname}>
+      <SEO
+        title="Growers"
+        keywords={[
+          `potency tester`,
+          `cannabis potency testing`,
+          `THCa tester`,
+          `THC tester`,
+          `harvest`,
+          `cbd tester`,
+          `microdosing`,
+          `edibles recipes`,
+          `cannabutter`,
+          `marijuana`,
+        ]}
+      />
       <CustomerSegmentHero
         heroImgURL={GrowersHero}
         heroHeader={"Harvest the highest potency"}
@@ -137,7 +152,7 @@ const Growers = props => {
           app={GrowersApp}
         />
       </PaddingContainer>
-    </>
+    </Layout>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import CustomerSegmentHero from "../components/CustomerSegmentHero"
 import CustomerSegmentValueProps from "../components/CustomerSegmentValueProps"
@@ -23,11 +24,7 @@ import Question1 from "../images/HowtoTest_e.svg"
 
 import { sizes } from "../lib/layout"
 
-const list = [
-  "3-5 drops of your infusion",
-  "tCheck",
-  "2 minutes of your time",
-]
+const list = ["3-5 drops of your infusion", "tCheck", "2 minutes of your time"]
 
 const arrayOfImages = [Case1, Case2]
 
@@ -62,7 +59,7 @@ const Makers = props => {
   } = props
 
   return (
-    <>
+    <Layout pathName={pathname}>
       <SEO
         title="Edible Makers"
         keywords={[`tCheck`, `cannabis`, `infusion`]}
@@ -118,7 +115,7 @@ const Makers = props => {
           app={EdiblesApp}
         />
       </PaddingContainer>
-    </>
+    </Layout>
   )
 }
 

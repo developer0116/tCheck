@@ -108,7 +108,7 @@ const AllCannabisProf = () => {
         <Header>For every cannabis professional</Header>
         <CannabisLead color={tGreen}>Edible Makers</CannabisLead>
         <CannabisBody secondary>
-        Avoid any edible misadventures by knowing the potency before you dine.
+          Avoid any edible misadventures by knowing the potency before you dine.
         </CannabisBody>
         <CannabisLink to="/makers">
           Learn More <ArrowIcon icon={faLongArrowAltRight} />
@@ -116,7 +116,8 @@ const AllCannabisProf = () => {
 
         <CannabisLead color={tGreen}>Growers</CannabisLead>
         <CannabisBody secondary>
-        Harvest your crop, and know what it’s worth by getting the percentage before you sell.
+          Harvest your crop, and know what it’s worth by getting the percentage
+          before you sell.
         </CannabisBody>
         <CannabisLink to="/growers">
           Learn More <ArrowIcon icon={faLongArrowAltRight} />

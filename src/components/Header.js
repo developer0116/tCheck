@@ -118,9 +118,6 @@ const MobileResponsiveButton = styled(Button)`
 `
 
 const MobileButtonLink = styled.a`
-  ${({ isProductPage }) => {
-    return isProductPage ? `display: none !important;` : null
-  }}
   display: none;
   text-decoration: none;
 
@@ -131,9 +128,6 @@ const MobileButtonLink = styled.a`
 `
 
 const ButtonLink = styled.a`
-  ${({ isProductPage }) => {
-    return isProductPage ? `display: none !important;` : null
-  }}
   text-decoration: none;
 
   &:hover {
@@ -150,95 +144,71 @@ const MobileMenuIconStyles = styled.div`
   }
 `
 
-const Header = React.memo(({ isProductPage, pathName }) => {
+const Header = React.memo(({ pathName }) => {
   const [open, toggleOpen] = useState(false)
 
   return (
     <HeaderTag>
-      {isProductPage ? (
-        <HeaderContainer>
+      <HeaderContainer>
+        <TLink to="/">
           <LogoImg src={Logo} />
-          <LinksButtonContainer open={open}>
-            <LinkContainer>
-              <ExternalLink
-                href="https://medium.com/tcheck/i-need-help-e7ede86f2191"
-                target="_blank"
-              >
-                Support
-              </ExternalLink>
-            </LinkContainer>
-          </LinksButtonContainer>
-        </HeaderContainer>
-      ) : (
-        <HeaderContainer>
-          <TLink to="/">
-            <LogoImg src={Logo} />
-          </TLink>
-          <LinksButtonContainer open={open}>
-            <LinkContainer>
-              <TLink
-                to="/makers"
-                activeStyle={{ color: tBlue }}
-                isActive={pathName === "/makers/"}
-              >
-                Edible Makers
-              </TLink>
-            </LinkContainer>
-            <LinkContainer>
-              <TLink
-                to="/growers"
-                activeStyle={{ color: tBlue }}
-                isActive={pathName === "/growers/"}
-              >
-                Growers
-              </TLink>
-            </LinkContainer>
-            <LinkContainer>
-              <TLink
-                to="/processors"
-                activeStyle={{ color: tBlue }}
-                isActive={pathName === "/processors/"}
-              >
-                Processors
-              </TLink>
-            </LinkContainer>
-            <LinkContainer>
-              <ExternalLink href="https://medium.com/tcheck" target="_blank">
-                Blog
-              </ExternalLink>
-            </LinkContainer>
-            <LinkContainer>
-              <ExternalLink
-                href="https://medium.com/tcheck/i-need-help-e7ede86f2191"
-                target="_blank"
-              >
-                Support
-              </ExternalLink>
-            </LinkContainer>
-            <ButtonLink
-              href="/product"
-              target="_blank"
-              isProductPage={isProductPage}
+        </TLink>
+        <LinksButtonContainer open={open}>
+          <LinkContainer>
+            <TLink
+              to="/makers"
+              activeStyle={{ color: tBlue }}
+              isActive={pathName === "/makers/"}
             >
-              <ResponsiveButton>Buy Now</ResponsiveButton>
-            </ButtonLink>
-          </LinksButtonContainer>
-          <MobileButtonLink
-            target="_blank"
-            href="/product"
-            isProductPage={isProductPage}
-          >
-            <MobileResponsiveButton>Buy Now</MobileResponsiveButton>
-          </MobileButtonLink>
-          <MobileMenuIconStyles
-            onClick={() => {
-              toggleOpen(!open)
-            }}
-          >
-            <MobileMenuIcon />
-          </MobileMenuIconStyles>
-        </HeaderContainer>
-      )}
+              Edible Makers
+            </TLink>
+          </LinkContainer>
+          <LinkContainer>
+            <TLink
+              to="/growers"
+              activeStyle={{ color: tBlue }}
+              isActive={pathName === "/growers/"}
+            >
+              Growers
+            </TLink>
+          </LinkContainer>
+          <LinkContainer>
+            <TLink
+              to="/processors"
+              activeStyle={{ color: tBlue }}
+              isActive={pathName === "/processors/"}
+            >
+              Processors
+            </TLink>
+          </LinkContainer>
+          <LinkContainer>
+            <ExternalLink href="https://medium.com/tcheck" target="_blank">
+              Blog
+            </ExternalLink>
+          </LinkContainer>
+          <LinkContainer>
+            <ExternalLink
+              href="https://medium.com/tcheck/i-need-help-e7ede86f2191"
+              target="_blank"
+            >
+              Support
+            </ExternalLink>
+          </LinkContainer>
+          <ButtonLink href="/product" target="_blank">
+            <ResponsiveButton>Buy Now</ResponsiveButton>
+          </ButtonLink>
+        </LinksButtonContainer>
+        <MobileButtonLink target="_blank" href="/product">
+          <MobileResponsiveButton>Buy Now</MobileResponsiveButton>
+        </MobileButtonLink>
+        <MobileMenuIconStyles
+          onClick={() => {
+            toggleOpen(!open)
+          }}
+        >
+          <MobileMenuIcon />
+        </MobileMenuIconStyles>
+      </HeaderContainer>
     </HeaderTag>
   )
 })

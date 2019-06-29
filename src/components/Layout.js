@@ -1,11 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import Header from "./Header"
 import Footer from "./Footer"
 import GlobalStyle from "./GlobalStyles"
-import ProductConsumer, { ContextProvider } from "./Context"
 
 import { maxWidth } from "../lib/layout"
 
@@ -15,40 +13,17 @@ const CenterContainer = styled.div`
   max-width: ${maxWidth}px;
 `
 
-const Layout = props => {
-  const {
-    location: { pathname },
-    children,
-  } = props
-
-  const isProductPage = pathname === "/product/"
-
+const Layout = ({ pathName, children }) => {
   return (
-    <ContextProvider>
+    <>
       <GlobalStyle />
-      <Header isProductPage={isProductPage} pathName={pathname} />
+      <Header pathName={pathName} />
       <CenterContainer>
-        {isProductPage ? (
-          <ProductConsumer>
-            {({ state, shopifyClient }) => {
-              return (
-                <main>
-                  {React.cloneElement(children, { state, shopifyClient })}
-                </main>
-              )
-            }}
-          </ProductConsumer>
-        ) : (
-          <main>{children}</main>
-        )}
+        <main>{children}</main>
         <Footer />
       </CenterContainer>
-    </ContextProvider>
+    </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

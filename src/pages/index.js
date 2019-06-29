@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-// import Layout from "../components/Layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import ValuePropsRow from "../components/ValuePropsRow"
@@ -23,8 +23,22 @@ const PaddingContainer = styled.div`
 `
 
 const IndexPage = () => (
-  <>
-    <SEO title="tCheck potency tester for THC or CBD in flower and infusions" keywords={[`potency tester`, `cannabis potency testing`, `THC tester`, `edibles strong`, `tcheck reviews`, `cbd tester`, `microdosing`, `edibles recipes`, `cannabutter`, `marijuana`]} />
+  <Layout>
+    <SEO
+      title="tCheck potency tester for THC or CBD in flower and infusions"
+      keywords={[
+        `potency tester`,
+        `cannabis potency testing`,
+        `THC tester`,
+        `edibles strong`,
+        `tcheck reviews`,
+        `cbd tester`,
+        `microdosing`,
+        `edibles recipes`,
+        `cannabutter`,
+        `marijuana`,
+      ]}
+    />
     <Hero />
     <PaddingContainer>
       <ValuePropsRow />
@@ -35,7 +49,7 @@ const IndexPage = () => (
       <AppCTA />
       <AsSeenIn />
     </PaddingContainer>
-  </>
+  </Layout>
 )
 
 export default IndexPage

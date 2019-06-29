@@ -79,9 +79,9 @@ const ProductRowB = () => {
           Expansion kit for flower and concentrate testing
         </ProductTitle>
         <ProductBody secondary>
-          Properly test flower and concentrate potency using a tCheck and
-          these components. Each item included has been carefully selected to
-          ensure the highest level of testing accuracy with tCheck.
+          Properly test flower and concentrate potency using a tCheck and these
+          components. Each item included has been carefully selected to ensure
+          the highest level of testing accuracy with tCheck.
         </ProductBody>
       </ProductTextSection>
     </ProductRowContainer>
