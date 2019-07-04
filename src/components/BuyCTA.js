@@ -131,7 +131,7 @@ const BuyCTA = () => {
           Want to also test flower and concentrate? Get the tCheck and Expansion
           kit for $478.99.
         </CTALead>
-        <CTAButtonLink href="/product" target="_blank">
+        <CTAButtonLink href="https://tcheckshop.com" target="_blank">
           <CTAButton secondary tertiary>
             Buy Now
           </CTAButton>

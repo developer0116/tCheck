@@ -194,11 +194,11 @@ const Header = React.memo(({ pathName }) => {
               Support
             </ExternalLink>
           </LinkContainer>
-          <ButtonLink href="/product" target="_blank">
+          <ButtonLink href="https://tcheckshop.com" target="_blank">
             <ResponsiveButton>Buy Now</ResponsiveButton>
           </ButtonLink>
         </LinksButtonContainer>
-        <MobileButtonLink target="_blank" href="/product">
+        <MobileButtonLink target="_blank" href="https://tcheckshop.com">
           <MobileResponsiveButton>Buy Now</MobileResponsiveButton>
         </MobileButtonLink>
         <MobileMenuIconStyles

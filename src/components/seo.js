@@ -44,12 +44,16 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           rel: "stylesheet",
-          href:
-            "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
-          integrity:
-            "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+          href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+          integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
           crossorigin: "anonymous",
-        },
+        }
+      ]}
+      script={[
+        {
+          id: "ze-snippet",
+          src: "https://static.zdassets.com/ekr/snippet.js?key=9a958579-ea73-48e4-99c4-8c05902242f6"
+        }
       ]}
       meta={[
         {

@@ -140,7 +140,7 @@ const Hero = () => {
                 flower, and concentrate with tCheck.
               </HeroLead>
               <BR2 />
-              <HeroButtonLink href="/product" target="_blank">
+              <HeroButtonLink href="https://tcheckshop.com" target="_blank">
                 <HeroButton>Buy Now</HeroButton>
               </HeroButtonLink>
 
