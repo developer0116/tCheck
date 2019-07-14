@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+///import ReactGA from "react-ga"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -13,6 +14,9 @@ import AppCTA from "../components/AppCTA"
 import AsSeenIn from "../components/AsSeenIn"
 
 import { sizes } from "../lib/layout"
+
+///ReactGA.initialize('UA-71026544-1');
+///ReactGA.pageview('/');
 
 const PaddingContainer = styled.div`
   padding: 0 80px;
@@ -39,6 +43,9 @@ const IndexPage = () => (
         `marijuana`,
       ]}
     />
+
+
+
     <Hero />
     <PaddingContainer>
       <ValuePropsRow />

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+//import ReactGA from "react-ga"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -23,6 +24,9 @@ import Case2 from "../images/case_droils.jpg"
 import Question1 from "../images/HowtoTest_e.svg"
 
 import { sizes } from "../lib/layout"
+
+//ReactGA.initialize('UA-71026544-1');
+//ReactGA.pageview('/makers');
 
 const list = ["3-5 drops of your infusion", "tCheck", "2 minutes of your time"]
 

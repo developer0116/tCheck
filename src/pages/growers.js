@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+//import ReactGA from "react-ga"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -24,6 +25,9 @@ import Case2 from "../images/case_gabriel.jpg"
 import Question1 from "../images/HowtoTest_g.svg"
 
 import { sizes } from "../lib/layout"
+
+//ReactGA.initialize('UA-71026544-1');
+//ReactGA.pageview('/growers');
 
 const list = [
   "A pea sized nug that is at least 60% dried",
