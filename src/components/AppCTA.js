@@ -8,7 +8,7 @@ import { sizes } from "../lib/layout"
 
 import AppStorePicture from "../images/app-store.svg"
 import GoogleStorePicture from "../images/google-play.svg"
-import AppExampleImage from "../images/app_download.svg"
+import AppExampleImage from "../images/app_download.png"
 
 const AppContainer = styled.section`
   display: flex;
@@ -100,8 +100,8 @@ const AppCTA = () => {
       <AppTextContainer>
         <Header>Get the tCheck app</Header>
         <AppBody secondary>
-          Collect live readings of your sample in minutes using the tCheck and
-          your phone. Test infused olive oil, coconut oil, alcohol, or butter.
+          Collect live readings of your cannabis sample in minutes using the tCheck and
+          your phone. Test infused olive oil, coconut oil, alcohol, butter, flower, or concentrate from anywhere. 
         </AppBody>
         <a
           target="_blank"

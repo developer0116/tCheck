@@ -3,8 +3,10 @@ module.exports = {
     title: `tCheck`,
     description: `tCheck is a cannabis infusion, flower, and concentrate potency tester used to collect live readings of your sample in mins for commercial or personal use.`,
     author: `Maxwell DeMers @maxuuell`,
+    siteUrl: 'https://tcheck.me',
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -44,6 +46,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-71026544-1",
+        optimizeid: "GTM-NL86TVF",
       },
     },
   ],

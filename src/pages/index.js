@@ -29,7 +29,7 @@ const PaddingContainer = styled.div`
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="tCheck potency tester for THC or CBD in flower and infusions"
+      title="“tCheck potency tester for THC or CBD in infusions and THCa in flower"
       keywords={[
         `potency tester`,
         `cannabis potency testing`,

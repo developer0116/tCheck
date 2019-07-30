@@ -59,7 +59,7 @@ const ValuePropsRow = React.memo(() => {
         <ValuePropImg src={Clock} />
         <ValuePropHeader color={tGreen}>Move fast.</ValuePropHeader>
         <ValuePropText>
-          60 seconds to test your infusions. 5 minutes to test your flower and
+          60 seconds to test cannabis infusions. 5 minutes to test flower and
           concentrates.
         </ValuePropText>
       </ValueProp>
