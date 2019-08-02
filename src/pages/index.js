@@ -42,6 +42,9 @@ const IndexPage = () => (
         `cannabutter`,
         `marijuana`,
       ]}
+      scripts={[
+        '<script> </script>'
+      ]}
     />
 
 

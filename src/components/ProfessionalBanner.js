@@ -54,10 +54,10 @@ const ProfessionalBanner = () => {
     <ProfessionalContainer>
       <ProfessionalTextSection>
         <ProfessionalTitle color={Flour}>
-          Start testing infusions with tCheck for $279.99
+          Start testing infusions with tCheck for $229.99
         </ProfessionalTitle>
         <ProfessionalLead color={Flour}>
-          Test infusions, flower, and concentrates for $478.99.
+          Test infusions, flower, and concentrates for $359.99.
         </ProfessionalLead>
       </ProfessionalTextSection>
       <ProfessionalImage src={PicPrice} />
