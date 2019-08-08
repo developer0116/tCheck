@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>ic_butter</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-650.000000, -1275.000000)" stroke="#B78E13" stroke-width="3">
+            <g id="Group-18" transform="translate(0.000000, 1008.000000)">
+                <g id="Group-21" transform="translate(620.000000, 269.000000)">
+                    <g id="ic_butter" transform="translate(32.000000, 0.000000)">
+                        <path d="M28.6955282,16.233729 L48,21.9395098 L48,40.5031466 L23.3067713,48 L23.3067713,28.008391 L47.6421271,21.9395098 L28.6953999,16.2338056 L25.2381215,18.2992327 L7.81105828,22.0971867 L7.81105828,25.8951407 C0.691162338,26.3000686 -1.56131522,24.8039049 1.05362561,21.4066496 L42.6651847,0 C47.5082427,0 47.1534749,4.81864228 45.5104195,6.5601023 L28.794665,13.4654731 L25.9494302,8.63171355 L29.8616281,15.5370844 L28.6955282,16.233729 Z" id="Combined-Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9.06666667,26.0869565 L9.06666667,34.4347826" id="Path-3" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M7.46666667,22.9565217 L23.4666667,28.173913" id="Path-5"></path>
+                        <polyline id="Path-6" stroke-linecap="round" stroke-linejoin="round" points="23.4666667 48 3.2 38.5605351 3.2 26.0869565"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
