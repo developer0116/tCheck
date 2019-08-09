@@ -12,6 +12,7 @@ import BuyCTA from "../components/BuyCTA"
 import AllCannabisProf from "../components/AllCannabisProf"
 import AppCTA from "../components/AppCTA"
 import AsSeenIn from "../components/AsSeenIn"
+import PortableLivePotencyTesting from "../components/PortableLivePotencyTesting"
 
 import { sizes } from "../lib/layout"
 
@@ -52,6 +53,7 @@ const IndexPage = () => (
     <Hero />
     <PaddingContainer>
       <ValuePropsRow />
+      <PortableLivePotencyTesting/>
       <ProductRowA />
       <ProductRowB />
       <BuyCTA />
