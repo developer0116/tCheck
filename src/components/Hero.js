@@ -114,7 +114,7 @@ const Hero = () => {
     <StaticQuery
       query={graphql`
         query {
-          hero: file(relativePath: { eq: "hero_homepage.png" }) {
+          hero: file(relativePath: { eq: "hero_homepage.jpg" }) {
             childImageSharp {
               fluid(quality: 100, maxWidth: 1440) {
                 ...GatsbyImageSharpFluid_withWebp
@@ -132,11 +132,11 @@ const Hero = () => {
           >
             <HeroContentContainer>
               <HeroHeader color={Flour}>
-                From seed to sale, tCheck will tell you the potency{" "}
+                Cannabis infusion tester{" "}
               </HeroHeader>
               <BR1 />
               <HeroLead color={Flour}>
-                Thousands of cannabis professionals are testing their infusions,
+                Thousands of cannabis professionals are testing their infusions, cannabis
                 flower, and concentrate with tCheck.
               </HeroLead>
               <BR2 />
@@ -147,7 +147,7 @@ const Hero = () => {
               <BR3 />
               <HeroButtonLink>
                 <HeroButton tertiary onClick={() => toggleModalShow(true)}>
-                  Learn More
+                  See Demo
                 </HeroButton>
               </HeroButtonLink>
               <Modal

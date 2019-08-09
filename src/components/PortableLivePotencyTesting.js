@@ -17,10 +17,13 @@ import Flower from "../images/ic_flower.svg"
 const Title = styled(Header5)`
   margin-bottom: 2rem;
   position: relative;
-  max-width: 600px;
+  max-width: 530px;
     margin: auto;
     width: 100%;
 
+    @media (max-width: ${sizes.mobileLg}) and (min-width: ${sizes.mobileS}) {
+        padding: 0px 12px;
+      }
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
     margin-bottom: 2rem;
     &:before {
@@ -32,16 +35,18 @@ const Title = styled(Header5)`
 const SubTitle = styled.p`
     max-width: 570px;
     margin: auto;
-    font-size: 20px;
+    font-size: 16pt;
+    font-family: Lato;
     font-weight: 500;
     width: 100%;
     color: ${Fade};
     margin-top: 32px;
 
 
-    @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
+    @media (max-width: ${sizes.mobileLg}) and (min-width: ${sizes.mobileS}) {
         font-size: 16px;
         width: 90%;
+        margin-bottom: 40px;
       } 
 `
 
@@ -69,14 +74,16 @@ const ValueProp = styled.div`
   margin-top: 50px;
 
   @media (max-width: ${sizes.mobileLg}) and (min-width: ${sizes.mobileL}) {
-    margin-bottom: 2rem;
+    margin-bottom: 0px;
     width: 33%;
+    margin-top: 25px;
 
   }
 
   @media (max-width: ${sizes.mobileL}) and (min-width: ${sizes.mobileS}) {
-    margin-bottom: 2rem;
+    margin-bottom: 0px;
     width: 33%;
+    margin-top: 25px;
   }
 `
 
@@ -119,8 +126,8 @@ const ValuePropText = styled(Body)`
 const PortableLivePotencyTesting = React.memo(() => {
   return (
     <ValuePropsContainer>
-        <Title>Personalized, portable live potency testing.</Title>
-        <SubTitle>Select your infusion, flower, or concentrate and determine potency and dominant cannabinoid in under 6 mins.</SubTitle>
+        <Title>Test for THC, THCa, or CBD</Title>
+        <SubTitle>Select your infusion, cannabis flower, or concentrate and determine potency and dominant cannabinoid in just a couple of mins.</SubTitle>
         <ValueProp>
             <ValuePropImg src={Oliveoil} />
             <ValuePropHeader color={Fade}>Olive Oil</ValuePropHeader>
@@ -143,7 +150,7 @@ const PortableLivePotencyTesting = React.memo(() => {
 
         <ValueProp>
             <ValuePropImg src={Flower} />
-            <ValuePropHeader color={Fade}>Flower</ValuePropHeader>
+            <ValuePropHeader color={Fade}>Cannabis (THCa)</ValuePropHeader>
         </ValueProp>
 
         <ValueProp>

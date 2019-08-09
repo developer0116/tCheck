@@ -52,10 +52,10 @@ const IndexPage = () => (
 
     <Hero />
     <PaddingContainer>
-      <ValuePropsRow />
       <PortableLivePotencyTesting/>
       <ProductRowA />
       <ProductRowB />
+      <ValuePropsRow />
       <BuyCTA />
       <AllCannabisProf />
       <AppCTA />

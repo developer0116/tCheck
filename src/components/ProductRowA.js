@@ -5,7 +5,7 @@ import { Body, Header5 } from "./Typography"
 
 import { sizes } from "../lib/layout"
 
-import CannabisTester from "../images/Cannabistester.png"
+import CannabisTester from "../images/Cannabistester.jpg"
 import OrangeHex from "../images/hex_orange.svg"
 
 const ProductRowContainer = styled.section`

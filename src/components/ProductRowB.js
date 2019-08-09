@@ -5,7 +5,7 @@ import { Body, Header5 } from "./Typography"
 
 import { sizes } from "../lib/layout"
 
-import ExpansionKit from "../images/kit.png"
+import ExpansionKit from "../images/kit.jpg"
 import GreenHex from "../images/hex_green.svg"
 
 const ProductRowContainer = styled.section`
