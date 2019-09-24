@@ -23,8 +23,7 @@ const productDetailsContent = {
       ],
     },
     included: {
-      unorderedListsArray: [
-        {
+      unorderedListsArray: [{
           title: `tCheck`,
           listItems: [
             `tCheck device`,
@@ -49,13 +48,11 @@ const productDetailsContent = {
       ],
     },
 
-    shipping: 
-    [
+    shipping: [
       `Before we ship, each device and flower kit is assembled by hand and tested.  Building quality products is our top priority. 
       Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country`,
     ],
-    specs: [
-      {
+    specs: [{
         title: `BREAKDOWN`,
         textArray: [
           `tCheck tests: Compound by Volume (CBV), THx, CBx, or THxa.`,
@@ -123,26 +120,23 @@ const productDetailsContent = {
       ],
     },
     included: {
-      unorderedListsArray: [
-        {
-          title: ``,
-          listItems: [
-            `tCheck device`,
-            `Reusable testing tray`,
-            `Eye dropper`,
-            `3 AAA batteries`,
-          ],
-        },
-      ],
+      unorderedListsArray: [{
+        title: ``,
+        listItems: [
+          `tCheck device`,
+          `Reusable testing tray`,
+          `Eye dropper`,
+          `3 AAA batteries`,
+        ],
+      }, ],
     },
 
     shipping: [
       `Before we ship, each device and flower kit is assembled by hand and tested. Building quality products is our top priority. 
       Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country.`,
-      
+
     ],
-    specs: [
-      {
+    specs: [{
         title: `TEST CAPABILITY`,
         textArray: [
           `tCheck tests: Compound by Volume (CBV), THx, CBx, or THxa`
@@ -150,8 +144,7 @@ const productDetailsContent = {
       },
       {
         title: `ACCURACY`,
-        textArray: [`+/- 15% Decarbed material`
-      ],
+        textArray: [`+/- 15% Decarbed material`],
       },
       {
         title: `OPTIMAL TEMPERATURE`,
@@ -196,29 +189,26 @@ const productDetailsContent = {
       ],
     },
     included: {
-      unorderedListsArray: [
-        {
-          title: ``,
-          listItems: [
-            `Scale`,
-            `100ml reagent`,
-            `Eye dropper`,
-            `Swizzle stick`,
-            `Syringe`,
-            `3 spoons`,
-            `3 containers`,
-            `2 AA batteries`,
-          ],
-        },
-      ],
+      unorderedListsArray: [{
+        title: ``,
+        listItems: [
+          `Scale`,
+          `100ml reagent`,
+          `Eye dropper`,
+          `Swizzle stick`,
+          `Syringe`,
+          `3 spoons`,
+          `3 containers`,
+          `2 AA batteries`,
+        ],
+      }, ],
     },
     shipping: [
       `Before we ship, each device and flower kit is assembled by hand and tested. Building quality products is our top priority. 
       Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country.`,
-      
+
     ],
-    specs: [
-      {
+    specs: [{
         title: `TESTS`,
         textArray: [`Flower and all concentrate derivatives`],
       },
